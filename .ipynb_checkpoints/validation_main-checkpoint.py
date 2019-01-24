@@ -29,7 +29,7 @@ pool=[]
 
 #/home/jkok1g14/Documents/GRS1915+105/data
 #/export/data/jakubok/GRS1915+105/Std1_PCU2
-for root, dirnames, filenames in os.walk("/home/jkok1g14/Documents/GRS1915+105/data/Std1_PCU2"):
+for root, dirnames, filenames in os.walk("/export/data/jakubok/GRS1915+105/Std1_PCU2"):
     for filename in fnmatch.filter(filenames, "*_std1_lc.txt"):
         available.append(filename)
 for ob, state in ob_state.items():
@@ -40,7 +40,7 @@ for ob, state in ob_state.items():
 lc_dirs=[]
 lcs=[]
 ids=[]
-for root, dirnames, filenames in os.walk("/home/jkok1g14/Documents/GRS1915+105/data/Std1_PCU2"):    
+for root, dirnames, filenames in os.walk("/export/data/jakubok/GRS1915+105/Std1_PCU2"):    
     for filename in fnmatch.filter(filenames, "*_std1_lc.txt"):
         if filename.split("_")[0] in pool:
             lc_dirs.append(os.path.join(root, filename))
@@ -98,10 +98,10 @@ from sklearn.cluster import KMeans
 import segment_cluster as sc
 import importlib
 importlib.reload(sc)
-pro_clusters=[0.1, 0.2, 0.3]
+pro_clusters=[0.01, 0.05, 0.1]
 seg_lens=[30, 50, 70]
 classes=set(y_train)
-results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes)))
+results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes), 2))
 for n_pro, proportion in enumerate(pro_clusters):
     for n_len, length in enumerate(seg_lens):
         for n_model, model_class in enumerate(classes):
@@ -116,8 +116,9 @@ for n_pro, proportion in enumerate(pro_clusters):
                 train_segments=sc.segmentation(ts, length, 2, time_stamps=time_stamps)
                 c_train_segments=sc.center_offset(train_segments, ts, offset=offset, time_stamps=time_stamps)
                 all_train_segments.append(c_train_segments)
+            all_train_segments=np.vstack(all_train_segments)
             cluster=KMeans(n_clusters=int(proportion*len(all_train_segments)), random_state=0)    
-            cluster.fit(np.array(c_train_segments))
+            cluster.fit(all_train_segments)
             
             ##test against the validation set
             for n_test, test_class in enumerate(classes):
@@ -134,7 +135,8 @@ for n_pro, proportion in enumerate(pro_clusters):
                     reco = sc.reconstruct(c_test_segments, test_ts, cluster, rel_offset=offset)
                     error=np.sqrt(np.mean((test_ts[1][seg_len:-seg_len]-reco[1][seg_len:-seg_len])**2))
                     reco_error.append((ts_id, error))
-                results[n_pro, n_len, n_model, n_test]=np.mean(np.array(reco_error)[:,1])
-                print(n_pro, n_len, n_model, n_test, np.mean(np.array(reco_error)[:,1]))
-                
+                results[n_pro, n_len, n_model, n_test, 0]=np.mean(np.array(reco_error)[:,1])
+                results[n_pro, n_len, n_model, n_test, 1]=np.std(np.array(reco_error)[:,1])
+                print(n_pro, n_len, n_model, n_test, results[n_pro, n_len, n_model, n_test, 0], results[n_pro, n_len, n_model, n_test, 1], flush=True)
+
 np.savetxt("model_errors.csv", results, delimiter=",")

@@ -29,7 +29,7 @@ pool=[]
 
 #/home/jkok1g14/Documents/GRS1915+105/data
 #/export/data/jakubok/GRS1915+105/Std1_PCU2
-for root, dirnames, filenames in os.walk("/home/jkok1g14/Documents/GRS1915+105/data/Std1_PCU2"):
+for root, dirnames, filenames in os.walk("/export/data/jakubok/GRS1915+105/Std1_PCU2"):
     for filename in fnmatch.filter(filenames, "*_std1_lc.txt"):
         available.append(filename)
 for ob, state in ob_state.items():
@@ -40,7 +40,7 @@ for ob, state in ob_state.items():
 lc_dirs=[]
 lcs=[]
 ids=[]
-for root, dirnames, filenames in os.walk("/home/jkok1g14/Documents/GRS1915+105/data/Std1_PCU2"):    
+for root, dirnames, filenames in os.walk("/export/data/jakubok/GRS1915+105/Std1_PCU2"):    
     for filename in fnmatch.filter(filenames, "*_std1_lc.txt"):
         if filename.split("_")[0] in pool:
             lc_dirs.append(os.path.join(root, filename))
@@ -101,7 +101,7 @@ importlib.reload(sc)
 pro_clusters=[0.01, 0.05, 0.1]
 seg_lens=[30, 50, 70]
 classes=set(y_train)
-results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes)))
+results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes), 2))
 for n_pro, proportion in enumerate(pro_clusters):
     for n_len, length in enumerate(seg_lens):
         for n_model, model_class in enumerate(classes):
@@ -122,7 +122,6 @@ for n_pro, proportion in enumerate(pro_clusters):
             
             ##test against the validation set
             for n_test, test_class in enumerate(classes):
-                print("model trained on ", model_class, " tested on ", test_class, "no segments ", all_train_segments)
                 testing_ys=np.where(np.array(y_valid)=='{}'.format(test_class))[0]
                 time_stamps=True
                 offset=False
@@ -136,7 +135,8 @@ for n_pro, proportion in enumerate(pro_clusters):
                     reco = sc.reconstruct(c_test_segments, test_ts, cluster, rel_offset=offset)
                     error=np.sqrt(np.mean((test_ts[1][seg_len:-seg_len]-reco[1][seg_len:-seg_len])**2))
                     reco_error.append((ts_id, error))
-                results[n_pro, n_len, n_model, n_test]=np.mean(np.array(reco_error)[:,1])
-                print(n_pro, n_len, n_model, n_test, np.mean(np.array(reco_error)[:,1]))
-                
+                results[n_pro, n_len, n_model, n_test, 0]=np.mean(np.array(reco_error)[:,1])
+                results[n_pro, n_len, n_model, n_test, 1]=np.std(np.array(reco_error)[:,1])
+                print(n_pro, n_len, n_model, n_test, results[n_pro, n_len, n_model, n_test, 0], results[n_pro, n_len, n_model, n_test, 1], flush=True)
+
 np.savetxt("model_errors.csv", results, delimiter=",")
