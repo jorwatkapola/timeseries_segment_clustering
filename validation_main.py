@@ -98,7 +98,7 @@ from sklearn.cluster import KMeans
 import segment_cluster as sc
 import importlib
 importlib.reload(sc)
-pro_clusters=[0.1, 0.2, 0.3]
+pro_clusters=[0.01, 0.05, 0.1]
 seg_lens=[30, 50, 70]
 classes=set(y_train)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes)))
@@ -116,11 +116,13 @@ for n_pro, proportion in enumerate(pro_clusters):
                 train_segments=sc.segmentation(ts, length, 2, time_stamps=time_stamps)
                 c_train_segments=sc.center_offset(train_segments, ts, offset=offset, time_stamps=time_stamps)
                 all_train_segments.append(c_train_segments)
+            all_train_segments=np.vstack(all_train_segments)
             cluster=KMeans(n_clusters=int(proportion*len(all_train_segments)), random_state=0)    
-            cluster.fit(np.array(c_train_segments))
+            cluster.fit(all_train_segments)
             
             ##test against the validation set
             for n_test, test_class in enumerate(classes):
+                print("model trained on ", model_class, " tested on ", test_class, "no segments ", all_train_segments)
                 testing_ys=np.where(np.array(y_valid)=='{}'.format(test_class))[0]
                 time_stamps=True
                 offset=False

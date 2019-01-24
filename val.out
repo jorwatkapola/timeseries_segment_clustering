@@ -1,0 +1,36 @@
+/home/jkok1g14/anaconda3/lib/python3.6/site-packages/sklearn/cluster/k_means_.py:92: RuntimeWarning: divide by zero encountered in log
+  n_local_trials = 2 + int(np.log(n_clusters))
+0 0 0 0 1215.830446080309
+0 0 0 1 780.4909333862817
+0 0 0 2 1687.2254693929367
+0 0 0 3 450.2288429419627
+0 0 0 4 1216.0602192218676
+0 0 0 5 337.2500927414162
+0 0 0 6 866.1263901419121
+0 0 0 7 217.4769629459357
+0 0 0 8 1139.7512634200516
+0 0 0 9 131.48008370543812
+0 0 1 0 1215.932709793417
+0 0 1 1 780.4891968195853
+0 0 1 2 1686.8613001145318
+0 0 1 3 450.20375457402264
+0 0 1 4 1216.0595606216355
+0 0 1 5 337.19358383242746
+0 0 1 6 866.1055373901036
+0 0 1 7 217.40629115198794
+0 0 1 8 1139.7766594136592
+0 0 1 9 131.43867692104024
+Traceback (most recent call last):
+  File "validation_main.py", line 120, in <module>
+    cluster.fit(np.array(c_train_segments))
+  File "/home/jkok1g14/anaconda3/lib/python3.6/site-packages/sklearn/cluster/k_means_.py", line 971, in fit
+    return_n_iter=True)
+  File "/home/jkok1g14/anaconda3/lib/python3.6/site-packages/sklearn/cluster/k_means_.py", line 380, in k_means
+    random_state=random_state)
+  File "/home/jkok1g14/anaconda3/lib/python3.6/site-packages/sklearn/cluster/k_means_.py", line 436, in _kmeans_single_elkan
+    x_squared_norms=x_squared_norms)
+  File "/home/jkok1g14/anaconda3/lib/python3.6/site-packages/sklearn/cluster/k_means_.py", line 748, in _init_centroids
+    x_squared_norms=x_squared_norms)
+  File "/home/jkok1g14/anaconda3/lib/python3.6/site-packages/sklearn/cluster/k_means_.py", line 92, in _k_init
+    n_local_trials = 2 + int(np.log(n_clusters))
+OverflowError: cannot convert float infinity to integer
