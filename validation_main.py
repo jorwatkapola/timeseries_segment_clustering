@@ -94,18 +94,17 @@ for n, lc in enumerate(lc_classes):
 x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu, classes_abu, ids_abu, test_size=0.5, random_state=0, stratify=classes_abu)
 x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y_test, id_test, test_size=0.5, random_state=0, stratify=y_test)
 
-from sklearn.cluster import KMeans
 import segment_cluster as sc
 import importlib
 importlib.reload(sc)
-pro_clusters=[0.01, 0.05, 0.1]
+pro_clusters=[100, 150, 200]
 seg_lens=[30, 50, 70]
 classes=set(y_train)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes), 2))
 for n_pro, proportion in enumerate(pro_clusters):
     for n_len, length in enumerate(seg_lens):
         for n_model, model_class in enumerate(classes):
-            
+
             ##train the model
             time_stamps=False
             offset=True
@@ -117,7 +116,9 @@ for n_pro, proportion in enumerate(pro_clusters):
                 c_train_segments=sc.center_offset(train_segments, ts, offset=offset, time_stamps=time_stamps)
                 all_train_segments.append(c_train_segments)
             all_train_segments=np.vstack(all_train_segments)
-            cluster=KMeans(n_clusters=int(proportion*len(all_train_segments)), random_state=0)    
+            if proportion > len(all_train_segments): proportion = len(all_train_segments)
+            #cluster=KMeans(n_clusters=int(proportion*len(all_train_segments)), random_state=0)
+            cluster=KMeans(n_clusters=proportion, random_state=0)
             cluster.fit(all_train_segments)
             
             ##test against the validation set
@@ -139,4 +140,9 @@ for n_pro, proportion in enumerate(pro_clusters):
                 results[n_pro, n_len, n_model, n_test, 1]=np.std(np.array(reco_error)[:,1])
                 print(n_pro, n_len, n_model, n_test, results[n_pro, n_len, n_model, n_test, 0], results[n_pro, n_len, n_model, n_test, 1], flush=True)
 
-np.savetxt("model_errors.csv", results, delimiter=",")
+with open("model_errors.csv", "w") as outfile:
+    for a, n_pro in enumerate(results):
+        for b, n_len in enumerate(n_pro):
+            for c, n_model in enumerate(n_len):
+                outfile.write("#n_clusters: {}, n_segment_len: {}, n_training_class: {}\n".format(a,b,c))
+                np.savetxt(outfile, n_model, delimiter=",") 

@@ -1,0 +1,1800 @@
+model trained on  beta  tested on  beta no segments  15670
+0 0 0 0 278.6683607751171 87.24482073910478
+model trained on  beta  tested on  phi no segments  15670
+0 0 0 1 150.97127623612957 41.29806335019796
+model trained on  beta  tested on  kappa no segments  15670
+0 0 0 2 541.213042203155 61.34940035394343
+model trained on  beta  tested on  alpha no segments  15670
+0 0 0 3 163.57784164154384 38.5929607534176
+model trained on  beta  tested on  mu no segments  15670
+0 0 0 4 663.1019497338655 127.06238294402044
+model trained on  beta  tested on  chi no segments  15670
+0 0 0 5 140.0045651476896 35.16207338017997
+model trained on  beta  tested on  delta no segments  15670
+0 0 0 6 246.88348843537187 38.51185318210193
+model trained on  beta  tested on  rho no segments  15670
+0 0 0 7 338.97004799327016 70.49213994491194
+model trained on  beta  tested on  gamma no segments  15670
+0 0 0 8 382.52354115718464 62.986850600082754
+model trained on  beta  tested on  theta no segments  15670
+0 0 0 9 371.40098939479634 73.77739258290661
+model trained on  phi  tested on  beta no segments  13387
+0 0 1 0 851.7395107313234 422.0973074558682
+model trained on  phi  tested on  phi no segments  13387
+0 0 1 1 110.34857789490123 44.72202616861317
+model trained on  phi  tested on  kappa no segments  13387
+0 0 1 2 970.0448435723029 122.92600242718264
+model trained on  phi  tested on  alpha no segments  13387
+0 0 1 3 174.78688747874477 89.54064542486807
+model trained on  phi  tested on  mu no segments  13387
+0 0 1 4 1431.4233740914221 418.1859438479211
+model trained on  phi  tested on  chi no segments  13387
+0 0 1 5 102.54233547605028 46.93584890933808
+model trained on  phi  tested on  delta no segments  13387
+0 0 1 6 493.4156023022706 88.38027467697984
+model trained on  phi  tested on  rho no segments  13387
+0 0 1 7 647.7151802943544 151.5091673463368
+model trained on  phi  tested on  gamma no segments  13387
+0 0 1 8 356.6726108142739 74.34906648657989
+model trained on  phi  tested on  theta no segments  13387
+0 0 1 9 930.4974213146472 101.9733800112829
+model trained on  kappa  tested on  beta no segments  13312
+0 0 2 0 434.5719855087759 198.47919607449535
+model trained on  kappa  tested on  phi no segments  13312
+0 0 2 1 187.98005937144535 69.47229559229181
+model trained on  kappa  tested on  kappa no segments  13312
+0 0 2 2 451.14550692728403 61.47609443056292
+model trained on  kappa  tested on  alpha no segments  13312
+0 0 2 3 213.76577208456038 43.935624139413534
+model trained on  kappa  tested on  mu no segments  13312
+0 0 2 4 749.8934241392789 98.5272694590476
+model trained on  kappa  tested on  chi no segments  13312
+0 0 2 5 131.92108047908388 55.483303882443636
+model trained on  kappa  tested on  delta no segments  13312
+0 0 2 6 294.8884865858155 37.012384685839265
+model trained on  kappa  tested on  rho no segments  13312
+0 0 2 7 454.93956577090495 90.12329534875121
+model trained on  kappa  tested on  gamma no segments  13312
+0 0 2 8 386.1589012586387 49.088672196097725
+model trained on  kappa  tested on  theta no segments  13312
+0 0 2 9 410.0966689107369 85.11967030820865
+model trained on  alpha  tested on  beta no segments  11603
+0 0 3 0 436.42154481168086 282.90412721347826
+model trained on  alpha  tested on  phi no segments  11603
+0 0 3 1 122.84492060219897 50.51611008045021
+model trained on  alpha  tested on  kappa no segments  11603
+0 0 3 2 776.4251992155774 29.82493617907802
+model trained on  alpha  tested on  alpha no segments  11603
+0 0 3 3 139.34125827047927 45.52611437879834
+model trained on  alpha  tested on  mu no segments  11603
+0 0 3 4 1126.7377362939635 339.32519586970835
+model trained on  alpha  tested on  chi no segments  11603
+0 0 3 5 106.9741308234744 44.0044549827195
+model trained on  alpha  tested on  delta no segments  11603
+0 0 3 6 322.413880550134 88.47326199174658
+model trained on  alpha  tested on  rho no segments  11603
+0 0 3 7 392.5042831289404 118.48174152249655
+model trained on  alpha  tested on  gamma no segments  11603
+0 0 3 8 369.74776377685566 69.30504926553364
+model trained on  alpha  tested on  theta no segments  11603
+0 0 3 9 611.7070774743636 92.42002576449441
+model trained on  mu  tested on  beta no segments  8619
+0 0 4 0 457.0255040492906 83.25059094009994
+model trained on  mu  tested on  phi no segments  8619
+0 0 4 1 375.8025911131606 32.835155675564096
+model trained on  mu  tested on  kappa no segments  8619
+0 0 4 2 529.5929406987935 26.198262967749045
+model trained on  mu  tested on  alpha no segments  8619
+0 0 4 3 406.21375587141836 41.59161843508525
+model trained on  mu  tested on  mu no segments  8619
+0 0 4 4 633.0445901270359 40.17725025768681
+model trained on  mu  tested on  chi no segments  8619
+0 0 4 5 346.2069530159643 28.950760976140387
+model trained on  mu  tested on  delta no segments  8619
+0 0 4 6 373.83308174655775 20.913259916478726
+model trained on  mu  tested on  rho no segments  8619
+0 0 4 7 502.34211183985246 26.760075305758207
+model trained on  mu  tested on  gamma no segments  8619
+0 0 4 8 482.64536251740964 43.885852500245136
+model trained on  mu  tested on  theta no segments  8619
+0 0 4 9 460.5940144515763 54.71729323370938
+model trained on  chi  tested on  beta no segments  89684
+0 0 5 0 451.42339255079025 276.03923424901274
+model trained on  chi  tested on  phi no segments  89684
+0 0 5 1 124.48767297456261 49.17583644086194
+model trained on  chi  tested on  kappa no segments  89684
+0 0 5 2 678.7278395479003 36.531169317317215
+model trained on  chi  tested on  alpha no segments  89684
+0 0 5 3 149.2217655269945 47.913782423052155
+model trained on  chi  tested on  mu no segments  89684
+0 0 5 4 1063.1481810690075 200.2186269091285
+model trained on  chi  tested on  chi no segments  89684
+0 0 5 5 100.52122482925976 42.60352502927415
+model trained on  chi  tested on  delta no segments  89684
+0 0 5 6 263.1074448674582 67.3555235044792
+model trained on  chi  tested on  rho no segments  89684
+0 0 5 7 543.7153205079885 141.3553085665585
+model trained on  chi  tested on  gamma no segments  89684
+0 0 5 8 347.4465704159802 65.52468052666568
+model trained on  chi  tested on  theta no segments  89684
+0 0 5 9 479.07484863702894 100.31244054392091
+model trained on  delta  tested on  beta no segments  12614
+0 0 6 0 363.38717719119234 201.68982978208015
+model trained on  delta  tested on  phi no segments  12614
+0 0 6 1 121.42761762341183 30.476463016839563
+model trained on  delta  tested on  kappa no segments  12614
+0 0 6 2 507.2748224530446 33.678053778568795
+model trained on  delta  tested on  alpha no segments  12614
+0 0 6 3 154.6809539561658 47.04109731391051
+model trained on  delta  tested on  mu no segments  12614
+0 0 6 4 779.3527459330319 143.54691132597594
+model trained on  delta  tested on  chi no segments  12614
+0 0 6 5 120.54780550153723 36.63835420468474
+model trained on  delta  tested on  delta no segments  12614
+0 0 6 6 221.54548195502608 37.86789358304765
+model trained on  delta  tested on  rho no segments  12614
+0 0 6 7 387.5705745718819 98.58813599011025
+model trained on  delta  tested on  gamma no segments  12614
+0 0 6 8 356.41394847076236 72.04742531219453
+model trained on  delta  tested on  theta no segments  12614
+0 0 6 9 384.6622296107771 82.09050271097777
+model trained on  rho  tested on  beta no segments  18669
+0 0 7 0 584.0258754074658 322.67605551662183
+model trained on  rho  tested on  phi no segments  18669
+0 0 7 1 138.81101059914275 51.95570382908847
+model trained on  rho  tested on  kappa no segments  18669
+0 0 7 2 755.1928916737934 46.02539554757289
+model trained on  rho  tested on  alpha no segments  18669
+0 0 7 3 176.71293578598227 68.56901640332362
+model trained on  rho  tested on  mu no segments  18669
+0 0 7 4 1100.1056126054395 392.6943994533287
+model trained on  rho  tested on  chi no segments  18669
+0 0 7 5 115.31155107840904 47.418009628513346
+model trained on  rho  tested on  delta no segments  18669
+0 0 7 6 376.9540397386713 69.91495517335059
+model trained on  rho  tested on  rho no segments  18669
+0 0 7 7 233.39043990102482 21.848123670879986
+model trained on  rho  tested on  gamma no segments  18669
+0 0 7 8 384.2573159996614 65.88059753841068
+model trained on  rho  tested on  theta no segments  18669
+0 0 7 9 696.9806197835 104.47066136082914
+model trained on  gamma  tested on  beta no segments  16766
+0 0 8 0 773.9967288267484 377.5485170055427
+model trained on  gamma  tested on  phi no segments  16766
+0 0 8 1 149.45030356408793 23.747542054072728
+model trained on  gamma  tested on  kappa no segments  16766
+0 0 8 2 782.7217449958052 158.89035845424502
+model trained on  gamma  tested on  alpha no segments  16766
+0 0 8 3 196.7458775381958 61.16453892074409
+model trained on  gamma  tested on  mu no segments  16766
+0 0 8 4 1239.0886893860575 301.5162325630205
+model trained on  gamma  tested on  chi no segments  16766
+0 0 8 5 140.95261156205515 29.638855614032384
+model trained on  gamma  tested on  delta no segments  16766
+0 0 8 6 411.062726368926 62.73934794870081
+model trained on  gamma  tested on  rho no segments  16766
+0 0 8 7 646.4929028330167 150.4025547996159
+model trained on  gamma  tested on  gamma no segments  16766
+0 0 8 8 318.3003793298217 63.016466819762364
+model trained on  gamma  tested on  theta no segments  16766
+0 0 8 9 790.3565290933681 89.63741077987612
+model trained on  theta  tested on  beta no segments  17368
+0 0 9 0 297.32684070603443 135.5582286740434
+model trained on  theta  tested on  phi no segments  17368
+0 0 9 1 130.02858521427643 43.84877766601179
+model trained on  theta  tested on  kappa no segments  17368
+0 0 9 2 529.2198908036625 52.66437202625071
+model trained on  theta  tested on  alpha no segments  17368
+0 0 9 3 152.25839461850381 42.062958828028115
+model trained on  theta  tested on  mu no segments  17368
+0 0 9 4 681.769658376106 39.67259312246273
+model trained on  theta  tested on  chi no segments  17368
+0 0 9 5 120.7891729040048 40.12460103099153
+model trained on  theta  tested on  delta no segments  17368
+0 0 9 6 238.67284552081665 42.645769020671636
+model trained on  theta  tested on  rho no segments  17368
+0 0 9 7 364.40482530510883 70.97745235574106
+model trained on  theta  tested on  gamma no segments  17368
+0 0 9 8 372.3120608899844 68.14285585360977
+model trained on  theta  tested on  theta no segments  17368
+0 0 9 9 353.4763744645702 76.52359773104789
+model trained on  beta  tested on  beta no segments  15520
+0 1 0 0 331.8787400520212 106.74786563096285
+model trained on  beta  tested on  phi no segments  15520
+0 1 0 1 174.83222509645861 51.7952557393377
+model trained on  beta  tested on  kappa no segments  15520
+0 1 0 2 643.0823419394501 33.01639512380521
+model trained on  beta  tested on  alpha no segments  15520
+0 1 0 3 159.15154671884676 1.2199751110878054
+model trained on  beta  tested on  mu no segments  15520
+0 1 0 4 806.4322741057306 97.82621706801143
+model trained on  beta  tested on  chi no segments  15520
+0 1 0 5 137.44901420994233 43.844731180290026
+model trained on  beta  tested on  delta no segments  15520
+0 1 0 6 303.2408249376043 51.871513410353394
+model trained on  beta  tested on  rho no segments  15520
+0 1 0 7 439.4322766755504 91.3180448860799
+model trained on  beta  tested on  gamma no segments  15520
+0 1 0 8 397.94636983527374 65.99504235172687
+model trained on  beta  tested on  theta no segments  15520
+0 1 0 9 418.7034315775465 67.17139982875536
+model trained on  phi  tested on  beta no segments  13277
+0 1 1 0 867.4917359971423 430.89928513649477
+model trained on  phi  tested on  phi no segments  13277
+0 1 1 1 126.67492828323218 53.08080318939319
+model trained on  phi  tested on  kappa no segments  13277
+0 1 1 2 1015.5094980202603 139.32769649364965
+model trained on  phi  tested on  alpha no segments  13277
+0 1 1 3 161.41576537310777 66.236367786241
+model trained on  phi  tested on  mu no segments  13277
+0 1 1 4 1473.6573586126406 420.9672259249643
+model trained on  phi  tested on  chi no segments  13277
+0 1 1 5 108.81290885096614 49.403585690731035
+model trained on  phi  tested on  delta no segments  13277
+0 1 1 6 521.5021868236079 95.32766554193286
+model trained on  phi  tested on  rho no segments  13277
+0 1 1 7 699.1311269174075 168.24131376902005
+model trained on  phi  tested on  gamma no segments  13277
+0 1 1 8 372.58856903280963 72.01612219572812
+model trained on  phi  tested on  theta no segments  13277
+0 1 1 9 952.8636133524467 101.42773822966014
+model trained on  kappa  tested on  beta no segments  13182
+0 1 2 0 519.5324450889068 184.24658177993422
+model trained on  kappa  tested on  phi no segments  13182
+0 1 2 1 236.9514392165885 61.66372129873083
+model trained on  kappa  tested on  kappa no segments  13182
+0 1 2 2 544.1734727592243 66.62933102829682
+model trained on  kappa  tested on  alpha no segments  13182
+0 1 2 3 254.44797281211322 55.35731951239465
+model trained on  kappa  tested on  mu no segments  13182
+0 1 2 4 926.1868414485634 109.47922713015106
+model trained on  kappa  tested on  chi no segments  13182
+0 1 2 5 181.39803745858998 48.4720166128436
+model trained on  kappa  tested on  delta no segments  13182
+0 1 2 6 378.7962120008721 38.24901312777263
+model trained on  kappa  tested on  rho no segments  13182
+0 1 2 7 580.0277236590439 100.47398638546667
+model trained on  kappa  tested on  gamma no segments  13182
+0 1 2 8 420.89031588911126 51.45026180723389
+model trained on  kappa  tested on  theta no segments  13182
+0 1 2 9 465.44598267864154 76.80374641090103
+model trained on  alpha  tested on  beta no segments  11493
+0 1 3 0 521.3485516628451 297.7407669160616
+model trained on  alpha  tested on  phi no segments  11493
+0 1 3 1 140.2242482624457 58.9847462211007
+model trained on  alpha  tested on  kappa no segments  11493
+0 1 3 2 867.0777019060607 63.72035510100829
+model trained on  alpha  tested on  alpha no segments  11493
+0 1 3 3 112.69405645375565 2.8493331428635855
+model trained on  alpha  tested on  mu no segments  11493
+0 1 3 4 1209.6854672627092 337.8633239410039
+model trained on  alpha  tested on  chi no segments  11493
+0 1 3 5 111.2021842977673 46.74459872786366
+model trained on  alpha  tested on  delta no segments  11493
+0 1 3 6 362.5453415416494 99.25411061370781
+model trained on  alpha  tested on  rho no segments  11493
+0 1 3 7 528.0708347340054 183.07541822252026
+model trained on  alpha  tested on  gamma no segments  11493
+0 1 3 8 384.5040011724407 68.78759833349389
+model trained on  alpha  tested on  theta no segments  11493
+0 1 3 9 669.675809281667 96.7685421583098
+model trained on  mu  tested on  beta no segments  8536
+0 1 4 0 564.5992302072119 92.99155195994588
+model trained on  mu  tested on  phi no segments  8536
+0 1 4 1 449.53844271450504 19.9985150151617
+model trained on  mu  tested on  kappa no segments  8536
+0 1 4 2 655.3268357519711 10.277935035473485
+model trained on  mu  tested on  alpha no segments  8536
+0 1 4 3 470.25788915404974 30.198297476019718
+model trained on  mu  tested on  mu no segments  8536
+0 1 4 4 809.658741533261 52.73390475527117
+model trained on  mu  tested on  chi no segments  8536
+0 1 4 5 432.06208426357347 19.863212632850548
+model trained on  mu  tested on  delta no segments  8536
+0 1 4 6 441.94691643188645 16.109477759837212
+model trained on  mu  tested on  rho no segments  8536
+0 1 4 7 627.5536641806472 51.09874926152196
+model trained on  mu  tested on  gamma no segments  8536
+0 1 4 8 549.4072469844099 45.59079185163702
+model trained on  mu  tested on  theta no segments  8536
+0 1 4 9 527.6635526540819 48.19976633299818
+model trained on  chi  tested on  beta no segments  88784
+0 1 5 0 503.19175826853893 282.6181006933389
+model trained on  chi  tested on  phi no segments  88784
+0 1 5 1 140.2680442331548 58.17502595263985
+model trained on  chi  tested on  kappa no segments  88784
+0 1 5 2 822.5942580174351 80.3474383991846
+model trained on  chi  tested on  alpha no segments  88784
+0 1 5 3 123.30115303737436 5.535520850744959
+model trained on  chi  tested on  mu no segments  88784
+0 1 5 4 1137.6892972017608 187.26287034571573
+model trained on  chi  tested on  chi no segments  88784
+0 1 5 5 105.59271119245895 45.99797715280175
+model trained on  chi  tested on  delta no segments  88784
+0 1 5 6 308.8880926761691 83.69703123744618
+model trained on  chi  tested on  rho no segments  88784
+0 1 5 7 679.1330663211877 178.5105050020615
+model trained on  chi  tested on  gamma no segments  88784
+0 1 5 8 367.4701546044948 69.70189665511755
+model trained on  chi  tested on  theta no segments  88784
+0 1 5 9 540.6875140467798 93.5676116673381
+model trained on  delta  tested on  beta no segments  12414
+0 1 6 0 417.58882346722214 213.87742017952382
+model trained on  delta  tested on  phi no segments  12414
+0 1 6 1 143.34261178728502 38.975534751069205
+model trained on  delta  tested on  kappa no segments  12414
+0 1 6 2 614.9272038623448 23.534516661935488
+model trained on  delta  tested on  alpha no segments  12414
+0 1 6 3 123.46143224256149 10.778207521372465
+model trained on  delta  tested on  mu no segments  12414
+0 1 6 4 909.741213660084 95.01729343194773
+model trained on  delta  tested on  chi no segments  12414
+0 1 6 5 134.97937978162363 36.862221147563154
+model trained on  delta  tested on  delta no segments  12414
+0 1 6 6 269.284075742608 51.639880635406826
+model trained on  delta  tested on  rho no segments  12414
+0 1 6 7 463.89003078761726 108.63256477661248
+model trained on  delta  tested on  gamma no segments  12414
+0 1 6 8 378.8977103085302 67.7554720441375
+model trained on  delta  tested on  theta no segments  12414
+0 1 6 9 430.21100717631236 81.41808080551311
+model trained on  rho  tested on  beta no segments  18469
+0 1 7 0 734.9945295039571 378.23136620546705
+model trained on  rho  tested on  phi no segments  18469
+0 1 7 1 169.8773126268135 67.08266227127072
+model trained on  rho  tested on  kappa no segments  18469
+0 1 7 2 854.5711499941355 36.22701131247402
+model trained on  rho  tested on  alpha no segments  18469
+0 1 7 3 198.57333067712852 60.31841693861293
+model trained on  rho  tested on  mu no segments  18469
+0 1 7 4 1250.3135629529786 414.8873780054937
+model trained on  rho  tested on  chi no segments  18469
+0 1 7 5 121.29881562571286 56.248026412350605
+model trained on  rho  tested on  delta no segments  18469
+0 1 7 6 478.4457343644949 74.70794311752195
+model trained on  rho  tested on  rho no segments  18469
+0 1 7 7 257.66812587609627 27.687539622798372
+model trained on  rho  tested on  gamma no segments  18469
+0 1 7 8 404.67028504504606 63.398621319731824
+model trained on  rho  tested on  theta no segments  18469
+0 1 7 9 840.4644576282276 103.36918712282315
+model trained on  gamma  tested on  beta no segments  16606
+0 1 8 0 831.2891283593706 409.07162952883795
+model trained on  gamma  tested on  phi no segments  16606
+0 1 8 1 170.83091830876216 30.277703036504693
+model trained on  gamma  tested on  kappa no segments  16606
+0 1 8 2 908.2815560391613 169.45804777182374
+model trained on  gamma  tested on  alpha no segments  16606
+0 1 8 3 180.59451498975125 39.565985319334416
+model trained on  gamma  tested on  mu no segments  16606
+0 1 8 4 1340.6498325276789 338.8762147588667
+model trained on  gamma  tested on  chi no segments  16606
+0 1 8 5 154.7164002392784 30.195009574720288
+model trained on  gamma  tested on  delta no segments  16606
+0 1 8 6 485.9337433308807 85.72417211756289
+model trained on  gamma  tested on  rho no segments  16606
+0 1 8 7 715.6941213517966 170.09959992051145
+model trained on  gamma  tested on  gamma no segments  16606
+0 1 8 8 345.58719024436374 65.94244383680572
+model trained on  gamma  tested on  theta no segments  16606
+0 1 8 9 884.9544872328496 95.26776313293557
+model trained on  theta  tested on  beta no segments  17208
+0 1 9 0 349.04112393049604 157.99116629633798
+model trained on  theta  tested on  phi no segments  17208
+0 1 9 1 149.91178155241926 54.80484130347624
+model trained on  theta  tested on  kappa no segments  17208
+0 1 9 2 633.1709326514181 48.81164662811975
+model trained on  theta  tested on  alpha no segments  17208
+0 1 9 3 122.97471985658044 3.90554464122296
+model trained on  theta  tested on  mu no segments  17208
+0 1 9 4 807.9548862767344 35.20736794342071
+model trained on  theta  tested on  chi no segments  17208
+0 1 9 5 125.00153493604448 41.931563136571434
+model trained on  theta  tested on  delta no segments  17208
+0 1 9 6 287.0049932745758 57.35588800731672
+model trained on  theta  tested on  rho no segments  17208
+0 1 9 7 448.14632163315383 115.751049325139
+model trained on  theta  tested on  gamma no segments  17208
+0 1 9 8 388.00043412374094 65.90545387967197
+model trained on  theta  tested on  theta no segments  17208
+0 1 9 9 390.224375059704 74.1686776876877
+model trained on  beta  tested on  beta no segments  15370
+0 2 0 0 373.8929985051692 125.44938003865677
+model trained on  beta  tested on  phi no segments  15370
+0 2 0 1 206.24428914479677 36.723130003689285
+model trained on  beta  tested on  kappa no segments  15370
+0 2 0 2 763.5053646214141 8.378628703112208
+model trained on  beta  tested on  alpha no segments  15370
+0 2 0 3 160.90367400303995 28.659038476020967
+model trained on  beta  tested on  mu no segments  15370
+0 2 0 4 887.6033634517784 71.78814083361976
+model trained on  beta  tested on  chi no segments  15370
+0 2 0 5 187.42901934810465 27.237341552902986
+model trained on  beta  tested on  delta no segments  15370
+0 2 0 6 341.47225392071937 66.27871025229341
+model trained on  beta  tested on  rho no segments  15370
+0 2 0 7 528.1932005085815 105.20767806804287
+model trained on  beta  tested on  gamma no segments  15370
+0 2 0 8 407.1911959995032 66.29319101059501
+model trained on  beta  tested on  theta no segments  15370
+0 2 0 9 482.76582004674935 65.20725302150365
+model trained on  phi  tested on  beta no segments  13167
+0 2 1 0 879.233449437422 439.5207682221808
+model trained on  phi  tested on  phi no segments  13167
+0 2 1 1 133.41673266752724 55.73079704858927
+model trained on  phi  tested on  kappa no segments  13167
+0 2 1 2 1054.727005224062 146.38555911512785
+model trained on  phi  tested on  alpha no segments  13167
+0 2 1 3 167.0990381142722 69.74841737942347
+model trained on  phi  tested on  mu no segments  13167
+0 2 1 4 1519.5432358771916 447.1406672149817
+model trained on  phi  tested on  chi no segments  13167
+0 2 1 5 111.84696710574948 50.85480197414214
+model trained on  phi  tested on  delta no segments  13167
+0 2 1 6 542.5787659541604 99.82514693318674
+model trained on  phi  tested on  rho no segments  13167
+0 2 1 7 740.8838705025072 173.0957021389728
+model trained on  phi  tested on  gamma no segments  13167
+0 2 1 8 380.70414760302975 70.71845738429299
+model trained on  phi  tested on  theta no segments  13167
+0 2 1 9 976.2570559153816 99.99044218835996
+model trained on  kappa  tested on  beta no segments  13052
+0 2 2 0 584.8944606723553 206.98271876427347
+model trained on  kappa  tested on  phi no segments  13052
+0 2 2 1 313.897778508668 44.90387220279855
+model trained on  kappa  tested on  kappa no segments  13052
+0 2 2 2 612.7604447465941 62.719118063633815
+model trained on  kappa  tested on  alpha no segments  13052
+0 2 2 3 304.8879882813779 15.456069374409822
+model trained on  kappa  tested on  mu no segments  13052
+0 2 2 4 967.4515725571175 66.00242635267267
+model trained on  kappa  tested on  chi no segments  13052
+0 2 2 5 269.13671872238666 37.90205759749031
+model trained on  kappa  tested on  delta no segments  13052
+0 2 2 6 416.25476923669504 42.682080162240034
+model trained on  kappa  tested on  rho no segments  13052
+0 2 2 7 654.9471928517308 96.0898269093633
+model trained on  kappa  tested on  gamma no segments  13052
+0 2 2 8 449.01322807148836 49.353316792564996
+model trained on  kappa  tested on  theta no segments  13052
+0 2 2 9 503.87699627450405 83.82791096809663
+model trained on  alpha  tested on  beta no segments  11393
+0 2 3 0 577.7593757090016 294.24744959554715
+model trained on  alpha  tested on  phi no segments  11393
+0 2 3 1 151.1278593199455 66.03785765092081
+model trained on  alpha  tested on  kappa no segments  11393
+0 2 3 2 952.05287251679 94.10925489322419
+model trained on  alpha  tested on  alpha no segments  11393
+0 2 3 3 116.68429581142284 8.453571377049315
+model trained on  alpha  tested on  mu no segments  11393
+0 2 3 4 1281.446336468844 367.87773091650587
+model trained on  alpha  tested on  chi no segments  11393
+0 2 3 5 112.87642683176819 48.36390967576042
+model trained on  alpha  tested on  delta no segments  11393
+0 2 3 6 401.0955024698893 118.6714312142565
+model trained on  alpha  tested on  rho no segments  11393
+0 2 3 7 680.508808189813 200.1442447918652
+model trained on  alpha  tested on  gamma no segments  11393
+0 2 3 8 389.97084189908384 67.78017198182592
+model trained on  alpha  tested on  theta no segments  11393
+0 2 3 9 725.3245969894089 93.64246753624404
+model trained on  mu  tested on  beta no segments  8456
+0 2 4 0 589.8415701539457 155.62965975599133
+model trained on  mu  tested on  phi no segments  8456
+0 2 4 1 454.96400580294016 4.770545163658851
+model trained on  mu  tested on  kappa no segments  8456
+0 2 4 2 763.7789384961046 18.721017462405708
+model trained on  mu  tested on  alpha no segments  8456
+0 2 4 3 456.9036314196961 8.152221462155751
+model trained on  mu  tested on  mu no segments  8456
+0 2 4 4 910.3730881206823 54.26669644318639
+model trained on  mu  tested on  chi no segments  8456
+0 2 4 5 456.4618208088182 19.07249346381753
+model trained on  mu  tested on  delta no segments  8456
+0 2 4 6 460.1357430414526 31.1373685063267
+model trained on  mu  tested on  rho no segments  8456
+0 2 4 7 722.5328113239486 81.89114777448721
+model trained on  mu  tested on  gamma no segments  8456
+0 2 4 8 554.5474468712401 50.14712215089469
+model trained on  mu  tested on  theta no segments  8456
+0 2 4 9 573.2193762239654 45.17939715693552
+model trained on  chi  tested on  beta no segments  87891
+0 2 5 0 539.0066695662581 289.74185938896335
+model trained on  chi  tested on  phi no segments  87891
+0 2 5 1 144.33846137429745 61.25952143512555
+model trained on  chi  tested on  kappa no segments  87891
+0 2 5 2 936.5065386861648 133.54216795936827
+model trained on  chi  tested on  alpha no segments  87891
+0 2 5 3 126.54673552693427 16.98159309419909
+model trained on  chi  tested on  mu no segments  87891
+0 2 5 4 1242.2481652396084 261.2987261133406
+model trained on  chi  tested on  chi no segments  87891
+0 2 5 5 108.59383851033935 48.01606972647868
+model trained on  chi  tested on  delta no segments  87891
+0 2 5 6 354.15740877566 109.19237131215259
+model trained on  chi  tested on  rho no segments  87891
+0 2 5 7 765.3791645797259 176.74112106549714
+model trained on  chi  tested on  gamma no segments  87891
+0 2 5 8 378.4728019126524 69.10000437046924
+model trained on  chi  tested on  theta no segments  87891
+0 2 5 9 600.4408000415478 79.42810353768188
+model trained on  delta  tested on  beta no segments  12214
+0 2 6 0 473.62382545426965 218.41195140263832
+model trained on  delta  tested on  phi no segments  12214
+0 2 6 1 156.51634284372244 41.918466734796624
+model trained on  delta  tested on  kappa no segments  12214
+0 2 6 2 712.4628435197078 18.817429174677688
+model trained on  delta  tested on  alpha no segments  12214
+0 2 6 3 122.61850435552816 19.740793681255063
+model trained on  delta  tested on  mu no segments  12214
+0 2 6 4 988.3290011095729 97.19080787129735
+model trained on  delta  tested on  chi no segments  12214
+0 2 6 5 140.4410122202129 38.23922527502118
+model trained on  delta  tested on  delta no segments  12214
+0 2 6 6 307.40994547589537 64.000668109744
+model trained on  delta  tested on  rho no segments  12214
+0 2 6 7 531.0661103068649 113.23995344469982
+model trained on  delta  tested on  gamma no segments  12214
+0 2 6 8 387.6622841166732 66.21940551511089
+model trained on  delta  tested on  theta no segments  12214
+0 2 6 9 485.87350146718745 81.30199262693039
+model trained on  rho  tested on  beta no segments  18269
+0 2 7 0 834.9233559053287 421.70201027824487
+model trained on  rho  tested on  phi no segments  18269
+0 2 7 1 204.97789241643468 65.15184601991159
+model trained on  rho  tested on  kappa no segments  18269
+0 2 7 2 930.6581448940875 30.13251798984489
+model trained on  rho  tested on  alpha no segments  18269
+0 2 7 3 251.67153475160507 53.98439676481196
+model trained on  rho  tested on  mu no segments  18269
+0 2 7 4 1359.3224806688943 457.3931332125899
+model trained on  rho  tested on  chi no segments  18269
+0 2 7 5 152.11955962302378 53.93519725515933
+model trained on  rho  tested on  delta no segments  18269
+0 2 7 6 564.5187912679373 68.5396916208305
+model trained on  rho  tested on  rho no segments  18269
+0 2 7 7 288.8488680954141 38.43396621095068
+model trained on  rho  tested on  gamma no segments  18269
+0 2 7 8 427.1992304894111 63.4056705702082
+model trained on  rho  tested on  theta no segments  18269
+0 2 7 9 944.0297648167436 102.9807758916003
+model trained on  gamma  tested on  beta no segments  16446
+0 2 8 0 844.9465122667689 425.000489084052
+model trained on  gamma  tested on  phi no segments  16446
+0 2 8 1 176.38775102203908 33.46385294630351
+model trained on  gamma  tested on  kappa no segments  16446
+0 2 8 2 979.9623864788049 169.6168114759363
+model trained on  gamma  tested on  alpha no segments  16446
+0 2 8 3 173.08679735751315 44.53083444795628
+model trained on  gamma  tested on  mu no segments  16446
+0 2 8 4 1444.9464949430976 407.48910417730986
+model trained on  gamma  tested on  chi no segments  16446
+0 2 8 5 157.60379758060057 32.29712860712727
+model trained on  gamma  tested on  delta no segments  16446
+0 2 8 6 508.96284084298895 102.11723602315702
+model trained on  gamma  tested on  rho no segments  16446
+0 2 8 7 773.0731586176075 171.19111971948317
+model trained on  gamma  tested on  gamma no segments  16446
+0 2 8 8 362.16077251870183 67.32455674545005
+model trained on  gamma  tested on  theta no segments  16446
+0 2 8 9 921.3967498438558 98.71016361631636
+model trained on  theta  tested on  beta no segments  17048
+0 2 9 0 415.7926372698147 195.2718517716649
+model trained on  theta  tested on  phi no segments  17048
+0 2 9 1 156.06212123607412 59.16302707134502
+model trained on  theta  tested on  kappa no segments  17048
+0 2 9 2 705.4335047436689 40.03865558546196
+model trained on  theta  tested on  alpha no segments  17048
+0 2 9 3 132.18984738211577 7.99241593596453
+model trained on  theta  tested on  mu no segments  17048
+0 2 9 4 850.1200419936495 72.00382776746858
+model trained on  theta  tested on  chi no segments  17048
+0 2 9 5 127.50694255085497 42.71803884097158
+model trained on  theta  tested on  delta no segments  17048
+0 2 9 6 320.5988910258882 65.86406933725914
+model trained on  theta  tested on  rho no segments  17048
+0 2 9 7 547.3810057545968 128.20630539887475
+model trained on  theta  tested on  gamma no segments  17048
+0 2 9 8 392.71444988584034 67.27155659826717
+model trained on  theta  tested on  theta no segments  17048
+0 2 9 9 412.6646324864897 85.11330041161995
+model trained on  beta  tested on  beta no segments  15670
+1 0 0 0 270.0289247139989 79.01451301780276
+model trained on  beta  tested on  phi no segments  15670
+1 0 0 1 139.68044014243742 40.068661306822534
+model trained on  beta  tested on  kappa no segments  15670
+1 0 0 2 530.237367617051 59.787952450078436
+model trained on  beta  tested on  alpha no segments  15670
+1 0 0 3 160.84986236285047 40.42972238169443
+model trained on  beta  tested on  mu no segments  15670
+1 0 0 4 638.9487543523335 135.47195953137688
+model trained on  beta  tested on  chi no segments  15670
+1 0 0 5 130.51758726486466 38.3413684043642
+model trained on  beta  tested on  delta no segments  15670
+1 0 0 6 242.22567003443447 42.409757241707574
+model trained on  beta  tested on  rho no segments  15670
+1 0 0 7 328.81750931831385 62.40298383726208
+model trained on  beta  tested on  gamma no segments  15670
+1 0 0 8 378.8611524351342 65.79621911510576
+model trained on  beta  tested on  theta no segments  15670
+1 0 0 9 362.75922693372644 74.24449487981961
+model trained on  phi  tested on  beta no segments  13387
+1 0 1 0 845.4891699062684 420.696692966188
+model trained on  phi  tested on  phi no segments  13387
+1 0 1 1 106.73124279319642 43.07440814855479
+model trained on  phi  tested on  kappa no segments  13387
+1 0 1 2 960.6947142825867 121.25240819378911
+model trained on  phi  tested on  alpha no segments  13387
+1 0 1 3 172.24457740902696 88.95020496141817
+model trained on  phi  tested on  mu no segments  13387
+1 0 1 4 1420.7293047599132 417.62580202790514
+model trained on  phi  tested on  chi no segments  13387
+1 0 1 5 100.99817880690688 45.85023392245127
+model trained on  phi  tested on  delta no segments  13387
+1 0 1 6 486.3281909771866 87.46331412425842
+model trained on  phi  tested on  rho no segments  13387
+1 0 1 7 637.7485564735218 149.59419904891118
+model trained on  phi  tested on  gamma no segments  13387
+1 0 1 8 351.6248121215195 74.69984512698043
+model trained on  phi  tested on  theta no segments  13387
+1 0 1 9 923.7118763099021 101.9704913832065
+model trained on  kappa  tested on  beta no segments  13312
+1 0 2 0 416.7546766410396 183.91752336216334
+model trained on  kappa  tested on  phi no segments  13312
+1 0 2 1 189.97155358211748 65.33568789866501
+model trained on  kappa  tested on  kappa no segments  13312
+1 0 2 2 432.01264258595546 60.115071245228975
+model trained on  kappa  tested on  alpha no segments  13312
+1 0 2 3 216.91724995745255 51.241819264222215
+model trained on  kappa  tested on  mu no segments  13312
+1 0 2 4 733.7705973435372 108.16089176561997
+model trained on  kappa  tested on  chi no segments  13312
+1 0 2 5 137.02977151618026 51.475480410809666
+model trained on  kappa  tested on  delta no segments  13312
+1 0 2 6 288.4199627575378 29.577895366113065
+model trained on  kappa  tested on  rho no segments  13312
+1 0 2 7 445.03210675172613 79.15465550563408
+model trained on  kappa  tested on  gamma no segments  13312
+1 0 2 8 380.5230298623267 46.61204649383204
+model trained on  kappa  tested on  theta no segments  13312
+1 0 2 9 402.34004241247385 83.74433574412531
+model trained on  alpha  tested on  beta no segments  11603
+1 0 3 0 430.25549403746936 282.3833662008502
+model trained on  alpha  tested on  phi no segments  11603
+1 0 3 1 120.70128430075665 49.57051573746428
+model trained on  alpha  tested on  kappa no segments  11603
+1 0 3 2 770.5771827093889 29.915884162878378
+model trained on  alpha  tested on  alpha no segments  11603
+1 0 3 3 139.59232450112785 45.06464217794455
+model trained on  alpha  tested on  mu no segments  11603
+1 0 3 4 1122.056336534226 339.64512371771985
+model trained on  alpha  tested on  chi no segments  11603
+1 0 3 5 105.32138382656967 43.9048650745889
+model trained on  alpha  tested on  delta no segments  11603
+1 0 3 6 319.6199514244064 87.87445811797525
+model trained on  alpha  tested on  rho no segments  11603
+1 0 3 7 387.0239855223238 117.24779073498125
+model trained on  alpha  tested on  gamma no segments  11603
+1 0 3 8 365.64018577174323 69.33283453312296
+model trained on  alpha  tested on  theta no segments  11603
+1 0 3 9 606.0205382355948 95.32905793248179
+model trained on  mu  tested on  beta no segments  8619
+1 0 4 0 426.75742461011697 88.58698135042486
+model trained on  mu  tested on  phi no segments  8619
+1 0 4 1 252.3855566891597 59.80768936189482
+model trained on  mu  tested on  kappa no segments  8619
+1 0 4 2 516.6200590776798 26.174525967066884
+model trained on  mu  tested on  alpha no segments  8619
+1 0 4 3 300.64629474548633 77.64895677266391
+model trained on  mu  tested on  mu no segments  8619
+1 0 4 4 602.3242478604743 40.212173649151225
+model trained on  mu  tested on  chi no segments  8619
+1 0 4 5 196.58451213047675 48.60510353331718
+model trained on  mu  tested on  delta no segments  8619
+1 0 4 6 344.88593508515 18.42223649388133
+model trained on  mu  tested on  rho no segments  8619
+1 0 4 7 460.05735777588023 39.8917314394808
+model trained on  mu  tested on  gamma no segments  8619
+1 0 4 8 430.4579293635681 50.13176727112494
+model trained on  mu  tested on  theta no segments  8619
+1 0 4 9 434.7269607633325 61.706339781986934
+model trained on  chi  tested on  beta no segments  89684
+1 0 5 0 448.9238672562009 275.10262418903886
+model trained on  chi  tested on  phi no segments  89684
+1 0 5 1 121.88139036275193 47.5208242656686
+model trained on  chi  tested on  kappa no segments  89684
+1 0 5 2 672.154185393732 37.12534154952228
+model trained on  chi  tested on  alpha no segments  89684
+1 0 5 3 148.08998740904764 50.46812127924815
+model trained on  chi  tested on  mu no segments  89684
+1 0 5 4 1058.7205024085872 204.1880404865883
+model trained on  chi  tested on  chi no segments  89684
+1 0 5 5 98.70469983525697 41.896818630447065
+model trained on  chi  tested on  delta no segments  89684
+1 0 5 6 260.3300123768562 68.30596401687067
+model trained on  chi  tested on  rho no segments  89684
+1 0 5 7 537.0600468458974 139.62193910968728
+model trained on  chi  tested on  gamma no segments  89684
+1 0 5 8 340.89469200955426 64.55039861453457
+model trained on  chi  tested on  theta no segments  89684
+1 0 5 9 473.1721861542823 102.58338953638975
+model trained on  delta  tested on  beta no segments  12614
+1 0 6 0 358.9289977891793 195.62644937028065
+model trained on  delta  tested on  phi no segments  12614
+1 0 6 1 119.95282249857922 29.356983398968783
+model trained on  delta  tested on  kappa no segments  12614
+1 0 6 2 494.08237581045756 38.93641481889355
+model trained on  delta  tested on  alpha no segments  12614
+1 0 6 3 150.24398801622215 50.18475891398661
+model trained on  delta  tested on  mu no segments  12614
+1 0 6 4 753.914829992646 147.84665932950242
+model trained on  delta  tested on  chi no segments  12614
+1 0 6 5 118.64503362471633 36.44997301416741
+model trained on  delta  tested on  delta no segments  12614
+1 0 6 6 215.79302315445096 36.038817536189356
+model trained on  delta  tested on  rho no segments  12614
+1 0 6 7 366.2093159269408 92.14008688987323
+model trained on  delta  tested on  gamma no segments  12614
+1 0 6 8 348.4769803674348 72.59559457321618
+model trained on  delta  tested on  theta no segments  12614
+1 0 6 9 374.10647798150654 82.8852808507689
+model trained on  rho  tested on  beta no segments  18669
+1 0 7 0 569.5194067853267 312.00020497727456
+model trained on  rho  tested on  phi no segments  18669
+1 0 7 1 135.31992530516425 51.788079062623936
+model trained on  rho  tested on  kappa no segments  18669
+1 0 7 2 741.6933023031658 50.437819926975536
+model trained on  rho  tested on  alpha no segments  18669
+1 0 7 3 174.45197805610724 64.89157182020064
+model trained on  rho  tested on  mu no segments  18669
+1 0 7 4 1084.3223701344464 392.4498633916834
+model trained on  rho  tested on  chi no segments  18669
+1 0 7 5 116.1809748753123 46.37187576103051
+model trained on  rho  tested on  delta no segments  18669
+1 0 7 6 368.095279065666 65.4923922472518
+model trained on  rho  tested on  rho no segments  18669
+1 0 7 7 221.29572189571414 21.55156508234038
+model trained on  rho  tested on  gamma no segments  18669
+1 0 7 8 381.95358177865563 68.09140654267685
+model trained on  rho  tested on  theta no segments  18669
+1 0 7 9 677.0431272021565 101.678462466977
+model trained on  gamma  tested on  beta no segments  16766
+1 0 8 0 790.298188014707 380.4235756855857
+model trained on  gamma  tested on  phi no segments  16766
+1 0 8 1 138.6857559127725 33.01682643053323
+model trained on  gamma  tested on  kappa no segments  16766
+1 0 8 2 778.875686499215 178.43487791094503
+model trained on  gamma  tested on  alpha no segments  16766
+1 0 8 3 197.42606941421093 64.51452965096531
+model trained on  gamma  tested on  mu no segments  16766
+1 0 8 4 1242.9764479053922 307.0899563209992
+model trained on  gamma  tested on  chi no segments  16766
+1 0 8 5 128.36634208384567 34.990043895696346
+model trained on  gamma  tested on  delta no segments  16766
+1 0 8 6 425.4933708575057 62.37951106516213
+model trained on  gamma  tested on  rho no segments  16766
+1 0 8 7 645.3051422679287 150.38850382495076
+model trained on  gamma  tested on  gamma no segments  16766
+1 0 8 8 310.31595883827464 62.03890031722085
+model trained on  gamma  tested on  theta no segments  16766
+1 0 8 9 804.8680682367443 87.61224347985505
+model trained on  theta  tested on  beta no segments  17368
+1 0 9 0 289.1177922414888 125.61434927323953
+model trained on  theta  tested on  phi no segments  17368
+1 0 9 1 132.86267508560675 38.83436711144352
+model trained on  theta  tested on  kappa no segments  17368
+1 0 9 2 524.9514703283982 55.69399783407871
+model trained on  theta  tested on  alpha no segments  17368
+1 0 9 3 152.18934285940395 43.61324654248779
+model trained on  theta  tested on  mu no segments  17368
+1 0 9 4 682.9244730431569 49.586516599658125
+model trained on  theta  tested on  chi no segments  17368
+1 0 9 5 123.4616821088213 37.41521454930816
+model trained on  theta  tested on  delta no segments  17368
+1 0 9 6 236.9647077334843 41.15944233426568
+model trained on  theta  tested on  rho no segments  17368
+1 0 9 7 352.7629913286708 72.1307686236003
+model trained on  theta  tested on  gamma no segments  17368
+1 0 9 8 366.19235356768803 67.08343962957385
+model trained on  theta  tested on  theta no segments  17368
+1 0 9 9 345.40736617064664 75.70532028050637
+model trained on  beta  tested on  beta no segments  15520
+1 1 0 0 322.7948481212218 95.61240300636929
+model trained on  beta  tested on  phi no segments  15520
+1 1 0 1 163.70698301251863 49.426398085696896
+model trained on  beta  tested on  kappa no segments  15520
+1 1 0 2 630.5909809116557 34.26253203973931
+model trained on  beta  tested on  alpha no segments  15520
+1 1 0 3 139.18828802511385 4.312794547383845
+model trained on  beta  tested on  mu no segments  15520
+1 1 0 4 776.0371984880393 102.98638826552985
+model trained on  beta  tested on  chi no segments  15520
+1 1 0 5 136.28350255772125 38.93881839579579
+model trained on  beta  tested on  delta no segments  15520
+1 1 0 6 292.88074127932316 50.662162065272966
+model trained on  beta  tested on  rho no segments  15520
+1 1 0 7 432.4435160835409 92.44719899668769
+model trained on  beta  tested on  gamma no segments  15520
+1 1 0 8 392.01136680188284 66.29787125920741
+model trained on  beta  tested on  theta no segments  15520
+1 1 0 9 405.9130202934567 71.08945763891414
+model trained on  phi  tested on  beta no segments  13277
+1 1 1 0 847.108721971586 428.3146926875788
+model trained on  phi  tested on  phi no segments  13277
+1 1 1 1 123.50257720854374 51.476368462555364
+model trained on  phi  tested on  kappa no segments  13277
+1 1 1 2 1003.6535119903177 137.50531498408387
+model trained on  phi  tested on  alpha no segments  13277
+1 1 1 3 152.39304015582405 56.1126343758392
+model trained on  phi  tested on  mu no segments  13277
+1 1 1 4 1455.2813927962327 411.85569845577425
+model trained on  phi  tested on  chi no segments  13277
+1 1 1 5 107.15373589564273 47.22196327769927
+model trained on  phi  tested on  delta no segments  13277
+1 1 1 6 502.79918105164387 97.67816773181164
+model trained on  phi  tested on  rho no segments  13277
+1 1 1 7 689.9040519158889 166.69654976613842
+model trained on  phi  tested on  gamma no segments  13277
+1 1 1 8 368.9898010606351 72.05172357502266
+model trained on  phi  tested on  theta no segments  13277
+1 1 1 9 931.6673379749008 101.32755291445302
+model trained on  kappa  tested on  beta no segments  13182
+1 1 2 0 492.4697004089453 193.52709379961405
+model trained on  kappa  tested on  phi no segments  13182
+1 1 2 1 215.18830126715693 59.26381248927247
+model trained on  kappa  tested on  kappa no segments  13182
+1 1 2 2 521.7028913669923 65.42721976057257
+model trained on  kappa  tested on  alpha no segments  13182
+1 1 2 3 223.41850573456355 47.17912885506529
+model trained on  kappa  tested on  mu no segments  13182
+1 1 2 4 890.5138979110417 98.49548464916256
+model trained on  kappa  tested on  chi no segments  13182
+1 1 2 5 163.62260601331027 45.296007909155
+model trained on  kappa  tested on  delta no segments  13182
+1 1 2 6 354.88162961215465 36.35693044958708
+model trained on  kappa  tested on  rho no segments  13182
+1 1 2 7 548.0203798741193 107.28321644290848
+model trained on  kappa  tested on  gamma no segments  13182
+1 1 2 8 402.317891116679 52.14165880126101
+model trained on  kappa  tested on  theta no segments  13182
+1 1 2 9 448.1554665872669 80.72812915780479
+model trained on  alpha  tested on  beta no segments  11493
+1 1 3 0 510.8011899425794 296.7594796200752
+model trained on  alpha  tested on  phi no segments  11493
+1 1 3 1 138.5833971491145 59.484187133109025
+model trained on  alpha  tested on  kappa no segments  11493
+1 1 3 2 864.4394402146141 63.252912894734486
+model trained on  alpha  tested on  alpha no segments  11493
+1 1 3 3 106.37823748159929 2.6043694702183515
+model trained on  alpha  tested on  mu no segments  11493
+1 1 3 4 1207.1216018355428 342.17265229034865
+model trained on  alpha  tested on  chi no segments  11493
+1 1 3 5 109.24587766068453 46.33941468997753
+model trained on  alpha  tested on  delta no segments  11493
+1 1 3 6 359.4546267638063 101.232563015717
+model trained on  alpha  tested on  rho no segments  11493
+1 1 3 7 521.6096084444046 183.5124399320797
+model trained on  alpha  tested on  gamma no segments  11493
+1 1 3 8 380.9189749573993 69.3815007292913
+model trained on  alpha  tested on  theta no segments  11493
+1 1 3 9 665.5307876684396 97.99023713056897
+model trained on  mu  tested on  beta no segments  8536
+1 1 4 0 545.4640202594678 102.13769555352313
+model trained on  mu  tested on  phi no segments  8536
+1 1 4 1 449.54947028988727 15.501817378779604
+model trained on  mu  tested on  kappa no segments  8536
+1 1 4 2 638.1706264332948 4.8347605288631925
+model trained on  mu  tested on  alpha no segments  8536
+1 1 4 3 467.795962209863 21.118059138502048
+model trained on  mu  tested on  mu no segments  8536
+1 1 4 4 778.5413636457711 39.163458993609254
+model trained on  mu  tested on  chi no segments  8536
+1 1 4 5 433.9021335340735 17.771492016618907
+model trained on  mu  tested on  delta no segments  8536
+1 1 4 6 435.4448189723641 19.575973193573166
+model trained on  mu  tested on  rho no segments  8536
+1 1 4 7 621.3893510810474 45.441078441203075
+model trained on  mu  tested on  gamma no segments  8536
+1 1 4 8 529.2128146571566 46.12551030382568
+model trained on  mu  tested on  theta no segments  8536
+1 1 4 9 518.5475607173429 49.9652689643829
+model trained on  chi  tested on  beta no segments  88784
+1 1 5 0 498.2649657462824 278.61356964629186
+model trained on  chi  tested on  phi no segments  88784
+1 1 5 1 138.4730021910545 56.73660230861504
+model trained on  chi  tested on  kappa no segments  88784
+1 1 5 2 813.5724475216026 78.09191949689352
+model trained on  chi  tested on  alpha no segments  88784
+1 1 5 3 120.42906570354879 5.069868378664914
+model trained on  chi  tested on  mu no segments  88784
+1 1 5 4 1123.7773515611634 185.82688281429313
+model trained on  chi  tested on  chi no segments  88784
+1 1 5 5 105.01035942970339 45.67121893052729
+model trained on  chi  tested on  delta no segments  88784
+1 1 5 6 306.59709160117177 79.29465859854058
+model trained on  chi  tested on  rho no segments  88784
+1 1 5 7 665.2535929692546 178.89729265352076
+model trained on  chi  tested on  gamma no segments  88784
+1 1 5 8 363.9126633012695 68.00064493639282
+model trained on  chi  tested on  theta no segments  88784
+1 1 5 9 530.087148767258 90.66075381478828
+model trained on  delta  tested on  beta no segments  12414
+1 1 6 0 413.53651187007347 199.36291980357686
+model trained on  delta  tested on  phi no segments  12414
+1 1 6 1 138.56645463302098 37.649990561914905
+model trained on  delta  tested on  kappa no segments  12414
+1 1 6 2 592.3528078285166 22.127609160547827
+model trained on  delta  tested on  alpha no segments  12414
+1 1 6 3 122.92286053911724 9.84785591067066
+model trained on  delta  tested on  mu no segments  12414
+1 1 6 4 898.5916323529678 112.36953911501598
+model trained on  delta  tested on  chi no segments  12414
+1 1 6 5 133.3009694117268 37.49458520717624
+model trained on  delta  tested on  delta no segments  12414
+1 1 6 6 262.3824733388316 47.12478356661478
+model trained on  delta  tested on  rho no segments  12414
+1 1 6 7 453.34737853981403 107.77795308456318
+model trained on  delta  tested on  gamma no segments  12414
+1 1 6 8 374.7841331524034 68.54743981348769
+model trained on  delta  tested on  theta no segments  12414
+1 1 6 9 421.5881711200813 84.452187668345
+model trained on  rho  tested on  beta no segments  18469
+1 1 7 0 733.4871291877505 369.82784158434964
+model trained on  rho  tested on  phi no segments  18469
+1 1 7 1 167.3587386165287 62.25140093235287
+model trained on  rho  tested on  kappa no segments  18469
+1 1 7 2 850.3764988615893 37.91132045990863
+model trained on  rho  tested on  alpha no segments  18469
+1 1 7 3 191.22247448135437 51.937302418304085
+model trained on  rho  tested on  mu no segments  18469
+1 1 7 4 1234.8322041501237 411.5671934481121
+model trained on  rho  tested on  chi no segments  18469
+1 1 7 5 124.59537000700972 56.15021880305111
+model trained on  rho  tested on  delta no segments  18469
+1 1 7 6 478.5447477969543 71.28383078777247
+model trained on  rho  tested on  rho no segments  18469
+1 1 7 7 249.1606487859528 25.698496512752122
+model trained on  rho  tested on  gamma no segments  18469
+1 1 7 8 400.7136795785835 65.05533804042132
+model trained on  rho  tested on  theta no segments  18469
+1 1 7 9 833.9410288072924 104.49399741992642
+model trained on  gamma  tested on  beta no segments  16606
+1 1 8 0 816.9469305879147 411.97715613995143
+model trained on  gamma  tested on  phi no segments  16606
+1 1 8 1 170.22332651399782 27.984119258054495
+model trained on  gamma  tested on  kappa no segments  16606
+1 1 8 2 877.9374216291177 183.34224858712236
+model trained on  gamma  tested on  alpha no segments  16606
+1 1 8 3 181.0706304769973 29.677111023534025
+model trained on  gamma  tested on  mu no segments  16606
+1 1 8 4 1322.7402715315204 334.4966182946367
+model trained on  gamma  tested on  chi no segments  16606
+1 1 8 5 155.10521121054043 28.73735554047283
+model trained on  gamma  tested on  delta no segments  16606
+1 1 8 6 473.18806561141383 86.4628340879941
+model trained on  gamma  tested on  rho no segments  16606
+1 1 8 7 705.6104827726543 169.65960235701118
+model trained on  gamma  tested on  gamma no segments  16606
+1 1 8 8 340.69409859999604 65.74150132901538
+model trained on  gamma  tested on  theta no segments  16606
+1 1 8 9 877.4482184297466 91.0356497945751
+model trained on  theta  tested on  beta no segments  17208
+1 1 9 0 351.67299838436963 150.15088912520005
+model trained on  theta  tested on  phi no segments  17208
+1 1 9 1 147.97405808898952 49.198885239809115
+model trained on  theta  tested on  kappa no segments  17208
+1 1 9 2 605.6102216110447 46.9670013477261
+model trained on  theta  tested on  alpha no segments  17208
+1 1 9 3 118.40226389997139 7.258752767271531
+model trained on  theta  tested on  mu no segments  17208
+1 1 9 4 813.4476925428883 15.822917429985239
+model trained on  theta  tested on  chi no segments  17208
+1 1 9 5 129.37596290493374 39.99868034364584
+model trained on  theta  tested on  delta no segments  17208
+1 1 9 6 277.285114067843 51.99882875012671
+model trained on  theta  tested on  rho no segments  17208
+1 1 9 7 428.0195462800275 106.68295197626689
+model trained on  theta  tested on  gamma no segments  17208
+1 1 9 8 385.4455699437016 66.36947381714921
+model trained on  theta  tested on  theta no segments  17208
+1 1 9 9 378.48745833374835 79.70575813083269
+model trained on  beta  tested on  beta no segments  15370
+1 2 0 0 363.02445250518673 122.89219464750772
+model trained on  beta  tested on  phi no segments  15370
+1 2 0 1 184.26405477365253 51.42801097259278
+model trained on  beta  tested on  kappa no segments  15370
+1 2 0 2 737.7122370729033 13.384650346675308
+model trained on  beta  tested on  alpha no segments  15370
+1 2 0 3 160.67758563539286 11.54611085430325
+model trained on  beta  tested on  mu no segments  15370
+1 2 0 4 900.1669236653487 114.54694161470775
+model trained on  beta  tested on  chi no segments  15370
+1 2 0 5 146.54222104905165 39.73709998285892
+model trained on  beta  tested on  delta no segments  15370
+1 2 0 6 332.90313498078746 60.87671235967882
+model trained on  beta  tested on  rho no segments  15370
+1 2 0 7 494.7641424040411 95.63330238991513
+model trained on  beta  tested on  gamma no segments  15370
+1 2 0 8 400.10543098320494 66.93974571932401
+model trained on  beta  tested on  theta no segments  15370
+1 2 0 9 472.7015127248922 60.87465722374092
+model trained on  phi  tested on  beta no segments  13167
+1 2 1 0 868.9823487870547 440.4276081228095
+model trained on  phi  tested on  phi no segments  13167
+1 2 1 1 132.09573057222772 55.9798079159414
+model trained on  phi  tested on  kappa no segments  13167
+1 2 1 2 1049.8044309139198 147.88418048613676
+model trained on  phi  tested on  alpha no segments  13167
+1 2 1 3 163.62493221464248 63.14931420273022
+model trained on  phi  tested on  mu no segments  13167
+1 2 1 4 1517.3839564000373 450.65363093929795
+model trained on  phi  tested on  chi no segments  13167
+1 2 1 5 110.89732590528334 50.37931164443379
+model trained on  phi  tested on  delta no segments  13167
+1 2 1 6 534.8400217997051 102.66179011514554
+model trained on  phi  tested on  rho no segments  13167
+1 2 1 7 740.8694273720096 170.47055899476186
+model trained on  phi  tested on  gamma no segments  13167
+1 2 1 8 378.1318976097755 70.6523980748314
+model trained on  phi  tested on  theta no segments  13167
+1 2 1 9 968.7289141210866 99.97785029900297
+model trained on  kappa  tested on  beta no segments  13052
+1 2 2 0 563.4820561412065 203.75674270795048
+model trained on  kappa  tested on  phi no segments  13052
+1 2 2 1 205.65194204952945 65.63737046491072
+model trained on  kappa  tested on  kappa no segments  13052
+1 2 2 2 597.3392220347316 64.55544082526015
+model trained on  kappa  tested on  alpha no segments  13052
+1 2 2 3 239.47068011907618 67.98010987747182
+model trained on  kappa  tested on  mu no segments  13052
+1 2 2 4 969.6623450254472 79.55414898850103
+model trained on  kappa  tested on  chi no segments  13052
+1 2 2 5 150.568628308662 53.72146521566161
+model trained on  kappa  tested on  delta no segments  13052
+1 2 2 6 404.1748025582921 38.73193847652795
+model trained on  kappa  tested on  rho no segments  13052
+1 2 2 7 625.129621473518 109.43262926263054
+model trained on  kappa  tested on  gamma no segments  13052
+1 2 2 8 413.65702422523003 60.349679081979694
+model trained on  kappa  tested on  theta no segments  13052
+1 2 2 9 487.47247050329133 84.2073311884412
+model trained on  alpha  tested on  beta no segments  11393
+1 2 3 0 567.528759208257 288.51968095584937
+model trained on  alpha  tested on  phi no segments  11393
+1 2 3 1 147.43258861956966 64.22935230500124
+model trained on  alpha  tested on  kappa no segments  11393
+1 2 3 2 946.6746754782566 94.10251036073993
+model trained on  alpha  tested on  alpha no segments  11393
+1 2 3 3 115.35366036381862 1.523378253073318
+model trained on  alpha  tested on  mu no segments  11393
+1 2 3 4 1268.8502582252709 363.94176855825435
+model trained on  alpha  tested on  chi no segments  11393
+1 2 3 5 112.33042220077488 48.391825626729
+model trained on  alpha  tested on  delta no segments  11393
+1 2 3 6 396.357769655012 116.03091566043315
+model trained on  alpha  tested on  rho no segments  11393
+1 2 3 7 672.6967964615011 197.00596156480654
+model trained on  alpha  tested on  gamma no segments  11393
+1 2 3 8 388.2839675338153 68.01508357597201
+model trained on  alpha  tested on  theta no segments  11393
+1 2 3 9 717.1814383137886 96.74583319260232
+model trained on  mu  tested on  beta no segments  8456
+1 2 4 0 595.8689101680229 143.05217910368034
+model trained on  mu  tested on  phi no segments  8456
+1 2 4 1 467.88086650350004 4.243093728046721
+model trained on  mu  tested on  kappa no segments  8456
+1 2 4 2 732.1715682045501 24.131403508529342
+model trained on  mu  tested on  alpha no segments  8456
+1 2 4 3 453.02618630951235 18.717781942954133
+model trained on  mu  tested on  mu no segments  8456
+1 2 4 4 857.3751240570491 7.167384725897421
+model trained on  mu  tested on  chi no segments  8456
+1 2 4 5 476.62702136099716 11.197692819921967
+model trained on  mu  tested on  delta no segments  8456
+1 2 4 6 465.78753024559865 27.183285561346334
+model trained on  mu  tested on  rho no segments  8456
+1 2 4 7 713.7468340523006 79.68294050390332
+model trained on  mu  tested on  gamma no segments  8456
+1 2 4 8 553.9513479937133 44.77576210775252
+model trained on  mu  tested on  theta no segments  8456
+1 2 4 9 559.3254760899031 54.68002684502058
+model trained on  chi  tested on  beta no segments  87891
+1 2 5 0 536.932173046137 284.1234721378312
+model trained on  chi  tested on  phi no segments  87891
+1 2 5 1 143.46124786634041 61.26055661056074
+model trained on  chi  tested on  kappa no segments  87891
+1 2 5 2 933.1289766478188 131.7483734408459
+model trained on  chi  tested on  alpha no segments  87891
+1 2 5 3 129.78915212602283 16.73019204301179
+model trained on  chi  tested on  mu no segments  87891
+1 2 5 4 1229.878622954237 251.8542341323713
+model trained on  chi  tested on  chi no segments  87891
+1 2 5 5 107.78881723213625 47.673881381559106
+model trained on  chi  tested on  delta no segments  87891
+1 2 5 6 351.05868493001464 104.67472751675784
+model trained on  chi  tested on  rho no segments  87891
+1 2 5 7 758.8109454218117 174.03796912278275
+model trained on  chi  tested on  gamma no segments  87891
+1 2 5 8 375.30544414451333 69.31427371455123
+model trained on  chi  tested on  theta no segments  87891
+1 2 5 9 595.0040190067804 78.55176322004932
+model trained on  delta  tested on  beta no segments  12214
+1 2 6 0 458.73271484204724 209.9999578513607
+model trained on  delta  tested on  phi no segments  12214
+1 2 6 1 146.8890332340982 42.37854237841351
+model trained on  delta  tested on  kappa no segments  12214
+1 2 6 2 694.7951824250649 4.469340120012528
+model trained on  delta  tested on  alpha no segments  12214
+1 2 6 3 123.69385921193378 18.962005282290967
+model trained on  delta  tested on  mu no segments  12214
+1 2 6 4 951.5032803900313 81.20421908535474
+model trained on  delta  tested on  chi no segments  12214
+1 2 6 5 133.8779035976492 39.58078392035632
+model trained on  delta  tested on  delta no segments  12214
+1 2 6 6 299.07219251621274 56.85523855771057
+model trained on  delta  tested on  rho no segments  12214
+1 2 6 7 519.013315608013 117.61888952301355
+model trained on  delta  tested on  gamma no segments  12214
+1 2 6 8 384.55501362673175 66.68167226867126
+model trained on  delta  tested on  theta no segments  12214
+1 2 6 9 468.516158044913 86.198017279933
+model trained on  rho  tested on  beta no segments  18269
+1 2 7 0 815.5840028601795 409.71938099790003
+model trained on  rho  tested on  phi no segments  18269
+1 2 7 1 205.40012723625796 56.18062376197757
+model trained on  rho  tested on  kappa no segments  18269
+1 2 7 2 918.9216960623743 30.95773664752946
+model trained on  rho  tested on  alpha no segments  18269
+1 2 7 3 243.7848964914123 54.84173713683171
+model trained on  rho  tested on  mu no segments  18269
+1 2 7 4 1348.12817859397 452.94248449801205
+model trained on  rho  tested on  chi no segments  18269
+1 2 7 5 161.503808814506 49.914580876153984
+model trained on  rho  tested on  delta no segments  18269
+1 2 7 6 545.54684368866 66.77771459545517
+model trained on  rho  tested on  rho no segments  18269
+1 2 7 7 273.83896921774345 37.43294649710437
+model trained on  rho  tested on  gamma no segments  18269
+1 2 7 8 422.77727014706744 63.357029136669716
+model trained on  rho  tested on  theta no segments  18269
+1 2 7 9 922.2863313151311 99.96337893267204
+model trained on  gamma  tested on  beta no segments  16446
+1 2 8 0 838.7672420638598 423.10804010074855
+model trained on  gamma  tested on  phi no segments  16446
+1 2 8 1 175.35880194087213 31.83581949365225
+model trained on  gamma  tested on  kappa no segments  16446
+1 2 8 2 952.9216774686453 171.1860633666719
+model trained on  gamma  tested on  alpha no segments  16446
+1 2 8 3 181.57760121084857 33.91754522839361
+model trained on  gamma  tested on  mu no segments  16446
+1 2 8 4 1428.979273878968 401.6586197918084
+model trained on  gamma  tested on  chi no segments  16446
+1 2 8 5 159.28474148781743 31.383546838525703
+model trained on  gamma  tested on  delta no segments  16446
+1 2 8 6 500.10619358708254 100.99475854870188
+model trained on  gamma  tested on  rho no segments  16446
+1 2 8 7 761.1671829880356 167.26379887774686
+model trained on  gamma  tested on  gamma no segments  16446
+1 2 8 8 357.32230995418496 67.65479778244365
+model trained on  gamma  tested on  theta no segments  16446
+1 2 8 9 910.6711059994824 101.6208759608719
+model trained on  theta  tested on  beta no segments  17048
+1 2 9 0 403.0877882464189 197.1347721032717
+model trained on  theta  tested on  phi no segments  17048
+1 2 9 1 153.9467868891327 59.34469103501606
+model trained on  theta  tested on  kappa no segments  17048
+1 2 9 2 680.5019251714642 30.390602606372976
+model trained on  theta  tested on  alpha no segments  17048
+1 2 9 3 127.20322595457452 10.252929554912775
+model trained on  theta  tested on  mu no segments  17048
+1 2 9 4 835.583659756586 68.76562712459764
+model trained on  theta  tested on  chi no segments  17048
+1 2 9 5 122.48374708524713 45.11960404918596
+model trained on  theta  tested on  delta no segments  17048
+1 2 9 6 313.3328574575248 61.949932813258926
+model trained on  theta  tested on  rho no segments  17048
+1 2 9 7 521.5513734899457 117.41344340743412
+model trained on  theta  tested on  gamma no segments  17048
+1 2 9 8 391.00473840291824 67.35159679085477
+model trained on  theta  tested on  theta no segments  17048
+1 2 9 9 404.19885774026943 84.91165034793862
+model trained on  beta  tested on  beta no segments  15670
+2 0 0 0 257.2880901704691 82.49146293051184
+model trained on  beta  tested on  phi no segments  15670
+2 0 0 1 134.76414087752087 40.14193436275898
+model trained on  beta  tested on  kappa no segments  15670
+2 0 0 2 516.0393527505585 57.24322228378522
+model trained on  beta  tested on  alpha no segments  15670
+2 0 0 3 155.78049099187047 40.53110061697407
+model trained on  beta  tested on  mu no segments  15670
+2 0 0 4 625.7620835711276 137.0630917060245
+model trained on  beta  tested on  chi no segments  15670
+2 0 0 5 128.34734143358412 37.8988301548798
+model trained on  beta  tested on  delta no segments  15670
+2 0 0 6 233.3130399749703 36.480583653921954
+model trained on  beta  tested on  rho no segments  15670
+2 0 0 7 325.5022132134106 67.80658789860355
+model trained on  beta  tested on  gamma no segments  15670
+2 0 0 8 374.3368401616653 67.45685503331418
+model trained on  beta  tested on  theta no segments  15670
+2 0 0 9 357.3515065776749 76.89087283193854
+model trained on  phi  tested on  beta no segments  13387
+2 0 1 0 831.2116207358188 419.878748578892
+model trained on  phi  tested on  phi no segments  13387
+2 0 1 1 103.63371795410337 41.03603322571104
+model trained on  phi  tested on  kappa no segments  13387
+2 0 1 2 951.1029493446343 118.01893494607125
+model trained on  phi  tested on  alpha no segments  13387
+2 0 1 3 169.29702233014635 85.89868470273757
+model trained on  phi  tested on  mu no segments  13387
+2 0 1 4 1405.9019290432889 415.7730131138067
+model trained on  phi  tested on  chi no segments  13387
+2 0 1 5 99.49179406597284 45.030797886591564
+model trained on  phi  tested on  delta no segments  13387
+2 0 1 6 475.67625701462276 88.0270497354553
+model trained on  phi  tested on  rho no segments  13387
+2 0 1 7 625.4986776801109 149.35814429448294
+model trained on  phi  tested on  gamma no segments  13387
+2 0 1 8 347.6650398907323 75.86892696810142
+model trained on  phi  tested on  theta no segments  13387
+2 0 1 9 909.903076969578 102.65877821513824
+model trained on  kappa  tested on  beta no segments  13312
+2 0 2 0 420.7802554755284 186.0105491127195
+model trained on  kappa  tested on  phi no segments  13312
+2 0 2 1 185.16833587974205 42.33309688279953
+model trained on  kappa  tested on  kappa no segments  13312
+2 0 2 2 414.3337107916273 56.46494033185469
+model trained on  kappa  tested on  alpha no segments  13312
+2 0 2 3 199.29871297382323 66.63446013700569
+model trained on  kappa  tested on  mu no segments  13312
+2 0 2 4 722.4733337457419 101.33939181410528
+model trained on  kappa  tested on  chi no segments  13312
+2 0 2 5 165.86907227770777 33.211813819460666
+model trained on  kappa  tested on  delta no segments  13312
+2 0 2 6 278.35872199443423 29.946747372948092
+model trained on  kappa  tested on  rho no segments  13312
+2 0 2 7 437.92466010623605 81.79742837227501
+model trained on  kappa  tested on  gamma no segments  13312
+2 0 2 8 367.8014031928492 46.174236980519474
+model trained on  kappa  tested on  theta no segments  13312
+2 0 2 9 393.72049575773474 79.75817200978575
+model trained on  alpha  tested on  beta no segments  11603
+2 0 3 0 420.1369568710811 277.74683814229144
+model trained on  alpha  tested on  phi no segments  11603
+2 0 3 1 118.5216129525498 48.52111900054255
+model trained on  alpha  tested on  kappa no segments  11603
+2 0 3 2 761.3908637749233 30.70591853719691
+model trained on  alpha  tested on  alpha no segments  11603
+2 0 3 3 137.26715791222938 43.930659900217
+model trained on  alpha  tested on  mu no segments  11603
+2 0 3 4 1111.1664681755333 336.98382427840784
+model trained on  alpha  tested on  chi no segments  11603
+2 0 3 5 104.01590063467582 43.57005776981402
+model trained on  alpha  tested on  delta no segments  11603
+2 0 3 6 312.2312742351377 87.76455677973335
+model trained on  alpha  tested on  rho no segments  11603
+2 0 3 7 379.294264705624 113.28784776546003
+model trained on  alpha  tested on  gamma no segments  11603
+2 0 3 8 362.3678872653524 70.1865926502428
+model trained on  alpha  tested on  theta no segments  11603
+2 0 3 9 595.0231476125545 95.14940428604201
+model trained on  mu  tested on  beta no segments  8619
+2 0 4 0 424.9639529485711 84.00510173733458
+model trained on  mu  tested on  phi no segments  8619
+2 0 4 1 208.80075761164835 80.22873977472362
+model trained on  mu  tested on  kappa no segments  8619
+2 0 4 2 507.07052330619814 28.158683193839
+model trained on  mu  tested on  alpha no segments  8619
+2 0 4 3 265.5143942928168 85.93841296263281
+model trained on  mu  tested on  mu no segments  8619
+2 0 4 4 565.9852254167962 18.395742079654497
+model trained on  mu  tested on  chi no segments  8619
+2 0 4 5 138.17953697573273 60.34462465225094
+model trained on  mu  tested on  delta no segments  8619
+2 0 4 6 336.45195755929296 20.968094105793245
+model trained on  mu  tested on  rho no segments  8619
+2 0 4 7 436.69118817218487 48.30993764375379
+model trained on  mu  tested on  gamma no segments  8619
+2 0 4 8 412.21735033465865 51.50669484061383
+model trained on  mu  tested on  theta no segments  8619
+2 0 4 9 426.36659352310636 64.01004006730004
+model trained on  chi  tested on  beta no segments  89684
+2 0 5 0 442.96920553191455 271.395407032116
+model trained on  chi  tested on  phi no segments  89684
+2 0 5 1 118.19668640719215 46.84839797238463
+model trained on  chi  tested on  kappa no segments  89684
+2 0 5 2 664.5914807719828 37.52088533301524
+model trained on  chi  tested on  alpha no segments  89684
+2 0 5 3 146.37043504568288 50.10482126976812
+model trained on  chi  tested on  mu no segments  89684
+2 0 5 4 1047.3903387293187 206.51787327212082
+model trained on  chi  tested on  chi no segments  89684
+2 0 5 5 97.57776902841887 41.65485025373552
+model trained on  chi  tested on  delta no segments  89684
+2 0 5 6 257.0627708067985 64.855816164702
+model trained on  chi  tested on  rho no segments  89684
+2 0 5 7 525.9982019451842 136.55865889214957
+model trained on  chi  tested on  gamma no segments  89684
+2 0 5 8 338.3687127556696 64.0200977817897
+model trained on  chi  tested on  theta no segments  89684
+2 0 5 9 465.78584776055766 101.72653421011212
+model trained on  delta  tested on  beta no segments  12614
+2 0 6 0 346.4471703950463 188.46610022227256
+model trained on  delta  tested on  phi no segments  12614
+2 0 6 1 118.59354130973725 26.644520730420826
+model trained on  delta  tested on  kappa no segments  12614
+2 0 6 2 487.150399290401 38.807585969581616
+model trained on  delta  tested on  alpha no segments  12614
+2 0 6 3 147.68358879850285 48.79260331699659
+model trained on  delta  tested on  mu no segments  12614
+2 0 6 4 734.823160080345 151.43274343615155
+model trained on  delta  tested on  chi no segments  12614
+2 0 6 5 118.68807541757927 35.763424032464734
+model trained on  delta  tested on  delta no segments  12614
+2 0 6 6 211.1405213196916 33.44396092537959
+model trained on  delta  tested on  rho no segments  12614
+2 0 6 7 354.0936590538483 84.90640345671493
+model trained on  delta  tested on  gamma no segments  12614
+2 0 6 8 345.19577714104463 73.32845819030956
+model trained on  delta  tested on  theta no segments  12614
+2 0 6 9 366.25609352547065 81.8110903072522
+model trained on  rho  tested on  beta no segments  18669
+2 0 7 0 564.0725926584337 305.0809136850387
+model trained on  rho  tested on  phi no segments  18669
+2 0 7 1 136.75140661708653 51.13824650044352
+model trained on  rho  tested on  kappa no segments  18669
+2 0 7 2 736.4414023570307 51.847186040562974
+model trained on  rho  tested on  alpha no segments  18669
+2 0 7 3 172.8354917754815 65.95596550002774
+model trained on  rho  tested on  mu no segments  18669
+2 0 7 4 1073.8082405893606 390.49775500635803
+model trained on  rho  tested on  chi no segments  18669
+2 0 7 5 115.98446537602558 46.93903012245079
+model trained on  rho  tested on  delta no segments  18669
+2 0 7 6 367.7013406018367 64.90940047208433
+model trained on  rho  tested on  rho no segments  18669
+2 0 7 7 215.3338024876852 21.33682218647121
+model trained on  rho  tested on  gamma no segments  18669
+2 0 7 8 379.9673678009455 67.27356718125247
+model trained on  rho  tested on  theta no segments  18669
+2 0 7 9 670.2630296388521 102.05343193916687
+model trained on  gamma  tested on  beta no segments  16766
+2 0 8 0 786.3950812131991 374.54207561511464
+model trained on  gamma  tested on  phi no segments  16766
+2 0 8 1 140.6749598207765 26.312080551849945
+model trained on  gamma  tested on  kappa no segments  16766
+2 0 8 2 762.5264736190676 177.79248360809422
+model trained on  gamma  tested on  alpha no segments  16766
+2 0 8 3 187.4964321888145 69.2259746286231
+model trained on  gamma  tested on  mu no segments  16766
+2 0 8 4 1228.6997040091926 303.3947081575762
+model trained on  gamma  tested on  chi no segments  16766
+2 0 8 5 135.7508004289829 29.748944657391093
+model trained on  gamma  tested on  delta no segments  16766
+2 0 8 6 421.59539929538903 60.87508137628961
+model trained on  gamma  tested on  rho no segments  16766
+2 0 8 7 638.1199219544118 148.74856989296876
+model trained on  gamma  tested on  gamma no segments  16766
+2 0 8 8 304.8735983744688 61.60704133572596
+model trained on  gamma  tested on  theta no segments  16766
+2 0 8 9 796.1517529892507 85.43009210495153
+model trained on  theta  tested on  beta no segments  17368
+2 0 9 0 290.34409476944035 124.38393214629774
+model trained on  theta  tested on  phi no segments  17368
+2 0 9 1 133.15532991200644 35.288680602793
+model trained on  theta  tested on  kappa no segments  17368
+2 0 9 2 510.42235615937625 55.22830324691318
+model trained on  theta  tested on  alpha no segments  17368
+2 0 9 3 152.66256773662667 41.411230714823546
+model trained on  theta  tested on  mu no segments  17368
+2 0 9 4 673.6318603282693 61.290762785526624
+model trained on  theta  tested on  chi no segments  17368
+2 0 9 5 120.04719691973811 39.05345741087047
+model trained on  theta  tested on  delta no segments  17368
+2 0 9 6 234.3769835057207 39.743779646666646
+model trained on  theta  tested on  rho no segments  17368
+2 0 9 7 345.4774936547792 65.33771771440033
+model trained on  theta  tested on  gamma no segments  17368
+2 0 9 8 363.66004414302535 66.3191789711764
+model trained on  theta  tested on  theta no segments  17368
+2 0 9 9 343.08061264534786 75.37345117473578
+model trained on  beta  tested on  beta no segments  15520
+2 1 0 0 306.57535655696415 96.80598905010439
+model trained on  beta  tested on  phi no segments  15520
+2 1 0 1 159.11618873370892 49.23300769405785
+model trained on  beta  tested on  kappa no segments  15520
+2 1 0 2 624.1146634126613 44.26873449156523
+model trained on  beta  tested on  alpha no segments  15520
+2 1 0 3 142.85305700662622 3.2673685742955882
+model trained on  beta  tested on  mu no segments  15520
+2 1 0 4 759.3705409482847 105.92463500254883
+model trained on  beta  tested on  chi no segments  15520
+2 1 0 5 131.4903269758553 41.2791240419858
+model trained on  beta  tested on  delta no segments  15520
+2 1 0 6 282.8649249743886 48.10328528926524
+model trained on  beta  tested on  rho no segments  15520
+2 1 0 7 421.5877221029926 86.24148174413698
+model trained on  beta  tested on  gamma no segments  15520
+2 1 0 8 391.1693247703159 65.9468833687733
+model trained on  beta  tested on  theta no segments  15520
+2 1 0 9 402.1374961706911 70.72005508052072
+model trained on  phi  tested on  beta no segments  13277
+2 1 1 0 868.0458701037043 428.6636783506803
+model trained on  phi  tested on  phi no segments  13277
+2 1 1 1 122.35367172919479 50.474208146886504
+model trained on  phi  tested on  kappa no segments  13277
+2 1 1 2 1006.3083181034405 134.98905710562556
+model trained on  phi  tested on  alpha no segments  13277
+2 1 1 3 162.67900387918337 67.86203304994848
+model trained on  phi  tested on  mu no segments  13277
+2 1 1 4 1466.387294098942 431.35471617793587
+model trained on  phi  tested on  chi no segments  13277
+2 1 1 5 107.23352454598435 48.9732483597374
+model trained on  phi  tested on  delta no segments  13277
+2 1 1 6 519.8225744539619 94.08780580219761
+model trained on  phi  tested on  rho no segments  13277
+2 1 1 7 672.8381645470372 163.0848977203882
+model trained on  phi  tested on  gamma no segments  13277
+2 1 1 8 366.59459356816666 72.71599005463527
+model trained on  phi  tested on  theta no segments  13277
+2 1 1 9 952.5057025630615 102.65550713413182
+model trained on  kappa  tested on  beta no segments  13182
+2 1 2 0 495.69289685148095 188.40859209593748
+model trained on  kappa  tested on  phi no segments  13182
+2 1 2 1 221.85159411343326 51.94243585538945
+model trained on  kappa  tested on  kappa no segments  13182
+2 1 2 2 503.6660265555688 59.36690513481926
+model trained on  kappa  tested on  alpha no segments  13182
+2 1 2 3 238.1005212270638 44.423698197712696
+model trained on  kappa  tested on  mu no segments  13182
+2 1 2 4 877.660384610947 96.04883979557104
+model trained on  kappa  tested on  chi no segments  13182
+2 1 2 5 178.66166303989948 38.33845757709611
+model trained on  kappa  tested on  delta no segments  13182
+2 1 2 6 347.2403743373142 37.95371762342007
+model trained on  kappa  tested on  rho no segments  13182
+2 1 2 7 545.5153588517478 99.62109612787442
+model trained on  kappa  tested on  gamma no segments  13182
+2 1 2 8 395.91827560436855 50.01617602371708
+model trained on  kappa  tested on  theta no segments  13182
+2 1 2 9 438.082999072471 84.99340333128582
+model trained on  alpha  tested on  beta no segments  11493
+2 1 3 0 506.6109732706668 297.2028729026307
+model trained on  alpha  tested on  phi no segments  11493
+2 1 3 1 136.61598101765014 58.06079146497581
+model trained on  alpha  tested on  kappa no segments  11493
+2 1 3 2 859.1997940116827 60.413541041087186
+model trained on  alpha  tested on  alpha no segments  11493
+2 1 3 3 105.43645874805284 5.667957422919706
+model trained on  alpha  tested on  mu no segments  11493
+2 1 3 4 1199.2737263018246 338.8035985680464
+model trained on  alpha  tested on  chi no segments  11493
+2 1 3 5 109.06482003409978 46.09607582054558
+model trained on  alpha  tested on  delta no segments  11493
+2 1 3 6 359.26613321756804 99.71284362684825
+model trained on  alpha  tested on  rho no segments  11493
+2 1 3 7 513.1525142538551 179.10321415861964
+model trained on  alpha  tested on  gamma no segments  11493
+2 1 3 8 378.9460754484785 69.67718223309446
+model trained on  alpha  tested on  theta no segments  11493
+2 1 3 9 663.6706121051157 98.42701845539328
+model trained on  mu  tested on  beta no segments  8536
+2 1 4 0 515.1317383850414 95.85236420912788
+model trained on  mu  tested on  phi no segments  8536
+2 1 4 1 308.64995202623066 59.23056411022348
+model trained on  mu  tested on  kappa no segments  8536
+2 1 4 2 603.9318669081111 18.441282143642884
+model trained on  mu  tested on  alpha no segments  8536
+2 1 4 3 351.8293618488144 81.23671988844265
+model trained on  mu  tested on  mu no segments  8536
+2 1 4 4 706.8988388087461 18.178764813489465
+model trained on  mu  tested on  chi no segments  8536
+2 1 4 5 252.01250820991558 51.58700148373752
+model trained on  mu  tested on  delta no segments  8536
+2 1 4 6 400.9524096172676 24.183350702478926
+model trained on  mu  tested on  rho no segments  8536
+2 1 4 7 597.276128573003 61.22751949845527
+model trained on  mu  tested on  gamma no segments  8536
+2 1 4 8 468.8693840058217 45.44407420631812
+model trained on  mu  tested on  theta no segments  8536
+2 1 4 9 488.76954315975127 56.52825382508258
+model trained on  chi  tested on  beta no segments  88784
+2 1 5 0 495.6079531263064 277.59473119769547
+model trained on  chi  tested on  phi no segments  88784
+2 1 5 1 135.3489623288543 56.48538133621657
+model trained on  chi  tested on  kappa no segments  88784
+2 1 5 2 808.0604168383026 73.5450846981591
+model trained on  chi  tested on  alpha no segments  88784
+2 1 5 3 115.31426399173833 5.0895662505395975
+model trained on  chi  tested on  mu no segments  88784
+2 1 5 4 1113.4352617758682 183.687762979797
+model trained on  chi  tested on  chi no segments  88784
+2 1 5 5 103.96006416935745 44.65768868574858
+model trained on  chi  tested on  delta no segments  88784
+2 1 5 6 301.94512681020996 78.52203311913529
+model trained on  chi  tested on  rho no segments  88784
+2 1 5 7 663.6972384358202 178.90089921434188
+model trained on  chi  tested on  gamma no segments  88784
+2 1 5 8 360.0701289451901 68.91882143952041
+model trained on  chi  tested on  theta no segments  88784
+2 1 5 9 522.8510226307038 91.70094751140502
+model trained on  delta  tested on  beta no segments  12414
+2 1 6 0 394.51582989762625 185.69758261161348
+model trained on  delta  tested on  phi no segments  12414
+2 1 6 1 135.682208052312 38.84957517620751
+model trained on  delta  tested on  kappa no segments  12414
+2 1 6 2 583.3384416094814 21.76550061271512
+model trained on  delta  tested on  alpha no segments  12414
+2 1 6 3 117.22709808457198 9.439675473417608
+model trained on  delta  tested on  mu no segments  12414
+2 1 6 4 867.3817335620741 113.81364950346392
+model trained on  delta  tested on  chi no segments  12414
+2 1 6 5 130.45190620793912 37.051291320308025
+model trained on  delta  tested on  delta no segments  12414
+2 1 6 6 257.71610446908244 50.24940298213104
+model trained on  delta  tested on  rho no segments  12414
+2 1 6 7 443.91964821920163 101.80377498140423
+model trained on  delta  tested on  gamma no segments  12414
+2 1 6 8 372.54815607969 69.80669181485663
+model trained on  delta  tested on  theta no segments  12414
+2 1 6 9 414.96483295528196 82.91888853631129
+model trained on  rho  tested on  beta no segments  18469
+2 1 7 0 724.7992224615247 359.73051342992125
+model trained on  rho  tested on  phi no segments  18469
+2 1 7 1 170.8199316691292 63.48689329331566
+model trained on  rho  tested on  kappa no segments  18469
+2 1 7 2 844.8393280330894 36.992177817395486
+model trained on  rho  tested on  alpha no segments  18469
+2 1 7 3 196.90632510613747 65.78735878349167
+model trained on  rho  tested on  mu no segments  18469
+2 1 7 4 1234.6393755378178 417.3431943083369
+model trained on  rho  tested on  chi no segments  18469
+2 1 7 5 132.56795964130868 51.3176924580241
+model trained on  rho  tested on  delta no segments  18469
+2 1 7 6 474.24768002463713 72.96289354911836
+model trained on  rho  tested on  rho no segments  18469
+2 1 7 7 243.77166566056735 26.599730256097075
+model trained on  rho  tested on  gamma no segments  18469
+2 1 7 8 402.14556323670604 64.68468412986823
+model trained on  rho  tested on  theta no segments  18469
+2 1 7 9 822.4194821712387 103.88232385081113
+model trained on  gamma  tested on  beta no segments  16606
+2 1 8 0 813.5082194179695 409.16066034921414
+model trained on  gamma  tested on  phi no segments  16606
+2 1 8 1 166.5130607777471 29.194816747568698
+model trained on  gamma  tested on  kappa no segments  16606
+2 1 8 2 881.6119249888765 182.77181741840985
+model trained on  gamma  tested on  alpha no segments  16606
+2 1 8 3 176.35395286262826 30.589806829999063
+model trained on  gamma  tested on  mu no segments  16606
+2 1 8 4 1314.0168338723101 326.8484053120808
+model trained on  gamma  tested on  chi no segments  16606
+2 1 8 5 150.500685867508 29.82187985882407
+model trained on  gamma  tested on  delta no segments  16606
+2 1 8 6 470.69593899576887 86.48878853279092
+model trained on  gamma  tested on  rho no segments  16606
+2 1 8 7 702.7422726750737 169.78412641763984
+model trained on  gamma  tested on  gamma no segments  16606
+2 1 8 8 336.3072365036488 65.42458721460729
+model trained on  gamma  tested on  theta no segments  16606
+2 1 8 9 871.9171327272941 90.12477276269632
+model trained on  theta  tested on  beta no segments  17208
+2 1 9 0 339.4307529856492 160.21255118525855
+model trained on  theta  tested on  phi no segments  17208
+2 1 9 1 143.0350903000225 50.46712106736678
+model trained on  theta  tested on  kappa no segments  17208
+2 1 9 2 601.6651061296433 48.22011411712552
+model trained on  theta  tested on  alpha no segments  17208
+2 1 9 3 115.298003538975 7.042418754195708
+model trained on  theta  tested on  mu no segments  17208
+2 1 9 4 786.2438688721206 26.962500899959593
+model trained on  theta  tested on  chi no segments  17208
+2 1 9 5 123.13491548750457 41.33625458027775
+model trained on  theta  tested on  delta no segments  17208
+2 1 9 6 275.56030166979 54.028279136786075
+model trained on  theta  tested on  rho no segments  17208
+2 1 9 7 427.76471954912375 107.24104657608727
+model trained on  theta  tested on  gamma no segments  17208
+2 1 9 8 382.7468543185975 66.19516192773223
+model trained on  theta  tested on  theta no segments  17208
+2 1 9 9 377.414892185669 76.93066101023457
+model trained on  beta  tested on  beta no segments  15370
+2 2 0 0 350.23969724843755 126.78805867016983
+model trained on  beta  tested on  phi no segments  15370
+2 2 0 1 176.72632259341017 44.33154055678592
+model trained on  beta  tested on  kappa no segments  15370
+2 2 0 2 725.3422555679749 15.876565861615182
+model trained on  beta  tested on  alpha no segments  15370
+2 2 0 3 152.04819467008164 7.481438232374131
+model trained on  beta  tested on  mu no segments  15370
+2 2 0 4 875.1120630571224 99.75510168192233
+model trained on  beta  tested on  chi no segments  15370
+2 2 0 5 159.13651656419222 32.355737937041994
+model trained on  beta  tested on  delta no segments  15370
+2 2 0 6 323.02353520398316 62.820316656302666
+model trained on  beta  tested on  rho no segments  15370
+2 2 0 7 489.76571084883034 96.95378513662835
+model trained on  beta  tested on  gamma no segments  15370
+2 2 0 8 396.20735692132456 67.04316342477418
+model trained on  beta  tested on  theta no segments  15370
+2 2 0 9 463.8959413939563 67.89447810310155
+model trained on  phi  tested on  beta no segments  13167
+2 2 1 0 860.7034701513628 438.28869495449646
+model trained on  phi  tested on  phi no segments  13167
+2 2 1 1 129.55567231729424 54.02677048023875
+model trained on  phi  tested on  kappa no segments  13167
+2 2 1 2 1041.1048077462372 141.55523825204017
+model trained on  phi  tested on  alpha no segments  13167
+2 2 1 3 155.5132563586698 67.02711376442801
+model trained on  phi  tested on  mu no segments  13167
+2 2 1 4 1508.5252566286324 457.028197431383
+model trained on  phi  tested on  chi no segments  13167
+2 2 1 5 110.35563826567987 50.30895103189048
+model trained on  phi  tested on  delta no segments  13167
+2 2 1 6 525.9136001887196 99.6802609665358
+model trained on  phi  tested on  rho no segments  13167
+2 2 1 7 723.7957706026136 171.5168079511515
+model trained on  phi  tested on  gamma no segments  13167
+2 2 1 8 375.88250596138397 70.81284708024765
+model trained on  phi  tested on  theta no segments  13167
+2 2 1 9 960.789643597496 100.37322863289862
+model trained on  kappa  tested on  beta no segments  13052
+2 2 2 0 576.8020717178974 185.41602446960323
+model trained on  kappa  tested on  phi no segments  13052
+2 2 2 1 217.97894537661986 51.801307021608444
+model trained on  kappa  tested on  kappa no segments  13052
+2 2 2 2 587.8939634059433 71.14575461287225
+model trained on  kappa  tested on  alpha no segments  13052
+2 2 2 3 240.6742174944129 50.27029433641897
+model trained on  kappa  tested on  mu no segments  13052
+2 2 2 4 935.294915896739 52.370406117404684
+model trained on  kappa  tested on  chi no segments  13052
+2 2 2 5 175.2510657599261 42.045426357927795
+model trained on  kappa  tested on  delta no segments  13052
+2 2 2 6 401.0270422211104 39.04316515606474
+model trained on  kappa  tested on  rho no segments  13052
+2 2 2 7 624.9635488800787 93.60482211293106
+model trained on  kappa  tested on  gamma no segments  13052
+2 2 2 8 409.9262803243417 57.837253994946465
+model trained on  kappa  tested on  theta no segments  13052
+2 2 2 9 485.5105090055671 78.59009312499678
+model trained on  alpha  tested on  beta no segments  11393
+2 2 3 0 563.1867023739761 287.2085937350811
+model trained on  alpha  tested on  phi no segments  11393
+2 2 3 1 145.95955096954447 64.39892242644028
+model trained on  alpha  tested on  kappa no segments  11393
+2 2 3 2 943.9035226860273 91.93021630661636
+model trained on  alpha  tested on  alpha no segments  11393
+2 2 3 3 107.53615893786403 4.4317058776303355
+model trained on  alpha  tested on  mu no segments  11393
+2 2 3 4 1264.0128861523428 362.4205106928077
+model trained on  alpha  tested on  chi no segments  11393
+2 2 3 5 110.78466146323734 48.11961475744002
+model trained on  alpha  tested on  delta no segments  11393
+2 2 3 6 393.6068365995069 114.97253869355787
+model trained on  alpha  tested on  rho no segments  11393
+2 2 3 7 657.4609887964705 199.70814548335332
+model trained on  alpha  tested on  gamma no segments  11393
+2 2 3 8 386.4397471662641 68.49787704341543
+model trained on  alpha  tested on  theta no segments  11393
+2 2 3 9 717.7268580340383 99.21212938599176
+model trained on  mu  tested on  beta no segments  8456
+2 2 4 0 578.9116435498772 137.84825873989473
+model trained on  mu  tested on  phi no segments  8456
+2 2 4 1 492.77215211200513 25.287877536320565
+model trained on  mu  tested on  kappa no segments  8456
+2 2 4 2 726.9985190846172 24.104677802075894
+model trained on  mu  tested on  alpha no segments  8456
+2 2 4 3 474.0263958434507 0.678354429500132
+model trained on  mu  tested on  mu no segments  8456
+2 2 4 4 823.4316425094579 12.082889257108604
+model trained on  mu  tested on  chi no segments  8456
+2 2 4 5 525.6143347153449 11.90473688982646
+model trained on  mu  tested on  delta no segments  8456
+2 2 4 6 447.0270428017549 28.737247617328382
+model trained on  mu  tested on  rho no segments  8456
+2 2 4 7 716.1694472304629 79.92394360735875
+model trained on  mu  tested on  gamma no segments  8456
+2 2 4 8 546.319554524547 40.2559170610259
+model trained on  mu  tested on  theta no segments  8456
+2 2 4 9 548.6228801531004 47.95408775607156
+model trained on  chi  tested on  beta no segments  87891
+2 2 5 0 531.0315304475106 287.8743500381166
+model trained on  chi  tested on  phi no segments  87891
+2 2 5 1 142.50239047562886 61.40469881490721
+model trained on  chi  tested on  kappa no segments  87891
+2 2 5 2 931.0486473868242 128.28963413616796
+model trained on  chi  tested on  alpha no segments  87891
+2 2 5 3 127.20780194087152 17.983857210032568
+model trained on  chi  tested on  mu no segments  87891
+2 2 5 4 1230.6797329154876 256.77154537315164
+model trained on  chi  tested on  chi no segments  87891
+2 2 5 5 107.45766176700234 47.592775537981964
+model trained on  chi  tested on  delta no segments  87891
+2 2 5 6 351.0654993106723 105.42844361399924
+model trained on  chi  tested on  rho no segments  87891
+2 2 5 7 753.1151832193912 175.60260397918117
+model trained on  chi  tested on  gamma no segments  87891
+2 2 5 8 372.86223847008523 68.28911324923098
+model trained on  chi  tested on  theta no segments  87891
+2 2 5 9 593.2270616442527 79.17105315996156
+model trained on  delta  tested on  beta no segments  12214
+2 2 6 0 452.5635851669733 212.00961638958634
+model trained on  delta  tested on  phi no segments  12214
+2 2 6 1 148.0904351349093 39.090213965320615
+model trained on  delta  tested on  kappa no segments  12214
+2 2 6 2 672.2477638569904 9.811626422482473
+model trained on  delta  tested on  alpha no segments  12214
+2 2 6 3 119.2387542235495 12.212337202733522
+model trained on  delta  tested on  mu no segments  12214
+2 2 6 4 928.2763578019733 65.15937644351601
+model trained on  delta  tested on  chi no segments  12214
+2 2 6 5 139.06622756347844 36.64133953393518
+model trained on  delta  tested on  delta no segments  12214
+2 2 6 6 293.9640223737024 58.11916081179534
+model trained on  delta  tested on  rho no segments  12214
+2 2 6 7 496.52348622060606 109.85696191019682
+model trained on  delta  tested on  gamma no segments  12214
+2 2 6 8 383.83952958265667 68.0301579389478
+model trained on  delta  tested on  theta no segments  12214
+2 2 6 9 464.61132655233115 84.3477927961991
+model trained on  rho  tested on  beta no segments  18269
+2 2 7 0 815.9535512468867 415.47055959474955
+model trained on  rho  tested on  phi no segments  18269
+2 2 7 1 187.73906522719656 67.38859385523038
+model trained on  rho  tested on  kappa no segments  18269
+2 2 7 2 918.3639427846693 28.72262518342937
+model trained on  rho  tested on  alpha no segments  18269
+2 2 7 3 233.3443506755799 59.30605031701053
+model trained on  rho  tested on  mu no segments  18269
+2 2 7 4 1339.9211976109405 450.9195410547908
+model trained on  rho  tested on  chi no segments  18269
+2 2 7 5 137.3510771077429 56.5949307671727
+model trained on  rho  tested on  delta no segments  18269
+2 2 7 6 546.9960109519865 69.48188699522196
+model trained on  rho  tested on  rho no segments  18269
+2 2 7 7 266.42095315659253 35.328732575391754
+model trained on  rho  tested on  gamma no segments  18269
+2 2 7 8 415.5824623930023 64.4962973287153
+model trained on  rho  tested on  theta no segments  18269
+2 2 7 9 925.9735327636836 101.12625038891319
+model trained on  gamma  tested on  beta no segments  16446
+2 2 8 0 837.8378563959668 422.171728804882
+model trained on  gamma  tested on  phi no segments  16446
+2 2 8 1 174.2146150549344 30.72068806217041
+model trained on  gamma  tested on  kappa no segments  16446
+2 2 8 2 940.5465724389642 183.02313189352614
+model trained on  gamma  tested on  alpha no segments  16446
+2 2 8 3 178.10105165790165 35.090748520873575
+model trained on  gamma  tested on  mu no segments  16446
+2 2 8 4 1410.7895560973407 386.3304888710161
+model trained on  gamma  tested on  chi no segments  16446
+2 2 8 5 157.94588453903333 32.03859347699588
+model trained on  gamma  tested on  delta no segments  16446
+2 2 8 6 499.3454170398195 99.76011938265786
+model trained on  gamma  tested on  rho no segments  16446
+2 2 8 7 761.6049848313938 170.54875505181835
+model trained on  gamma  tested on  gamma no segments  16446
+2 2 8 8 354.693810508983 67.22481567104647
+model trained on  gamma  tested on  theta no segments  16446
+2 2 8 9 907.5339795558768 101.56148758562126
+model trained on  theta  tested on  beta no segments  17048
+2 2 9 0 388.00819681993306 199.19275113256765
+model trained on  theta  tested on  phi no segments  17048
+2 2 9 1 156.2597599222312 52.94495545358611
+model trained on  theta  tested on  kappa no segments  17048
+2 2 9 2 679.5409016190653 37.959212013712076
+model trained on  theta  tested on  alpha no segments  17048
+2 2 9 3 122.49939479499474 14.569042915550966
+model trained on  theta  tested on  mu no segments  17048
+2 2 9 4 817.8148090637969 79.55634335397536
+model trained on  theta  tested on  chi no segments  17048
+2 2 9 5 130.38943900351336 41.45297908006179
+model trained on  theta  tested on  delta no segments  17048
+2 2 9 6 308.11080404213527 61.437162135368794
+model trained on  theta  tested on  rho no segments  17048
+2 2 9 7 516.6493435604996 121.9734158258683
+model trained on  theta  tested on  gamma no segments  17048
+2 2 9 8 388.29727227517577 67.60212438896966
+model trained on  theta  tested on  theta no segments  17048
+2 2 9 9 398.68443238104146 87.73613423866524
