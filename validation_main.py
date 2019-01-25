@@ -97,8 +97,10 @@ x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y
 import segment_cluster as sc
 import importlib
 importlib.reload(sc)
-pro_clusters=[100, 150, 200]
-seg_lens=[30, 50, 70]
+from sklearn.cluster import KMeans
+
+pro_clusters=[30,100,150,200]
+seg_lens=[30,50,70,100,150]
 classes=set(y_train)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes), 2))
 for n_pro, proportion in enumerate(pro_clusters):

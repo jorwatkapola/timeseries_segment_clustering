@@ -97,8 +97,10 @@ x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y
 import segment_cluster as sc
 import importlib
 importlib.reload(sc)
-pro_clusters=[100, 150, 200]
-seg_lens=[30, 50, 70]
+from sklearn.cluster import KMeans
+
+pro_clusters=[30]
+seg_lens=[50, 70]
 classes=set(y_train)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), len(classes), 2))
 for n_pro, proportion in enumerate(pro_clusters):
@@ -140,4 +142,9 @@ for n_pro, proportion in enumerate(pro_clusters):
                 results[n_pro, n_len, n_model, n_test, 1]=np.std(np.array(reco_error)[:,1])
                 print(n_pro, n_len, n_model, n_test, results[n_pro, n_len, n_model, n_test, 0], results[n_pro, n_len, n_model, n_test, 1], flush=True)
 
-np.savetxt("model_errors.csv", results, delimiter=",")
+with open("model_errors.csv", "w") as outfile:
+    for a, n_pro in enumerate(results):
+        for b, n_len in enumerate(n_pro):
+            for c, n_model in enumerate(n_len):
+                outfile.write("#n_clusters: {}, n_segment_len: {}, n_training_class: {}\n".format(a,b,c))
+                np.savetxt(outfile, n_model, delimiter=",") 
