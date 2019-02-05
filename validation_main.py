@@ -120,7 +120,7 @@ for n_pro, proportion in enumerate(pro_clusters):
             all_train_segments=np.vstack(all_train_segments)
             if proportion > len(all_train_segments): proportion = len(all_train_segments)
             #cluster=KMeans(n_clusters=int(proportion*len(all_train_segments)), random_state=0)
-            cluster=KMeans(n_clusters=proportion, random_state=0)
+            cluster=KMeans(n_clusters=proportion, random_state=1)
             cluster.fit(all_train_segments)
             
             ##test against the validation set
