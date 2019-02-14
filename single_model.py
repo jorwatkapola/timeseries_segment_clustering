@@ -15,6 +15,7 @@ import segment_cluster as sc
 import importlib
 importlib.reload(sc)
 from sklearn.cluster import KMeans
+from datetime import date
 
 cwd = os.getcwd()
 if cwd.split("/")[1] == "home":
@@ -120,18 +121,17 @@ sigma4=armean+4*arstd-armin
 
 lcs_abu_std=[]
 for lc in lcs_abu:
-    lc[1]=(lc[1]-armin)/sigma4
-    over_sigma4=np.where(lc[1]>1.)[0]
-    lc[1][over_sigma4]=1.
+    lc[1]=(lc[1]-armean)/arstd
     lcs_abu_std.append(lc)
-#data is normalised, x_inorm = (x_i-x_min)/(x_max-x_min)
+# data is standardised, x_i_stand = (x_i - x_mean)/x_std
 
 x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu_std, classes_abu, ids_abu, test_size=0.5, random_state=0, stratify=classes_abu)
 x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y_test, id_test, test_size=0.5, random_state=0, stratify=y_test)
 
 pro_clusters=[100, 150, 200]
 seg_lens=[30, 50, 70]
-classes=set(y_train)
+classes=list(set(y_train))
+print(classes, flush=True)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), 2))
 for n_pro, proportion in enumerate(pro_clusters):
     for n_len, length in enumerate(seg_lens):
@@ -173,7 +173,7 @@ for n_pro, proportion in enumerate(pro_clusters):
             results[n_pro, n_len, n_test, 1]=np.std(np.array(reco_error)[:,1])
             print(n_pro, n_len, n_test, results[n_pro, n_len, n_test, 0], results[n_pro, n_len, n_test, 1], flush=True)
 
-with open("model_errors.csv", "w") as outfile:
+with open("model_errors_{}.csv".format(str(date.today())), "w") as outfile:
     for a, n_pro in enumerate(results):
         for b, n_len in enumerate(n_pro):
     #        for c, n_model in enumerate(n_len):
