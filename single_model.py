@@ -129,9 +129,6 @@ for lc in lcs_abu:
 x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu_std, classes_abu, ids_abu, test_size=0.5, random_state=0, stratify=classes_abu)
 x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y_test, id_test, test_size=0.5, random_state=0, stratify=y_test)
 
-import segment_cluster as sc
-import importlib
-importlib.reload(sc)
 pro_clusters=[100, 150, 200]
 seg_lens=[30, 50, 70]
 classes=set(y_train)
@@ -159,13 +156,13 @@ for n_pro, proportion in enumerate(pro_clusters):
 
         ##test against the validation set
         for n_test, test_class in enumerate(classes):
-            testing_ys=np.where(np.array(y_valid)=='{}'.format(test_class))[0]
+            testing_ids=np.where(np.array(y_valid)=='{}'.format(test_class))[0]
             time_stamps=True
             offset=False
             reco_error=[]
             seg_len=length
             seg_slide=int(length*0.5)
-            for ts_id in testing_ys:
+            for ts_id in testing_ids:
                 test_ts=x_valid[ts_id]
                 test_segments= sc.segmentation(test_ts, seg_len, seg_slide, time_stamps=time_stamps)
                 c_test_segments=sc.center_offset(test_segments, test_ts, offset=offset, time_stamps=time_stamps)

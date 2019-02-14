@@ -50,14 +50,14 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
     centroids=kmeans_model.cluster_centers_
     if np.shape(test_segments)[1] == 2:
         reco= np.zeros(np.shape(test_ts))
-        reco[0]=np.copy(test_ts[0])
         if rel_offset == True:
             ts_time=np.copy(test_ts[0])-test_ts[0][0]
+            print(ts_time)
         else:
             ts_time=np.copy(test_ts[0])
+        reco[0]=np.copy(ts_time)
         for n_seg, segment in enumerate(test_segments):
             start=np.where(ts_time==segment[0][0])[0][0]
-            print(start)
             end=int(start+len(segment[0]))
             reco_seg=reco[1][start:end]
             #print(start, end)
