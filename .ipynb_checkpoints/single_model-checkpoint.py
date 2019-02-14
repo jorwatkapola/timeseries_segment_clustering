@@ -133,7 +133,7 @@ seg_lens=[30, 50, 70]
 classes=list(set(y_train))
 print(classes, flush=True)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), 2))
-for n_pro, proportion in enumerate(pro_clusters):
+for n_pro, n_clusters in enumerate(pro_clusters):
     for n_len, length in enumerate(seg_lens):
  #       for n_model, model_class in enumerate(classes):
         
@@ -149,9 +149,9 @@ for n_pro, proportion in enumerate(pro_clusters):
             c_train_segments=sc.center_offset(train_segments, ts, offset=offset, time_stamps=time_stamps)
             all_train_segments.append(c_train_segments)
         all_train_segments=np.vstack(all_train_segments)
-        if proportion > len(all_train_segments): proportion = len(all_train_segments)
-        #cluster=KMeans(n_clusters=int(proportion*len(all_train_segments)), random_state=0)
-        cluster=KMeans(n_clusters=proportion, random_state=0)
+        if n_clusters > len(all_train_segments): n_clusters = len(all_train_segments)
+        #cluster=KMeans(n_clusters=int(n_clusters*len(all_train_segments)), random_state=0)
+        cluster=KMeans(n_clusters=n_clusters, random_state=0)
         cluster.fit(all_train_segments)
 
         ##test against the validation set
