@@ -107,7 +107,6 @@ def scaling(data, method, no_sigma=5, center="minimum"):
     if method = "normal":
         if center = "minimum":
             center=armin
-            
         elif center = "mean":
             center=armean
         else:
@@ -116,10 +115,14 @@ def scaling(data, method, no_sigma=5, center="minimum"):
         if data_dims = 2:
             for lc in data:
                 lc[1]=(lc[1]-center)/(armax-armin)
+                over_max=np.where(lc[1]>1.)[0]
+                lc[1][over_max]=1.
                 lcs_std.append(lc)
         else:
             for lc in data:
                 lc=(lc-center)/(armax-armin)
+                over_max=np.where(lc>1.)[0]
+                lc[over_max]=1.
                 lcs_std.append(lc)
         return lcs_std
     
