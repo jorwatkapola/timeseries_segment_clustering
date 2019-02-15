@@ -80,3 +80,60 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             end=start+len(segment)
             reco[start:end]+=centroids[pred_centroid]
         return reco
+
+def scaling(data, method, no_sigma=5, center="minimum"):
+    """ Normalise or standardise the y-values of time series.
+    method =    "normal" for normalisation y_i_norm = (y_i - y_center)/(y_max - y_min), where y_center is either y_mean or y_min as dictated                    by center argument
+                "standard" for standardisation y_i_stand = (y_i - y_mean)/y_std
+    no_sigma = the value of sigma to be assumed as the maximum value of y (to truncate the outliers).
+    center =    "minimum" for min-max normalisation
+                "mean" for mean normalisation
+    """
+    data_dims = np.shape(data[0])[0]
+    all_counts=[]
+    if data_dims = 2:
+        for lc in data:
+            all_counts.append(lc[1])
+    else:
+        all_counts=data
+    all_counts_ar=np.concatenate(all_counts, axis=0)
+    armean=np.mean(all_counts_ar)
+    arstd=np.std(all_counts_ar)
+    armedian=np.median(all_counts_ar)
+    armin=np.min(all_counts_ar)
+    armax=armean+no_sigma*arstd
+    
+    lcs_std=[]
+    if method = "normal":
+        if center = "minimum":
+            center=armin
+            
+        elif center = "mean":
+            center=armean
+        else:
+            print("{} is not a valid center".format(center))
+            return
+        if data_dims = 2:
+            for lc in data:
+                lc[1]=(lc[1]-center)/(armax-armin)
+                lcs_std.append(lc)
+        else:
+            for lc in data:
+                lc=(lc-center)/(armax-armin)
+                lcs_std.append(lc)
+        return lcs_std
+    
+    elif method = "standard"
+        if data_dims = 2:
+            for lc in data:
+                lc[1]=(lc[1]-armean)/arstd
+                lcs_std.append(lc)
+        else:
+            for lc in data:
+                lc=(lc-armean)/arstd
+                lcs_std.append(lc)
+        return lcs_std
+    
+    else:
+        print("{} is not a valid method".format(method))
+        return
