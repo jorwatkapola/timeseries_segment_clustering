@@ -81,7 +81,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             reco[start:end]+=centroids[pred_centroid]
         return reco
 
-def scaling(ts_data, method, no_sigma=5, center="minimum"):
+def scaling(data, method, no_sigma=5, center="minimum"):
     """ Normalise or standardise the y-values of time series.
     method =    "normal" for normalisation y_i_norm = (y_i - y_center)/(y_max - y_min), where y_center is either y_mean or y_min as dictated                    by center argument
                 "standard" for standardisation y_i_stand = (y_i - y_mean)/y_std

@@ -107,29 +107,15 @@ for n, lc in enumerate(lc_classes):
         ids_abu.append(ids[n])  
 #a list of light curve 2D arrays of classes with at least 7 light curves
 
-all_counts=[]
-for lc in lcs_abu:
-    all_counts.append(lc[1])
-all_counts_ar=np.concatenate(all_counts, axis=0)
-armean=np.mean(all_counts_ar)
-arstd=np.std(all_counts_ar)
-armedian=np.median(all_counts_ar)
-armin=np.min(all_counts_ar)
-sigma4=armean+4*arstd-armin
-
-#sigma4 is going to be the assumed maximum count rate that will be used to normalise the data
-
-lcs_abu_std=[]
-for lc in lcs_abu:
-    lc[1]=(lc[1]-armean)/arstd
-    lcs_abu_std.append(lc)
+lcs_abu_std=sc.scaling(lcs_abu, method="standard")
 # data is standardised, x_i_stand = (x_i - x_mean)/x_std
+# mean+n*sigma is going to be the assumed maximum count rate that will be used to normalise the data
 
 x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu_std, classes_abu, ids_abu, test_size=0.5, random_state=0, stratify=classes_abu)
 x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y_test, id_test, test_size=0.5, random_state=0, stratify=y_test)
 
-pro_clusters=[100, 150, 200]
-seg_lens=[30, 50, 70]
+pro_clusters=[10, 50, 100, 150]
+seg_lens=[30, 50, 100, 200]
 classes=list(set(y_train))
 print(classes, flush=True)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), 2))
@@ -172,7 +158,7 @@ for n_pro, n_clusters in enumerate(pro_clusters):
             results[n_pro, n_len, n_test, 0]=np.mean(np.array(reco_error)[:,1])
             results[n_pro, n_len, n_test, 1]=np.std(np.array(reco_error)[:,1])
             print(n_pro, n_len, n_test, results[n_pro, n_len, n_test, 0], results[n_pro, n_len, n_test, 1], flush=True)
-
+print(classes, flush=True)
 with open("model_errors_{}.csv".format(str(date.today())), "w") as outfile:
     for a, n_pro in enumerate(results):
         for b, n_len in enumerate(n_pro):
