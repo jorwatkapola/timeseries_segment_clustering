@@ -81,7 +81,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             reco[start:end]+=centroids[pred_centroid]
         return reco
 
-def scaling(data, method, no_sigma=5, center="minimum"):
+def scaling(ts_data, method, no_sigma=5, center="minimum"):
     """ Normalise or standardise the y-values of time series.
     method =    "normal" for normalisation y_i_norm = (y_i - y_center)/(y_max - y_min), where y_center is either y_mean or y_min as dictated                    by center argument
                 "standard" for standardisation y_i_stand = (y_i - y_mean)/y_std
@@ -91,7 +91,7 @@ def scaling(data, method, no_sigma=5, center="minimum"):
     """
     data_dims = np.shape(data[0])[0]
     all_counts=[]
-    if data_dims = 2:
+    if data_dims == 2:
         for lc in data:
             all_counts.append(lc[1])
     else:
@@ -104,35 +104,39 @@ def scaling(data, method, no_sigma=5, center="minimum"):
     armax=armean+no_sigma*arstd
     
     lcs_std=[]
-    if method = "normal":
-        if center = "minimum":
+    if method == "normal":
+        if center == "minimum":
             center=armin
-        elif center = "mean":
+        elif center == "mean":
             center=armean
         else:
             print("{} is not a valid center".format(center))
             return
-        if data_dims = 2:
-            for lc in data:
+        if data_dims == 2:
+            for ts in data:
+                lc=np.copy(ts)
                 lc[1]=(lc[1]-center)/(armax-armin)
                 over_max=np.where(lc[1]>1.)[0]
                 lc[1][over_max]=1.
                 lcs_std.append(lc)
         else:
-            for lc in data:
+            for ts in data:
+                lc=np.copy(ts)
                 lc=(lc-center)/(armax-armin)
                 over_max=np.where(lc>1.)[0]
                 lc[over_max]=1.
                 lcs_std.append(lc)
         return lcs_std
     
-    elif method = "standard"
-        if data_dims = 2:
-            for lc in data:
+    elif method == "standard":
+        if data_dims == 2:
+            for ts in data:
+                lc=np.copy(ts)
                 lc[1]=(lc[1]-armean)/arstd
                 lcs_std.append(lc)
         else:
-            for lc in data:
+            for ts in data:
+                lc=np.copy(ts)
                 lc=(lc-armean)/arstd
                 lcs_std.append(lc)
         return lcs_std
