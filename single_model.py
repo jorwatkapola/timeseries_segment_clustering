@@ -114,8 +114,8 @@ lcs_abu_std=sc.scaling(lcs_abu, method="standard")
 x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu_std, classes_abu, ids_abu, test_size=0.5, random_state=0, stratify=classes_abu)
 x_valid, x_test, y_valid, y_test, id_valid, id_test = train_test_split(x_test, y_test, id_test, test_size=0.5, random_state=0, stratify=y_test)
 
-pro_clusters=[10, 50, 100, 150]
-seg_lens=[30, 50, 100, 200]
+pro_clusters=[4,6,8,10,20]
+seg_lens=[5,10,20,30]
 classes=list(set(y_train))
 print(classes, flush=True)
 results=np.zeros((len(pro_clusters), len(seg_lens), len(classes), 2))
