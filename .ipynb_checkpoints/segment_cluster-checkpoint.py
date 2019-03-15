@@ -21,7 +21,7 @@ def segmentation(ts, seg_len, seg_slide, time_stamps=True):
             segments.append(np.copy(ts[1][start:end]))
         return segments
 
-def center_offset(segments, ts, time_stamps=True, offset=True):
+def center_window(segments, ts, time_stamps=True, offset=True):
     """multiplies the segments by a waveform to emphesise the features in the centre and zero the ends so that the segments can be joined smoothly together. Use cluster.fit(np.array(c_train_segments)[:,1]) on the time stamped output
     segments = segmented time series, the output of segmentation function
     ts = the original time series
@@ -30,7 +30,7 @@ def center_offset(segments, ts, time_stamps=True, offset=True):
     c_segments=[]
     if time_stamps==True:
         window_rads = np.linspace(0, np.pi, len(segments[0][0]))
-        window_sin = np.sin(window_rads)**2
+        window_sin = np.sin(window_rads)**20
         #window_sin = np.sin(window_rads)**(1/2)
         #window_sin = window_rads*0+1
         if offset==True:
