@@ -30,7 +30,7 @@ def center_window(segments, ts, time_stamps=True, offset=True):
     c_segments=[]
     if time_stamps==True:
         window_rads = np.linspace(0, np.pi, len(segments[0][0]))
-        window_sin = np.sin(window_rads)**20
+        window_sin = np.sin(window_rads)**2
         #window_sin = np.sin(window_rads)**(1/2)
         #window_sin = window_rads*0+1
         if offset==True:
