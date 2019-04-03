@@ -12,14 +12,14 @@ def segmentation(ts, seg_len, seg_slide, time_stamps=True):
             if ts[0][end]-ts[0][start] != seg_len: ####don't allow segments with missing data
                 continue
             segments.append(np.copy(ts[:,start:end]))
-        return segments
+        return np.array(segments)
     else:
         for start in range(0, len(ts[0])-seg_len, seg_slide):
             end=start+seg_len
             if ts[0][end]-ts[0][start] != seg_len: ####don't allow segments with missing data
                 continue
             segments.append(np.copy(ts[1][start:end]))
-        return segments
+        return np.array(segments)
 
 def center_window(segments, ts, time_stamps=True, offset=True):
     """multiplies the segments by a waveform to emphesise the features in the centre and zero the ends so that the segments can be joined smoothly together. Use cluster.fit(np.array(c_train_segments)[:,1]) on the time stamped output
@@ -59,6 +59,8 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
     kmeans_model = sklearn.cluster.KMeans object that has been fit to the training segments
     rel_offset = offset the reconstructed time series to start at time zero
     seg_slide = needed when time stamps are not provided (i.e. test_segments are 1 dimensional)"""
+    window_rads = np.linspace(0, np.pi, len(test_segments[0][0]))
+    window_sin = np.sin(window_rads)**2
     centroids=kmeans_model.cluster_centers_
     if np.shape(test_segments)[1] == 2:
         reco= np.zeros(np.shape(test_ts))
@@ -72,7 +74,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             end=int(start+len(segment[0]))
             reco_seg=reco[1][start:end]
             pred_centroid=kmeans_model.predict(np.array(segment[1]).reshape(1, -1))[0]
-            reco[1,start:end]+=centroids[pred_centroid][0:len(reco_seg)]            
+            reco[1,start:end]+=centroids[pred_centroid][0:len(reco_seg)]*window_sin            
         return reco
     else:
         reco= np.zeros(np.shape(test_ts)[1])
@@ -80,7 +82,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             pred_centroid=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             start=n_seg*seg_slide
             end=start+len(segment)
-            reco[start:end]+=centroids[pred_centroid]
+            reco[start:end]+=centroids[pred_centroid]*window_sin
         return reco
 
 def scaling(data, method, no_sigma=5, center="minimum"):
