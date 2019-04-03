@@ -18,7 +18,6 @@ import importlib
 importlib.reload(sc)
 from sklearn.cluster import KMeans
 import pandas as pd
-random.seed(0)
 np.random.seed(0)
 
 cwd = os.getcwd()
@@ -119,17 +118,15 @@ lcs_abu_std=sc.scaling(lcs_abu, method="standard")
 x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu_std, classes_abu, ids_abu, test_size=0.25, stratify=classes_abu)
 #x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu, classes_abu, ids_abu, test_size=0.25, random_state=0, stratify=classes_abu)
 
-
+reco_error=[]
 importlib.reload(sc)
 k_clusters=[5, 25, 50]
 seg_lens=[8, 60, 100]
-seg_len=1
-seg_slides=[1, int(seg_len*0.25), int(seg_len*0.5)]
 model_class="rho"
 for k_id, k_cluster in enumerate(k_clusters):
     for len_id, seg_len in enumerate(seg_lens):
-        # create a wave of the required length to center the segments
-        
+        # calculate the slide values
+        seg_slides=[1, int(seg_len*0.25), int(seg_len*0.5)]
         for slide_id, seg_slide in enumerate(seg_slides):
             #bootstrapping
             for CV_id in range(10):
@@ -153,7 +150,6 @@ for k_id, k_cluster in enumerate(k_clusters):
                 #loop through light curves of every class
                 for n_test, test_class in enumerate(classes):
                     testing_ids=np.where(np.array(y_valid)=='{}'.format(test_class))[0]
-                    reco_error=[]
                     for ts_id in testing_ids:
                         test_ts=x_valid[ts_id]
                         test_segments= sc.segmentation(test_ts, seg_len, int(seg_len/2) , time_stamps=True)
