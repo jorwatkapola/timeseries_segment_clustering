@@ -119,6 +119,7 @@ x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu_s
 #x_train, x_test, y_train, y_test, id_train, id_test = train_test_split(lcs_abu, classes_abu, ids_abu, test_size=0.25, random_state=0, stratify=classes_abu)
 
 reco_error=[]
+reco_classes=[]
 importlib.reload(sc)
 k_clusters=[5, 25, 50]
 seg_lens=[8, 60, 100]
@@ -155,7 +156,7 @@ for k_id, k_cluster in enumerate(k_clusters):
                         test_segments= sc.segmentation(test_ts, seg_len, int(seg_len/2) , time_stamps=True)
                         reco = sc.reconstruct(test_segments, test_ts, cluster, rel_offset=False)
                         error=np.sqrt(np.mean((test_ts[1][seg_len:-seg_len]-reco[1][seg_len:-seg_len])**2))
-                        reco_error.append((k_id,len_id,slide_id,CV_id,ts_id, error))
-                        print((k_cluster,seg_len,seg_slide,CV_id,ts_id, error))
-results=np.array(reco_error)
-np.savetxt("valid_results_20190402.csv", results, delimiter=",") 
+                        reco_error.append((k_id,len_id,slide_id,CV_id,int(id_valid[ts_id].replace("-","")), error))
+                        print((k_id,len_id,slide_id,CV_id,int(id_valid[ts_id].replace("-","")), error))
+reco_error_ar=np.array(reco_error)
+np.savetxt("valid_results_20190405.csv", reco_error_ar, delimiter=",") 
