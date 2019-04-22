@@ -123,7 +123,7 @@ seg_lens=[8, 60, 100]
 for k_id, k_cluster in enumerate(k_clusters):
     for len_id, seg_len in enumerate(seg_lens):
         # calculate the slide values
-        seg_slides=[1, int(seg_len*0.25), int(seg_len*0.5)]
+        seg_slides=[1]
         for slide_id, seg_slide in enumerate(seg_slides):
             #leave one out cross validation
             loo_ID=0
@@ -163,4 +163,4 @@ for k_id, k_cluster in enumerate(k_clusters):
                     reco_error.append((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
                     print((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
 reco_error_ar=np.array(reco_error)
-np.savetxt("valid_results_20190415.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190422.csv", reco_error_ar, delimiter=",") 

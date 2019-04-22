@@ -73,8 +73,17 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             start=np.where(ts_time==segment[0][0])[0][0]
             end=int(start+len(segment[0]))
             reco_seg=reco[1][start:end]
-            pred_centroid=kmeans_model.predict(np.array(segment[1]).reshape(1, -1))[0]
-            reco[1,start:end]+=centroids[pred_centroid][0:len(reco_seg)]*window_sin            
+            pred_centroid_index=kmeans_model.predict(np.array(segment[1]).reshape(1, -1))[0]
+            pred_centroid=centroids[pred_centroid_index][0:len(reco_seg)]
+            ###
+            #scaling of the predicted centroid in the y direction to the standard deviation of the original segment
+            std_ori=np.std(np.array(segment[1]))
+            mean_ori=np.mean(np.array(segment[1]))
+            std_pred=np.std(pred_centroid)
+            mean_pred=np.mean(pred_centroid)
+            scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
+            ###
+            reco[1,start:end]+=scaled_centroid*window_sin            
         return reco
     else:
         reco= np.zeros(np.shape(test_ts)[1])
