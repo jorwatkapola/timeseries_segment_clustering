@@ -120,6 +120,8 @@ reco_error=[]
 #reco_classes=[]
 k_clusters=[5, 25, 50]
 seg_lens=[8, 60, 100]
+classes=list(set(y_train))
+print(classes, flush=True)
 for k_id, k_cluster in enumerate(k_clusters):
     for len_id, seg_len in enumerate(seg_lens):
         # calculate the slide values
@@ -150,7 +152,6 @@ for k_id, k_cluster in enumerate(k_clusters):
                 print((k_id,len_id,slide_id,loo_ID,int(loo_valid_ts_id.replace("-","")), error))
                 loo_ID+=1
             #reconstruction loop through light curves for every class other than rho              
-            classes=list(set(y_train))
             for n_valid, valid_class in enumerate(classes):
                 if valid_class == model_class:
                     continue
@@ -163,4 +164,5 @@ for k_id, k_cluster in enumerate(k_clusters):
                     reco_error.append((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
                     print((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
 reco_error_ar=np.array(reco_error)
+print(classes, flush=True)
 np.savetxt("valid_results_20190422.csv", reco_error_ar, delimiter=",") 
