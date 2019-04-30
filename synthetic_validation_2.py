@@ -115,14 +115,14 @@ rho_train, rho_valid, rho_train_ids, rho_valid_ids= train_test_split(rho_file, l
 #numbers of clusters and segment lengths to be tested
 reco_error=[]
 #reco_classes=[]
-k_clusters=[50, 75, 100]
-seg_lens=[4,8,12]
+k_clusters=[50]
+seg_lens=[8]
 classes=list(set(y_train))
 print(classes, flush=True)
 for k_id, k_cluster in enumerate(k_clusters):
     for len_id, seg_len in enumerate(seg_lens):
         # calculate the slide values
-        seg_slides=[1, int(seg_len/4), int(seg_len/2)]
+        seg_slides=[1]
         for slide_id, seg_slide in enumerate(seg_slides):
             #leave one out cross validation
             
@@ -141,8 +141,8 @@ for k_id, k_cluster in enumerate(k_clusters):
 
             ### reconstruction: complete for every validation observation in leave-one-out. Then do once for lcs of all other classes
             for n_rho, rho in enumerate(rho_valid):
-                valid_segments= sc.segmentation(rho, seg_len, int(seg_len/2) , time_stamps=False)
-                reco = sc.reconstruct(valid_segments, rho, cluster, rel_offset=False, seg_slide=int(seg_len/2))
+                valid_segments= sc.segmentation(rho, seg_len, seg_len , time_stamps=False)
+                reco = sc.reconstruct(valid_segments, rho, cluster, rel_offset=False, seg_slide=seg_len)
                 error=np.sqrt(np.mean((rho[seg_len:-seg_len]-reco[seg_len:-seg_len])**2))
                 reco_error.append((k_id,len_id,slide_id,len(classes)+1, n_rho, error))
                 print((k_id,len_id,slide_id,len(classes), n_rho, error), flush=True)
@@ -154,11 +154,11 @@ for k_id, k_cluster in enumerate(k_clusters):
                 validation_ids=np.where(np.array(y_train)=='{}'.format(valid_class))[0]
                 for ts_id in validation_ids:
                     valid_ts=x_train[ts_id]
-                    valid_segments= sc.segmentation(valid_ts, seg_len, int(seg_len/2) , time_stamps=True)
-                    reco = sc.reconstruct(valid_segments, valid_ts, cluster, rel_offset=False, seg_slide=int(seg_len/2))
+                    valid_segments= sc.segmentation(valid_ts, seg_len, seg_len , time_stamps=True)
+                    reco = sc.reconstruct(valid_segments, valid_ts, cluster, rel_offset=False, seg_slide=seg_len)
                     error=np.sqrt(np.mean((valid_ts[1][seg_len:-seg_len]-reco[1][seg_len:-seg_len])**2))
                     reco_error.append((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
                     print((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
 reco_error_ar=np.array(reco_error)
 print(classes, flush=True)
-np.savetxt("valid_results_20190426.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190430.csv", reco_error_ar, delimiter=",") 

@@ -60,8 +60,8 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
 
     centroids=kmeans_model.cluster_centers_
     if np.shape(test_segments)[1] == 2:
-        window_rads = np.linspace(0, np.pi, len(test_segments[0][0]))
-        window_sin = np.sin(window_rads)**2
+        # window_rads = np.linspace(0, np.pi, len(test_segments[0][0]))
+        # window_sin = np.sin(window_rads)**2
         reco= np.zeros(np.shape(test_ts))
         if rel_offset == True:
             ts_time=np.copy(test_ts[0])-test_ts[0][0]
@@ -82,11 +82,11 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             mean_pred=np.mean(pred_centroid)
             scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
             ###
-            reco[1,start:end]+=scaled_centroid*window_sin            
+            reco[1,start:end]+=scaled_centroid#*window_sin            
         return reco
     else:
-        window_rads = np.linspace(0, np.pi, len(test_segments[0]))
-        window_sin = np.sin(window_rads)**2
+        # window_rads = np.linspace(0, np.pi, len(test_segments[0]))
+        # window_sin = np.sin(window_rads)**2
         reco= np.zeros(len(test_ts))
         for n_seg, segment in enumerate(test_segments):
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
@@ -101,7 +101,12 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             
             start=n_seg*seg_slide
             end=start+len(segment)
-            reco[start:end]+=scaled_centroid*window_sin
+            reco[start:end]+=scaled_centroid#*window_sin
+            
+            
+            
+            
+            
         return reco
 
 def scaling(data, method, no_sigma=5, center="minimum"):
