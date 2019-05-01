@@ -115,8 +115,8 @@ rho_train, rho_valid, rho_train_ids, rho_valid_ids= train_test_split(rho_file, l
 #numbers of clusters and segment lengths to be tested
 reco_error=[]
 #reco_classes=[]
-k_clusters=[50]
-seg_lens=[8]
+k_clusters=[10, 50, 100, 150]
+seg_lens=[4,8,12,30,50]
 classes=list(set(y_train))
 print(classes, flush=True)
 for k_id, k_cluster in enumerate(k_clusters):
@@ -161,4 +161,4 @@ for k_id, k_cluster in enumerate(k_clusters):
                     print((k_id,len_id,slide_id,n_valid,int(id_train[ts_id].replace("-","")), error))
 reco_error_ar=np.array(reco_error)
 print(classes, flush=True)
-np.savetxt("valid_results_20190430.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190501.csv", reco_error_ar, delimiter=",") 
