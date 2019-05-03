@@ -17,6 +17,7 @@ importlib.reload(sc)
 from sklearn.cluster import KMeans
 import pandas as pd
 from sklearn.model_selection import LeaveOneOut
+plt.switch_backend('agg')
 
 np.random.seed(0)
 rho_file=np.loadtxt("synthetic_rhos.csv", delimiter=',')
