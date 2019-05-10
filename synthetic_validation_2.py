@@ -115,7 +115,7 @@ rho_train, rho_valid, rho_train_ids, rho_valid_ids= train_test_split(rho_file, l
 #numbers of clusters and segment lengths to be tested
 reco_error=[]
 #reco_classes=[]
-k_clusters=[10, 50, 100, 150]
+k_clusters=[10, 50, 100]
 seg_lens=[4,8,12,30,50]
 classes=list(set(y_train))
 print(classes, flush=True)
