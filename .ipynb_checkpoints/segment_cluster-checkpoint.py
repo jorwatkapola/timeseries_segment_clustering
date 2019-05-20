@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.stats import zscore
 #time series and light curve can be used interchangebly below
 def segmentation(ts, seg_len, seg_slide, time_stamps=True):
     """ creates a list of 1D (when time_stamps=False) or 2D (when time_stamps=True) arrays, which are overlappig fragments of ts. Incomplete fragments are rejected.
@@ -60,6 +61,8 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
 
     centroids=kmeans_model.cluster_centers_
     if np.shape(test_segments)[1] == 2:
+        scaled_segments=np.copy(test_segments)
+        scaled_segments[:,1]=zscore(scaled_segments[:,1])
         # window_rads = np.linspace(0, np.pi, len(test_segments[0][0]))
         # window_sin = np.sin(window_rads)**2
         reco= np.zeros(np.shape(test_ts))
@@ -68,7 +71,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
         else:
             ts_time=np.copy(test_ts[0])
         reco[0]=np.copy(ts_time)
-        for n_seg, segment in enumerate(test_segments):
+        for n_seg, segment in enumerate(scaled_segments):
             start=np.where(ts_time==segment[0][0])[0][0]
             end=int(start+len(segment[0]))
             reco_seg=reco[1][start:end]
@@ -76,8 +79,8 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             pred_centroid=centroids[pred_centroid_index][0:len(reco_seg)]
             ###
             #scaling of the predicted centroid in the y direction to the standard deviation of the original segment
-            std_ori=np.std(np.array(segment[1]))
-            mean_ori=np.mean(np.array(segment[1]))
+            std_ori=np.std(np.array(test_segments[n_seg,1]))
+            mean_ori=np.mean(np.array(test_segments[n_seg,1]))
             std_pred=np.std(pred_centroid)
             mean_pred=np.mean(pred_centroid)
             scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
@@ -87,13 +90,15 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
     else:
         # window_rads = np.linspace(0, np.pi, len(test_segments[0]))
         # window_sin = np.sin(window_rads)**2
+        scaled_segments=np.copy(test_segments)
+        scaled_segments=zscore(scaled_segments)
         reco= np.zeros(len(test_ts))
-        for n_seg, segment in enumerate(test_segments):
+        for n_seg, segment in enumerate(scaled_segments):
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             pred_centroid=centroids[pred_centroid_index]
             
-            std_ori=np.std(np.array(segment))
-            mean_ori=np.mean(np.array(segment))
+            std_ori=np.std(np.array(test_segments[n_seg]))
+            mean_ori=np.mean(np.array(test_segments[n_seg]))
             std_pred=np.std(pred_centroid)
             mean_pred=np.mean(pred_centroid)
             scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)

@@ -20,6 +20,8 @@ import segment_cluster as sc
 import importlib
 importlib.reload(sc)
 
+from scipy.stats import zscore
+
 
 np.random.seed(0)
 
@@ -46,7 +48,7 @@ for k_id, k_cluster in enumerate(k_clusters):
         all_train_segments=np.vstack(all_train_segments)
         #cluster the segments
         cluster=KMeans(n_clusters=k_cluster, random_state=0)
-        cluster.fit(all_train_segments)
+        cluster.fit(zscore(all_train_segments))
 
         ### reconstruction of the training class
         for n_rho, rho in enumerate(rho_valid):
@@ -65,4 +67,4 @@ for k_id, k_cluster in enumerate(k_clusters):
             reco_error.append((k_id,len_id,1,n_sine, error))
             print((k_id,len_id,1,n_sine, error), flush=True)
 reco_error_ar=np.array(reco_error)
-np.savetxt("valid_results_20190510_sine.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190520_sine_scaled.csv", reco_error_ar, delimiter=",") 
