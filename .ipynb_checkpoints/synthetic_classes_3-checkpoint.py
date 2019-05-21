@@ -19,7 +19,7 @@ from sklearn.cluster import KMeans
 import segment_cluster as sc
 import importlib
 importlib.reload(sc)
-
+from scipy.stats import zscore
 
 np.random.seed(0)
 
@@ -52,13 +52,13 @@ for k_id, k_cluster in enumerate(k_clusters):
         all_train_segments=np.vstack(all_train_segments)
         #cluster the segments
         cluster=KMeans(n_clusters=k_cluster, random_state=0)
-        cluster.fit(all_train_segments)
+        cluster.fit(zscore(all_train_segments))
 
         ### reconstruction of the training class
         for n_rho, rho in enumerate(rho_valid):
             valid_segments= sc.segmentation(rho, seg_len, seg_len , time_stamps=False)
-            reco = sc.reconstruct(valid_segments, rho, cluster, rel_offset=False, seg_slide=seg_len)
-            error=np.sqrt(np.mean((rho[seg_len:-seg_len]-reco[seg_len:-seg_len])**2))
+            reco, error = sc.reconstruct(valid_segments, rho, cluster, rel_offset=False, seg_slide=seg_len)
+            #error=np.sqrt(np.mean((rho[seg_len:-seg_len]-reco[seg_len:-seg_len])**2))
             reco_error.append((k_id,len_id,0, n_rho, error))
             print((k_id,len_id,0, n_rho, error), flush=True)
 
@@ -66,9 +66,9 @@ for k_id, k_cluster in enumerate(k_clusters):
         #reconstruction loop through light curves for every class other than rho              
         for n_sine, sine in enumerate(inverted_rho):
             valid_segments= sc.segmentation(sine, seg_len, seg_len , time_stamps=False)
-            reco = sc.reconstruct(valid_segments, sine, cluster, rel_offset=False, seg_slide=seg_len)
-            error=np.sqrt(np.mean((sine[seg_len:-seg_len]-reco[seg_len:-seg_len])**2))
+            reco, error = sc.reconstruct(valid_segments, sine, cluster, rel_offset=False, seg_slide=seg_len)
+            #error=np.sqrt(np.mean((sine[seg_len:-seg_len]-reco[seg_len:-seg_len])**2))
             reco_error.append((k_id,len_id,1,n_sine, error))
             print((k_id,len_id,1,n_sine, error), flush=True)
 reco_error_ar=np.array(reco_error)
-np.savetxt("valid_results_20190510_inverted.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190521_inverted.csv", reco_error_ar, delimiter=",") 

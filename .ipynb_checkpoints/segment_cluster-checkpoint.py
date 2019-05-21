@@ -58,7 +58,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
     kmeans_model = sklearn.cluster.KMeans object that has been fit to the training segments
     rel_offset = offset the reconstructed time series to start at time zero
     seg_slide = needed when time stamps are not provided (i.e. test_segments are 1 dimensional)"""
-
+    error=0
     centroids=kmeans_model.cluster_centers_
     if np.shape(test_segments)[1] == 2:
         scaled_segments=np.copy(test_segments)
@@ -86,7 +86,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
             ###
             reco[1,start:end]+=scaled_centroid#*window_sin            
-        return reco
+        return "test this"#reco
     else:
         # window_rads = np.linspace(0, np.pi, len(test_segments[0]))
         # window_sin = np.sin(window_rads)**2
@@ -96,6 +96,8 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
         for n_seg, segment in enumerate(scaled_segments):
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             pred_centroid=centroids[pred_centroid_index]
+            
+            error+=np.sqrt(np.mean((segment-pred_centroid)**2))
             
             std_ori=np.std(np.array(test_segments[n_seg]))
             mean_ori=np.mean(np.array(test_segments[n_seg]))
@@ -112,7 +114,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             
             
             
-        return reco
+        return reco, error
 
 def scaling(data, method, no_sigma=5, center="minimum"):
     """ Normalise or standardise the y-values of time series.
