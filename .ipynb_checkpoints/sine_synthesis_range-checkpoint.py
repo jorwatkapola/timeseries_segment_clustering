@@ -1,3 +1,7 @@
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+
 #synthesise sine waves that span the same range as the synthetic rho
 
 #"normal" lightcurves
@@ -17,7 +21,12 @@ for sine in range(no_sines):
     xs=np.linspace(start,(lc_len/interval)*2*np.pi+start, num=500)
     ys=np.sin(xs)
     range_ind=np.random.randint(500)
-    ys=sine_mean+ys*(sine_std/np.std(ys))+np.random.normal(0,200 ,len(ys))
-    #mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
+    ys+=1
+    ys=(ys/2)*(list_maxs[range_ind]-list_mins[range_ind])
+    ys+=np.random.normal(0,200 ,len(ys))
+    if np.min(ys)<0:
+        ys+=abs(np.min(ys))
+    ys*=(list_maxs[range_ind]-list_mins[range_ind])/np.max(ys)
+    ys+=list_mins[range_ind]
     sines[sine,:]=ys
-#np.savetxt("synthetic_sines.csv" ,sines, delimiter=',')
+np.savetxt("synthetic_sines_range.csv" ,sines, delimiter=',')
