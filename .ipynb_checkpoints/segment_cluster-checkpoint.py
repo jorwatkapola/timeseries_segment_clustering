@@ -1,4 +1,5 @@
 import numpy as np
+
 #time series and light curve can be used interchangebly below
 def segmentation(ts, seg_len, seg_slide, time_stamps=True):
     """ creates a list of 1D (when time_stamps=False) or 2D (when time_stamps=True) arrays, which are overlappig fragments of ts. Incomplete fragments are rejected.
@@ -93,18 +94,22 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
         # window_sin = np.sin(window_rads)**2
         reco= np.zeros(len(test_ts))
         for n_seg, segment in enumerate(test_segments):
+#             std_ori=np.std(np.array(segment))
+#             mean_ori=np.mean(np.array(segment))
+#             scaled_centroids=np.copy(centroids)
+#             scaled_centroids=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
+            
+            
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             pred_centroid=centroids[pred_centroid_index]
-            
-            #error+=np.sqrt(np.mean((segment-pred_centroid)**2))
-            
-            
             scaled_centroid=pred_centroid
-            std_ori=np.std(np.array(test_segments[n_seg]))
-            mean_ori=np.mean(np.array(test_segments[n_seg]))
-            std_pred=np.std(pred_centroid)
-            mean_pred=np.mean(pred_centroid)
-            scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
+            
+            
+#             std_ori=np.std(np.array(test_segments[n_seg]))
+#             mean_ori=np.mean(np.array(test_segments[n_seg]))
+#             std_pred=np.std(pred_centroid)
+#             mean_pred=np.mean(pred_centroid)
+#             scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
             
             
             start=n_seg*seg_slide
