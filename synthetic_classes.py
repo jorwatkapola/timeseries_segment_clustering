@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
 
-import segment_cluster_zscore as sc
+import segment_cluster_scaled as sc
 import importlib
 importlib.reload(sc)
 
@@ -49,7 +49,8 @@ for k_id, k_cluster in enumerate(k_clusters):
         all_train_segments=np.vstack(all_train_segments)
         #cluster the segments
         cluster=KMeans(n_clusters=k_cluster, random_state=0)
-        cluster.fit(zscore(all_train_segments))
+        cluster.fit(all_train_segments)      
+        
 
         ### reconstruction of the training class
         for n_rho, rho in enumerate(rho_valid):
@@ -68,4 +69,4 @@ for k_id, k_cluster in enumerate(k_clusters):
             reco_error.append((k_id,len_id,1,n_sine, error))
             print((k_id,len_id,1,n_sine, error), flush=True)
 reco_error_ar=np.array(reco_error)
-np.savetxt("valid_results_20190604_bp5.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190605_bp7.csv", reco_error_ar, delimiter=",") 

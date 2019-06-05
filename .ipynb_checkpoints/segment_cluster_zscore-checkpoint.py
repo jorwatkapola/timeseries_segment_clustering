@@ -88,8 +88,6 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             reco[1,start:end]+=scaled_centroid#*window_sin            
         return "test this"#reco
     else:
-        # window_rads = np.linspace(0, np.pi, len(test_segments[0]))
-        # window_sin = np.sin(window_rads)**2
         scaled_segments=np.copy(test_segments)
         scaled_segments=zscore(scaled_segments)
         reco= np.zeros(len(test_ts))
@@ -97,7 +95,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             pred_centroid=centroids[pred_centroid_index]
             
-            #error+=np.mean((segment-pred_centroid)**2)
+            error+=np.mean((segment-pred_centroid)**2)
             
             std_ori=np.std(np.array(test_segments[n_seg]))
             mean_ori=np.mean(np.array(test_segments[n_seg]))
@@ -111,10 +109,10 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             reco[start:end]+=scaled_centroid#*window_sin
             
             
-        #error=np.sqrt(error/len(scaled_segments))
+        error=np.sqrt(error/len(scaled_segments))
             
             
-        return reco
+        return reco, error
 
 def scaling(data, method, no_sigma=5, center="minimum"):
     """ Normalise or standardise the y-values of time series.
