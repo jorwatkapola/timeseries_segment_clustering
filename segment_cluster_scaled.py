@@ -107,7 +107,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             end=start+len(segment)
             reco[start:end]+=pred_centroid
             
-            kmeans_model.cluster_centers_=centroids
+            kmeans_model.cluster_centers_=np.copy(centroids)
  
         return reco
 

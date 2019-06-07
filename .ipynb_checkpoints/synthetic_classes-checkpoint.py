@@ -56,7 +56,13 @@ for k_id, k_cluster in enumerate(k_clusters):
         for n_rho, rho in enumerate(rho_valid):
             valid_segments= sc.segmentation(rho, seg_len, seg_len , time_stamps=False)
             reco = sc.reconstruct(valid_segments, rho, cluster, rel_offset=False, seg_slide=seg_len)
-            error=np.sqrt(np.mean((rho[0:-seg_len]-reco[0:-seg_len])**2))
+            
+            #reco[0:-seg_len] = np.mean(rho[0:-seg_len])+ (reco[0:-seg_len]- np.mean(reco[0:-seg_len]))*(np.std(rho[0:-seg_len])/np.std(reco[0:-seg_len]))
+            reco[0:-seg_len]=zscore(reco[0:-seg_len])
+            rho_expected=np.copy(zscore(rho[0:-seg_len]))
+            error=np.mean((     (rho_expected-reco[0:-seg_len])**2))
+            
+            #error=np.sqrt(np.mean((rho[0:-seg_len]-reco[0:-seg_len])**2))
             reco_error.append((k_id,len_id,0, n_rho, error))
             print((k_id,len_id,0, n_rho, error), flush=True)
 
@@ -65,8 +71,14 @@ for k_id, k_cluster in enumerate(k_clusters):
         for n_sine, sine in enumerate(sine_file):
             valid_segments= sc.segmentation(sine, seg_len, seg_len , time_stamps=False)
             reco = sc.reconstruct(valid_segments, sine, cluster, rel_offset=False, seg_slide=seg_len)
-            error=np.sqrt(np.mean((sine[0:-seg_len]-reco[0:-seg_len])**2))
+            
+            #reco[0:-seg_len] = np.mean(sine[0:-seg_len])+ (reco[0:-seg_len]- np.mean(reco[0:-seg_len]))*(np.std(sine[0:-seg_len])/np.std(reco[0:-seg_len]))
+            reco[0:-seg_len]=zscore(reco[0:-seg_len])
+            sine_expected=np.copy(zscore(sine[0:-seg_len]))
+            error=np.mean((     (sine_expected-reco[0:-seg_len])**2))
+            
+            #error=np.sqrt(np.mean((sine[0:-seg_len]-reco[0:-seg_len])**2))
             reco_error.append((k_id,len_id,1,n_sine, error))
             print((k_id,len_id,1,n_sine, error), flush=True)
 reco_error_ar=np.array(reco_error)
-np.savetxt("valid_results_20190605_bp7.csv", reco_error_ar, delimiter=",") 
+np.savetxt("valid_results_20190605_bp8_2.csv", reco_error_ar, delimiter=",") 
