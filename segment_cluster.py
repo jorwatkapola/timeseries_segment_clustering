@@ -15,12 +15,12 @@ def segmentation(ts, seg_len, seg_slide, time_stamps=True):
             end=start+seg_len
             if ts[0][end]-ts[0][start] != seg_len: ####don't allow segments with missing data
                 continue
-            segments.append(np.copy(ts[:,start:end]))
+            segments.append(ts[:,start:end])
         return np.array(segments)
     else:
         for start in range(0, len(ts)-seg_len, seg_slide):
             end=start+seg_len
-            segments.append(np.copy(ts[start:end]))
+            segments.append(ts[start:end])
         return np.array(segments)
 
 def center_window(segments, ts, time_stamps=True, offset=True):
