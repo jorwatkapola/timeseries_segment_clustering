@@ -25,10 +25,11 @@ for sine in range(no_sines):
     range_ind=np.random.randint(len(small_maxs))
     ys+=1
     ys=(ys/2)*(small_maxs[range_ind]-list_mins[range_ind])
-    ys+=np.random.normal(0,200 ,len(ys))
     if np.min(ys)<0:
         ys+=abs(np.min(ys))
     ys*=(small_maxs[range_ind]-list_mins[range_ind])/np.max(ys)
     ys+=list_mins[range_ind]
+    gen_err=np.power(np.e,np.log(ys)*0.5+1.0397207708265923)
+    ys+=np.random.normal(ys, gen_err)
     sines[sine,:]=ys
-np.savetxt("synthetic_sines_range_wide.csv" ,sines, delimiter=',')
+np.savetxt("synthetic_sines_v2.csv" ,sines, delimiter=',')

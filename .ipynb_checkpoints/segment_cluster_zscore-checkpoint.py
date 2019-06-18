@@ -101,7 +101,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             mean_ori=np.mean(np.array(test_segments[n_seg]))
             std_pred=np.std(pred_centroid)
             mean_pred=np.mean(pred_centroid)
-            scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
+            scaled_centroid=mean_ori+(np.copy(pred_centroid)-mean_pred)*(std_ori/std_pred)
             
             
             start=n_seg*seg_slide
@@ -109,7 +109,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             reco[start:end]+=scaled_centroid#*window_sin
             
             
-        error=np.sqrt(error/len(scaled_segments))
+        error=error/len(scaled_segments)
             
             
         return reco, error

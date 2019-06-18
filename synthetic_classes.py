@@ -33,6 +33,8 @@ sine_file=np.loadtxt("synthetic_sines_range_wide.csv", delimiter=',')
 
 rho_train, rho_valid, rho_train_ids, rho_valid_ids= train_test_split(rho_file, list(range(len(rho_file))) ,test_size=0.25, random_state=0)
 
+print(rho_valid_ids)
+
 reco_error=[]
 #reco_classes=[]
 k_clusters=[150]

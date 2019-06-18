@@ -1,4 +1,7 @@
 import numpy as np
+from sklearn.cluster import KMeans
+from scipy.stats import zscore
+import sys
 
 #time series and light curve can be used interchangebly below
 def segmentation(ts, seg_len, seg_slide, time_stamps=True):
@@ -102,7 +105,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             pred_centroid=centroids[pred_centroid_index]
-            scaled_centroid=pred_centroid
+            scaled_centroid=np.copy(pred_centroid)
             
             
 #             std_ori=np.std(np.array(test_segments[n_seg]))
@@ -122,66 +125,84 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             
         return reco
 
-def scaling(data, method, no_sigma=5, center="minimum"):
-    """ Normalise or standardise the y-values of time series.
-    method =    "normal" for normalisation y_i_norm = (y_i - y_center)/(y_max - y_min), where y_center is either y_mean or y_min as dictated                    by center argument
-                "standard" for standardisation y_i_stand = (y_i - y_mean)/y_std
-    no_sigma = the value of sigma to be assumed as the maximum value of y (to truncate the outliers).
-    center =    "minimum" for min-max normalisation
-                "mean" for mean normalisation
+
+class TSSCOD():
+    """Time series segmentation, clustering, outlier detection
     """
-    data_dims = np.shape(data[0])[0]
-    all_counts=[]
-    if data_dims == 2:
-        for lc in data:
-            all_counts.append(lc[1])
-    else:
-        all_counts=data
-    all_counts_ar=np.concatenate(all_counts, axis=0)
-    armean=np.mean(all_counts_ar)
-    arstd=np.std(all_counts_ar)
-    armedian=np.median(all_counts_ar)
-    armin=np.min(all_counts_ar)
-    armax=armean+no_sigma*arstd
-    
-    lcs_std=[]
-    if method == "normal":
-        if center == "minimum":
-            center=armin
-        elif center == "mean":
-            center=armean
+    def __init__(self, k_clusters, seg_len):
+        self.k_clusters = k_clusters
+        self.seg_len = seg_len
+        
+    def train(self, training_data, seg_slide=1, random_state=None):
+        """Segment the set of ordinary time series and cluster the segments.
+        """
+        if len(np.shape(training_data))==2:#check if time data is provided
+            time_stamps=False
+        elif len(np.shape(training_data))==3:
+            time_stamps=True
         else:
-            print("{} is not a valid center".format(center))
-            return
-        if data_dims == 2:
-            for ts in data:
-                lc=np.copy(ts)
-                lc[1]=(lc[1]-center)/(armax-armin)
-                over_max=np.where(lc[1]>1.)[0]
-                lc[1][over_max]=1.
-                lcs_std.append(lc)
-        else:
-            for ts in data:
-                lc=np.copy(ts)
-                lc=(lc-center)/(armax-armin)
-                over_max=np.where(lc>1.)[0]
-                lc[over_max]=1.
-                lcs_std.append(lc)
-        return lcs_std
+            raise ValueError("Time series must be 1D or 2D arrays.")
+        
+        all_train_segments=[]#loop throught the light curves of a given class and segments them
+        for time_series in training_data:
+            train_segments=segmentation(time_series, 
+                                        self.seg_len, 
+                                        seg_slide,
+                                        time_stamps=time_stamps)
+            all_train_segments.append(train_segments)
+        all_train_segments=np.vstack(all_train_segments)
+        print("all_train_segments", sys.getsizeof(all_train_segments))
+        self.cluster=KMeans(n_clusters=self.k_clusters,
+                            random_state=random_state)#cluster the segments
+        self.cluster.fit(all_train_segments)
+        print("cluster", sys.getsizeof(self.cluster))
+        return self
     
-    elif method == "standard":
-        if data_dims == 2:
-            for ts in data:
-                lc=np.copy(ts)
-                lc[1]=(lc[1]-armean)/arstd
-                lcs_std.append(lc)
+    def reconstruct(self, time_series):
+        """Reconstruct a time series
+        """
+        if len(np.shape(time_series))==1:#check if time data is provided
+            time_stamps=False
+        elif len(np.shape(time_series))==2:
+            time_stamps=True
         else:
-            for ts in data:
-                lc=np.copy(ts)
-                lc=(lc-armean)/arstd
-                lcs_std.append(lc)
-        return lcs_std
+            raise ValueError("Time series must be 1D or 2D arrays.")
+            
+        seg_len = self.seg_len
+        seg_slide = self.seg_len
+            
+
+        segments = segmentation(time_series, 
+                                seg_len, 
+                                seg_slide, 
+                                time_stamps = False)
+
+        reco = reconstruct(segments, 
+                           time_series, 
+                           self.cluster, 
+                           rel_offset=False, 
+                           seg_slide=seg_slide)
+            
+        reco[0:-seg_len]=zscore(reco[0:-seg_len])
+        expectation=zscore(np.copy(time_series[0:-seg_len]))
+        error = np.mean(((reco[0:-seg_len]-expectation))**2.0)
+
+        return reco, error
     
-    else:
-        print("{} is not a valid method".format(method))
-        return
+    def validate(self, validation_data, labels):
+        """Reconstruct a bunch of time series and save errors
+        """
+        unique_labels = np.unique(labels)
+        reco_error = np.zeros((len(validation_data), 3))
+        validation_counter=0
+        for label_index, label in enumerate(unique_labels):
+            single_class_indices = np.where(labels == label)[0]
+            for single_class_index in single_class_indices:
+                time_series = validation_data[single_class_index]
+                reco, error = self.reconstruct(time_series)
+                reco_error[validation_counter, 0] = label_index
+                reco_error[validation_counter, 1] = single_class_index
+                reco_error[validation_counter, 2] = error
+                validation_counter+=1
+        
+        return reco_error
