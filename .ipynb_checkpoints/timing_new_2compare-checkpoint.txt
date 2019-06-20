@@ -1,0 +1,61 @@
+all_train_segments 29400112
+cluster 56
+383.846296194
+all_train_segments 135000112
+cluster 56
+1121.302081093
+all_train_segments 240000112
+cluster 56
+3175.3056034369997
+all_train_segments 315000112
+cluster 56
+4698.695113864001
+all_train_segments 360000112
+cluster 56
+6413.1391491780005
+all_train_segments 29400112
+cluster 56
+9379.322576849001
+all_train_segments 135000112
+cluster 56
+13855.595598842001
+all_train_segments 240000112
+cluster 56
+20022.183900084
+all_train_segments 315000112
+cluster 56
+24719.192972954
+all_train_segments 360000112
+cluster 56
+28793.458229777
+all_train_segments 29400112
+cluster 56
+33133.312270409
+all_train_segments 135000112
+cluster 56
+39001.11623999399
+all_train_segments 240000112
+cluster 56
+46450.368615677995
+all_train_segments 315000112
+cluster 56
+53321.415425761996
+all_train_segments 360000112
+cluster 56
+59467.206906253996
+all_train_segments 29400112
+cluster 56
+68952.462754029
+all_train_segments 135000112
+cluster 56
+82695.45383269
+all_train_segments 240000112
+cluster 56
+98324.682887757
+all_train_segments 315000112
+cluster 56
+114344.69445112899
+all_train_segments 360000112
+cluster 56
+129553.546942328
+129554.49162594699

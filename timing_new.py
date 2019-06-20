@@ -45,5 +45,5 @@ for k_id, k_cluster in enumerate(k_clusters):
         validation_result.append(validation_iteration) # append results for this set of hyperparameters
         print(time.process_time()-t0)
 validation_result=np.vstack(validation_result)
-np.savetxt("new_20190617.csv", validation_result, delimiter=",") 
+np.savetxt("new_20190617_2comparenocopy.csv", validation_result, delimiter=",") 
 print(time.process_time()-t0)

@@ -2,6 +2,8 @@ import numpy as np
 from sklearn.cluster import KMeans
 from scipy.stats import zscore
 import sys
+import os
+import matplotlib.pyplot as plt
 
 #time series and light curve can be used interchangebly below
 def segmentation(ts, seg_len, seg_slide, time_stamps=True):
@@ -9,19 +11,24 @@ def segmentation(ts, seg_len, seg_slide, time_stamps=True):
     ts=time series to be segmented
     seg_len=size of the moving window, 
     seg_slide=difference in the starting position of the consecutive windows"""
-    segments=[]
+    
+    
+    
     if time_stamps==True:
+        segments=[]
         for start in range(0, len(ts[0])-seg_len, seg_slide):
             end=start+seg_len
             if ts[0][end]-ts[0][start] != seg_len: ####don't allow segments with missing data
                 continue
             segments.append(ts[:,start:end])
-        return np.array(segments)
+        return np.array(segments) ## check why time stamps are kept, probably no way to make an array apriori
     else:
-        for start in range(0, len(ts)-seg_len, seg_slide):
+        no_segments = int((len(ts)-seg_len)/seg_slide +1)
+        segments = np.zeros((no_segments, seg_len))
+        for seg_count, start in enumerate(range(0, len(ts)-seg_len, seg_slide)):
             end=start+seg_len
-            segments.append(ts[start:end])
-        return np.array(segments)
+            segments[seg_count] = ts[start:end]
+        return segments
 
 def center_window(segments, ts, time_stamps=True, offset=True):
     """multiplies the segments by a waveform to emphesise the features in the centre and zero the ends so that the segments can be joined smoothly together. Use cluster.fit(np.array(c_train_segments)[:,1]) on the time stamped output
@@ -124,7 +131,68 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             
             
         return reco
+    
+def analyse(file_name, k_clusters, seg_lens, save_histograms=False, save_grid=False):
+    #create a directory for the plots
+    if save_histograms == True or save_grid == True:
+        results_dir=os.getcwd()+"/"+file_name.split(".")[0]
+        os.system("mkdir {}".format(results_dir))
 
+    results=np.loadtxt(file_name, dtype=float, delimiter=",")
+    counts=np.zeros((3, len(k_clusters)+1,len(seg_lens)+1))
+    counts[0, 1:,0]=np.array(k_clusters).T
+    counts[0, 0,1:]=np.array(seg_lens)
+    counts[1, 1:,0]=np.array(k_clusters).T
+    counts[1, 0,1:]=np.array(seg_lens)
+    counts[2, 1:,0]=np.array(k_clusters).T
+    counts[2, 0,1:]=np.array(seg_lens)
+    for k_id, k_cluster in enumerate(k_clusters):
+        for len_id, seg_len in enumerate(seg_lens):
+            ordinary=results[(results[:,0]==k_id) & (results[:,1]==len_id) & (results[:,2]==0)]
+            max_ordinary=np.max(ordinary[:,-1])
+            outliers=results[(results[:,0]==k_id) & (results[:,1]==len_id) & (results[:,2]==1)]
+            min_outlier=np.min(outliers[:,-1])
+            counter_fn=0
+            for t in outliers[:,-1]:
+                if t<max_ordinary:
+                    counter_fn+=1
+            
+            counter_fp=0
+            for t in ordinary[:,-1]:
+                if t>min_outlier:
+                    counter_fp+=1
+            counts[0, k_id+1,len_id+1]=counter_fn
+            counts[1, k_id+1,len_id+1]=counter_fp
+            
+            tp=(len(outliers)-counter_fn)
+            tn=(len(ordinary)-counter_fp)
+            precision = tp/(tp+counter_fp)
+            recall = tp/len(outliers)
+            accuracy = (tp+tn)/(len(outliers)+len(ordinary))
+            if precision * recall == 0:
+                F1 = 0
+            else:
+                F1 = 2 * (precision * recall) / (precision + recall)
+            counts[2, k_id+1,len_id+1]=F1
+            
+            if save_histograms == True:
+                f = plt.figure()
+                ax = f.add_subplot(111)
+                plt.hist(ordinary[:,-1])
+                plt.hist(outliers[:,-1],alpha=0.5)
+                plt.text(0.85,0.75,"k= {}\nlen= {}\noverlap= {}\nfn= {}\nfp= {}\nprecision = {}\nrecall = {}\naccuracy = {}\nF1 = {}".format(k_cluster, seg_len, round(min_outlier-max_ordinary,1), counter_fn, counter_fp, round(precision,3), round(recall,3), round(accuracy,3), round(F1,3)), ha='center', va='center', transform=ax.transAxes)
+                plt.savefig("{}.png".format(results_dir+"/"+"k{}_len{}".format(k_cluster, seg_len)))
+                plt.close()
+    
+    F1s = counts[2, :,:]
+    F1s[1:,1:] = F1s[1:,1:]*1000
+    F1s = F1s.astype(int)
+    
+    if save_grid == True:
+        
+        np.savetxt("{}/grid_search.csv".format(results_dir), F1s, delimiter=",", fmt='%i') 
+    
+    return counts
 
 class TSSCOD():
     """Time series segmentation, clustering, outlier detection
