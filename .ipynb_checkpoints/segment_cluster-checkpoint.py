@@ -4,75 +4,49 @@ from scipy.stats import zscore
 import sys
 import os
 import matplotlib.pyplot as plt
+import time
+from sklearn.model_selection import train_test_split
+import datetime
 
 #time series and light curve can be used interchangebly below
-def segmentation(ts, seg_len, seg_slide, time_stamps=True):
-    """ creates a list of 1D (when time_stamps=False) or 2D (when time_stamps=True) arrays, which are overlappig fragments of ts. Incomplete fragments are rejected.
-    ts=time series to be segmented
-    seg_len=size of the moving window, 
-    seg_slide=difference in the starting position of the consecutive windows"""
+def segmentation(time_series, seg_len, stride, time_stamps=True):
+    """
+    Create a list of 1D (when time_stamps=False) or 2D (when time_stamps=True) arrays, which are overlappig segments of ts. Incomplete fragments are rejected.
     
-    
+    time_series = time series to be segmented
+    seg_len = length of a segment, 
+    stride = step size; difference in the starting position of the consecutive segments
+    """
     
     if time_stamps==True:
-        segments=[]
-        for start in range(0, len(ts[0])-seg_len, seg_slide):
+        segments=[] #probably no way to make an array apriori
+        for start in range(0, len(time_series[0])-seg_len, stride):
             end=start+seg_len
-            if ts[0][end]-ts[0][start] != seg_len: ####don't allow segments with missing data
+            if time_series[0][end]-time_series[0][start] != seg_len: #don't allow temporally discontinous segments
                 continue
-            segments.append(ts[:,start:end])
-        return np.array(segments) ## check why time stamps are kept, probably no way to make an array apriori
+            segments.append(time_series[:,start:end])
+        return np.array(segments) # check why time stamps are kept 
     else:
-        no_segments = int((len(ts)-seg_len)/seg_slide +1)
+        no_segments = int((len(time_series)-seg_len)/stride +1)
         segments = np.zeros((no_segments, seg_len))
-        for seg_count, start in enumerate(range(0, len(ts)-seg_len, seg_slide)):
+        for seg_count, start in enumerate(range(0, len(time_series)-seg_len+1, stride)):
             end=start+seg_len
-            segments[seg_count] = ts[start:end]
+            segments[seg_count] = time_series[start:end]
         return segments
 
-def center_window(segments, ts, time_stamps=True, offset=True):
-    """multiplies the segments by a waveform to emphesise the features in the centre and zero the ends so that the segments can be joined smoothly together. Use cluster.fit(np.array(c_train_segments)[:,1]) on the time stamped output
-    segments = segmented time series, the output of segmentation function
-    ts = the original time series
-    time_stamps = set to False if the input segments are 1 dimensional
-    offset = offset the time stamps as if the time series started at time zero (not sure if this is needed any more...)"""
-    c_segments=[]
-    if time_stamps==True:
-        window_rads = np.linspace(0, np.pi, len(segments[0][0]))
-        window_sin = np.sin(window_rads)**2
-        #window_sin = np.sin(window_rads)**(1/2)
-        #window_sin = window_rads*0+1
-        if offset==True:
-            for segment in segments:
-                segment[1]*=window_sin
-                segment[0]-=ts[0][0]
-                c_segments.append(segment)
-            return c_segments
-        else:
-            for segment in segments:
-                segment[1]*=window_sin
-                c_segments.append(segment)
-            return c_segments
-    else:
-        window_rads = np.linspace(0, np.pi, len(segments[0]))
-        window_sin = np.sin(window_rads)**2
-        for segment in segments:
-            segment*=window_sin
-            c_segments.append(segment)
-        return c_segments
-
-def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide=25):
-    """function uses the kmeans clusters trained on the centered segments to rebuild a time series
-    test_segments = the output of center_offset function applied time series to be reconstructed
+def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, stride=1):
+    """
+    Reconstruct a time series with segments derived from centroids of k-means clusters. Clusters must be fitted in n-dimensional space to time series segments of length n.
+    
+    test_segments = segments of the time series to be reconstructed. Use stride equal to the segment length to make these.
     test_ts = the original time series that is to be reconstructed
     kmeans_model = sklearn.cluster.KMeans object that has been fit to the training segments
     rel_offset = offset the reconstructed time series to start at time zero
-    seg_slide = needed when time stamps are not provided (i.e. test_segments are 1 dimensional)"""
+    stride = needed when time stamps are not provided (i.e. test_segments are 1 dimensional). Defaults to the segment length.
+    """
     error=0
     centroids=kmeans_model.cluster_centers_
     if np.shape(test_segments)[1] == 2:
-        # window_rads = np.linspace(0, np.pi, len(test_segments[0][0]))
-        # window_sin = np.sin(window_rads)**2
         reco= np.zeros(np.shape(test_ts))
         if rel_offset == True:
             ts_time=np.copy(test_ts[0])-test_ts[0][0]
@@ -100,45 +74,31 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, seg_slide
             reco[1,start:end]+=scaled_centroid#*window_sin            
         return "test this"#reco
     else:
-        # window_rads = np.linspace(0, np.pi, len(test_segments[0]))
-        # window_sin = np.sin(window_rads)**2
         reco= np.zeros(len(test_ts))
         for n_seg, segment in enumerate(test_segments):
-#             std_ori=np.std(np.array(segment))
-#             mean_ori=np.mean(np.array(segment))
-#             scaled_centroids=np.copy(centroids)
-#             scaled_centroids=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
-            
-            
             pred_centroid_index=kmeans_model.predict(np.array(segment).reshape(1, -1))[0]
             pred_centroid=centroids[pred_centroid_index]
             scaled_centroid=np.copy(pred_centroid)
-            
-            
-#             std_ori=np.std(np.array(test_segments[n_seg]))
-#             mean_ori=np.mean(np.array(test_segments[n_seg]))
-#             std_pred=np.std(pred_centroid)
-#             mean_pred=np.mean(pred_centroid)
-#             scaled_centroid=mean_ori+(pred_centroid-mean_pred)*(std_ori/std_pred)
-            
-            
-            start=n_seg*seg_slide
+            start=n_seg*stride
             end=start+len(segment)
-            reco[start:end]+=scaled_centroid#*window_sin
-            
-            
-            
-            
-            
+            reco[start:end]+=scaled_centroid
         return reco
     
-def analyse(file_name, k_clusters, seg_lens, save_histograms=False, save_grid=False):
+def analyse(validation_results, k_clusters, seg_lens, save_histograms=False, save_grid=False):
+    """
+    
+    """
+    
     #create a directory for the plots
     if save_histograms == True or save_grid == True:
-        results_dir=os.getcwd()+"/"+file_name.split(".")[0]
+        results_dir=os.getcwd()+"/"+validation_results.split(".")[0]
         os.system("mkdir {}".format(results_dir))
 
-    results=np.loadtxt(file_name, dtype=float, delimiter=",")
+    if type(validation_results) == str:
+        results = np.loadtxt(validation_results, dtype=float, delimiter=",")
+    else:
+        results = validation_results
+    
     counts=np.zeros((3, len(k_clusters)+1,len(seg_lens)+1))
     counts[0, 1:,0]=np.array(k_clusters).T
     counts[0, 0,1:]=np.array(seg_lens)
@@ -148,9 +108,9 @@ def analyse(file_name, k_clusters, seg_lens, save_histograms=False, save_grid=Fa
     counts[2, 0,1:]=np.array(seg_lens)
     for k_id, k_cluster in enumerate(k_clusters):
         for len_id, seg_len in enumerate(seg_lens):
-            ordinary=results[(results[:,0]==k_id) & (results[:,1]==len_id) & (results[:,2]==0)]
+            ordinary=results[(results[:,0]==k_cluster) & (results[:,1]==seg_len) & (results[:,2]==0)]
             max_ordinary=np.max(ordinary[:,-1])
-            outliers=results[(results[:,0]==k_id) & (results[:,1]==len_id) & (results[:,2]==1)]
+            outliers=results[(results[:,0]==k_cluster) & (results[:,1]==seg_len) & (results[:,2]==1)]
             min_outlier=np.min(outliers[:,-1])
             counter_fn=0
             for t in outliers[:,-1]:
@@ -191,8 +151,65 @@ def analyse(file_name, k_clusters, seg_lens, save_histograms=False, save_grid=Fa
     if save_grid == True:
         
         np.savetxt("{}/grid_search.csv".format(results_dir), F1s, delimiter=",", fmt='%i') 
+        
     
     return counts
+
+def validate_algorithm(ordinary_file, outlier_file, k_clusters, seg_lens, save_results=True):
+    """
+    Function performs segmentation and clustering on 75% of the ordinary_file time series. 
+    Then it reconstructs the remaining 25% of ordinary_file and all of the outlier_file time series.
+    Process is repeated for every combination of k_clusters and seg_lens parameters.
+    The output is an array of reconstruction error values; [k_clusters_index, seg_lens_index, classification, time_series_id, error]
+    
+    """
+
+    process_t0 = time.process_time()
+    real_t0 = time.time()
+    
+    ordinary_train, ordinary_valid, ordinary_train_ids, ordinary_valid_ids= train_test_split(ordinary_file, np.array(range(len(ordinary_file))) ,test_size=0.25, random_state=0)
+    outlier_ids = np.array(range(len(outlier_file)))+len(ordinary_file)
+    
+    validation_data = np.vstack((ordinary_valid, outlier_file)) # stack validation data of ordinary and outlier time series
+    validation_labels = np.hstack((np.zeros(len(ordinary_valid)), np.ones(len(outlier_file)))).T # generate labels for valdiation data
+    
+
+    validation_result = np.zeros((int(len(validation_data)*len(k_clusters)*len(seg_lens)),5))
+    loop_counter = 0
+    for k_id, k_cluster in enumerate(k_clusters):
+        for len_id, seg_len in enumerate(seg_lens): #for every combination of hyperparameters
+            tsscod = TSSCOD(k_clusters = k_cluster, seg_len = seg_len) #initialise outlier detection class
+
+            tsscod.train(ordinary_train, random_state = 0) # train on the subset with no outliers; segment each series with a slide of 1 and cluster the segments
+            
+            start_index = int(loop_counter*len(validation_data))
+            validation_result[start_index:start_index+len(validation_data), 4] = tsscod.validate(validation_data) #validation reconstructs the provided series and saves error
+            validation_result[start_index:start_index+len(validation_data), 3] = np.hstack((ordinary_valid_ids, outlier_ids))
+            validation_result[start_index:start_index+len(validation_data), 2] = validation_labels
+            validation_result[start_index:start_index+len(validation_data), 1] = seg_len # add indices of hyperparameters to the results array; this part makes it easier to feed the result into the analysis pipeline
+            validation_result[start_index:start_index+len(validation_data), 0] = k_cluster
+
+            loop_counter += 1
+            print("Hyperparameter sets completed: {}/{}, ".format(loop_counter, int(len(k_clusters)*len(seg_lens))) + "elapsed CPU time: {}s".format(time.process_time()-process_t0))
+    
+    if save_results == True:
+        file_name = "validation_results_{}.csv".format(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+        np.savetxt(file_name, validation_result, delimiter=",") 
+        return file_name, validation_result
+    
+    print()
+    print("Finished, elapsed time: {}s".format(time.time() - real_t0)+", total CPU time: {}s".format(time.process_time()-process_t0))
+    
+    return validation_result
+
+def plot_time_series(time_series_file):
+    fig, axes = plt.subplots(nrows=5, ncols=1)
+    for index, time_series in enumerate(time_series_file[0:5]):
+        axes[index].plot(time_series)
+        axes[index].get_xaxis().set_visible(False)
+    axes[-1].get_xaxis().set_visible(True)
+    fig.tight_layout()
+    fig.show()
 
 class TSSCOD():
     """Time series segmentation, clustering, outlier detection
@@ -201,7 +218,7 @@ class TSSCOD():
         self.k_clusters = k_clusters
         self.seg_len = seg_len
         
-    def train(self, training_data, seg_slide=1, random_state=None):
+    def train(self, training_data, stride=1, random_state=None):
         """Segment the set of ordinary time series and cluster the segments.
         """
         if len(np.shape(training_data))==2:#check if time data is provided
@@ -215,18 +232,16 @@ class TSSCOD():
         for time_series in training_data:
             train_segments=segmentation(time_series, 
                                         self.seg_len, 
-                                        seg_slide,
+                                        stride,
                                         time_stamps=time_stamps)
             all_train_segments.append(train_segments)
         all_train_segments=np.vstack(all_train_segments)
-        print("all_train_segments", sys.getsizeof(all_train_segments))
         self.cluster=KMeans(n_clusters=self.k_clusters,
                             random_state=random_state)#cluster the segments
         self.cluster.fit(all_train_segments)
-        print("cluster", sys.getsizeof(self.cluster))
         return self
     
-    def reconstruct(self, time_series):
+    def reconstruct(self, time_series, output="both"):
         """Reconstruct a time series
         """
         if len(np.shape(time_series))==1:#check if time data is provided
@@ -235,42 +250,43 @@ class TSSCOD():
             time_stamps=True
         else:
             raise ValueError("Time series must be 1D or 2D arrays.")
+        
+        outputs = ["reconstruction", "error", "both"]
+        if output not in outputs:
+            raise ValueError("Unavailable output argument. Available outputs: {}.".format(outputs))
             
         seg_len = self.seg_len
-        seg_slide = self.seg_len
+        stride = self.seg_len
             
 
         segments = segmentation(time_series, 
                                 seg_len, 
-                                seg_slide, 
+                                stride, 
                                 time_stamps = False)
 
         reco = reconstruct(segments, 
                            time_series, 
                            self.cluster, 
                            rel_offset=False, 
-                           seg_slide=seg_slide)
+                           stride=stride)
             
-        reco[0:-seg_len]=zscore(reco[0:-seg_len])
+        z_reco=zscore(reco[0:-seg_len])
         expectation=zscore(np.copy(time_series[0:-seg_len]))
-        error = np.mean(((reco[0:-seg_len]-expectation))**2.0)
-
-        return reco, error
+        error = np.mean(((z_reco-expectation))**2.0)
+        
+        if output == "both":
+            return reco, error
+        elif output == "reconstruction":
+            return reco
+        elif output == "error":
+            return error
     
-    def validate(self, validation_data, labels):
+    def validate(self, validation_data):
         """Reconstruct a bunch of time series and save errors
         """
-        unique_labels = np.unique(labels)
-        reco_error = np.zeros((len(validation_data), 3))
-        validation_counter=0
-        for label_index, label in enumerate(unique_labels):
-            single_class_indices = np.where(labels == label)[0]
-            for single_class_index in single_class_indices:
-                time_series = validation_data[single_class_index]
-                reco, error = self.reconstruct(time_series)
-                reco_error[validation_counter, 0] = label_index
-                reco_error[validation_counter, 1] = single_class_index
-                reco_error[validation_counter, 2] = error
-                validation_counter+=1
+        reco_errors = np.zeros(len(validation_data))
         
-        return reco_error
+        for series_index, time_series in enumerate(validation_data):
+            reco_errors[series_index] = self.reconstruct(time_series, output = "error")
+            
+        return reco_errors

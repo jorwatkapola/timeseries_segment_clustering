@@ -1,0 +1,308 @@
+Hyperparameter sets completed: 1/20, elapsed CPU time: 55.953452102s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 125.898798086s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 215.469525389s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 322.367641684s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 430.453964709s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 537.631332435s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 691.154916636s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 898.5007781s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1117.9963350799999s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1406.968719016s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1819.3486135399999s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2339.5988368089997s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 2993.525504279s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3666.463675872s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4255.270148205001s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8532.931537288s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12497.18615829s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17333.586683505s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 21898.157903936s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 25816.426750466s
+file_name: validation_results_2019-06-24_08-18-51.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.29   0.02    0.05    0.00    0.00
+K50.0    0.63   0.55    0.00    0.24    0.09
+K100.0   0.76   0.63    0.10    0.19    0.06
+K200.0   1.00   0.70    0.11    0.00    0.10
+Hyperparameter sets completed: 1/20, elapsed CPU time: 54.63731666500098s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 123.46796261100098s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 211.9010944900001s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 317.69356270999924s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 425.429079264999s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 535.2150814749984s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 686.8142738860006s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 895.3020581550009s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1114.5152627700008s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1403.702117077999s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1808.9774113880012s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2342.4039234170014s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 2984.8707143579995s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3669.487094494001s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4263.863140583999s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8546.239376995s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12528.801574673998s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17359.556404299s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 21940.938738514s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 25931.718964121s
+file_name: validation_results_2019-06-24_08-57-45.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.41   0.19    0.54    0.00    0.00
+K50.0    0.41   0.97    0.00    0.53    0.19
+K100.0   0.46   1.00    0.35    0.43    0.12
+K200.0   0.73   1.00    0.48    0.16    0.36
+Hyperparameter sets completed: 1/20, elapsed CPU time: 54.10951926699636s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 124.32400901700021s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 213.17675719199906s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 315.11223239999526s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 422.1575951919949s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 528.9779080049993s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 680.4767221839938s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 888.5057850699959s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1107.3782223799935s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1395.8168978999965s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1824.3375290749973s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2361.2038997130003s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3030.092362743999s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3718.0743725659995s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4316.5630533359945s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8605.704412747997s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12571.987291309997s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17399.046793258996s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 21955.060756573002s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 25867.661005037997s
+file_name: validation_results_2019-06-24_09-36-34.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.84   0.95    0.78    0.25    0.00
+K50.0    0.98   1.00    0.78    0.68    0.97
+K100.0   1.00   1.00    0.97    0.59    0.57
+K200.0   1.00   1.00    1.00    0.92    0.70
+Hyperparameter sets completed: 1/20, elapsed CPU time: 52.896610973999486s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 121.38189935300034s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 209.68077949598955s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 315.0237792650005s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 425.17179315899557s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 533.2739217999915s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 687.0808197139995s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 900.4977148629987s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1118.9196238570003s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1406.2548389619915s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1816.9733298469946s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2353.9742178329907s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3012.581257190992s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3696.038138338001s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4287.468524626995s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8562.07992497299s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12527.99114346999s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17353.62190639699s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 21913.467416394997s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 25930.853274790992s
+file_name: validation_results_2019-06-24_10-15-08.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.13    0.0    0.10    0.00    0.00
+K50.0    0.26    1.0    0.00    0.08    0.04
+K100.0   0.51    1.0    0.09    0.02    0.02
+K200.0   1.00    1.0    0.36    0.03    0.05
+Hyperparameter sets completed: 1/20, elapsed CPU time: 55.49333669299085s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 123.87871321800048s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 211.4062273879972s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 313.5665819919959s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 420.07893146699644s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 527.8120786829968s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 679.8258924830006s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 887.7147072279913s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1103.1975188299984s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1396.4742358479998s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1822.0808981209993s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2363.976722673993s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3034.33767579899s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3721.8154349019896s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4320.337719408999s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8628.932502926997s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12627.396500100993s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17492.855600448995s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 22073.755548429996s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 26077.981108277992s
+file_name: validation_results_2019-06-24_10-54-55.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.09   0.52    0.19    0.04    0.02
+K50.0    0.41   0.98    0.21    0.18    0.24
+K100.0   0.73   1.00    0.59    0.26    0.07
+K200.0   1.00   1.00    0.71    0.33    0.25
+Hyperparameter sets completed: 1/20, elapsed CPU time: 55.43294476100709s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 125.12585284600209s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 215.78075402900868s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 316.91995414900884s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 423.0085211520054s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 529.513464928008s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 685.1179910909996s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 893.268847416999s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1109.5401646760001s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1402.0454234770004s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1827.965743904002s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2363.067181911989s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3022.9541941389907s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3730.1812929970038s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4339.343570327008s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8646.74934397699s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12645.973800323001s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17527.758288664016s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 22139.763207851996s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 26183.07548208299s
+file_name: validation_results_2019-06-24_11-34-42.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.19   0.07    0.69     0.0    0.00
+K50.0    0.22   1.00    0.00     1.0    1.00
+K100.0   0.31   0.95    0.73     1.0    0.98
+K200.0   0.91   1.00    0.89     1.0    1.00
+Hyperparameter sets completed: 1/20, elapsed CPU time: 53.98233855099534s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 121.73642426700098s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 209.83341473600012s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 314.9985619969957s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 427.73186907501076s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 540.3250451119966s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 701.0171520790027s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 922.1858439740026s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1148.0293751480058s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1441.1346452290018s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1851.3551781440037s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2380.985156292998s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3044.4878328460036s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3779.427322397998s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4403.438467952015s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8705.270742855995s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12701.284269255004s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17549.060332044s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 22121.422644948994s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 26151.585594656994s
+file_name: validation_results_2019-06-24_12-14-41.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.06   0.46    0.39    0.00    0.00
+K50.0    0.16   1.00    0.00    0.48    0.44
+K100.0   0.34   1.00    0.63    0.50    0.41
+K200.0   1.00   1.00    0.71    0.48    0.49
+Hyperparameter sets completed: 1/20, elapsed CPU time: 54.12299962597899s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 125.39430993498536s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 216.4552740479994s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 321.8233860699984s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 427.7521413679933s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 535.217893271998s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 686.6114961569838s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 897.5291853709787s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1113.8835275079764s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1402.9062357189832s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1821.4187947299797s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2355.515461169998s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3012.106190347986s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3714.687218483974s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4317.226864793978s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8611.300208875997s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12616.672436085995s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17477.670078465977s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 22103.62605130498s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 26153.681432997982s
+file_name: validation_results_2019-06-24_12-54-36.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.07   0.42    0.53    0.00    0.00
+K50.0    0.11   0.96    0.16    1.00    1.00
+K100.0   0.09   0.92    0.84    1.00    0.94
+K200.0   0.55   0.94    0.92    0.88    0.97
+Hyperparameter sets completed: 1/20, elapsed CPU time: 53.87482399799046s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 123.7845421389793s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 214.9338599749899s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 318.58518552797614s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 428.73160077197826s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 537.9887787549815s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 686.3428690479777s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 893.2442934049759s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1105.0447453939996s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1400.1055511009763s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 1824.6594754849793s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2362.773788853985s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3011.102978971001s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3685.789374474989s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4282.044104592991s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 8574.687250138988s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 12567.707053359976s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17423.53761415198s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 22010.849382185s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 25986.522629048995s
+file_name: validation_results_2019-06-24_13-33-54.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.67   0.64    0.39    0.00    0.00
+K50.0    0.86   0.98    0.30    0.50    0.47
+K100.0   0.94   1.00    0.80    0.49    0.50
+K200.0   1.00   1.00    0.82    0.55    0.53
+Hyperparameter sets completed: 1/20, elapsed CPU time: 58.770297882001614s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 133.38774766999995s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 223.63654568701168s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 313.9889404150017s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 413.3409376589989s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 557.4809327939874s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 733.2695546169998s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 912.1038526569901s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1107.6075177819876s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1354.6617043750011s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 2064.6025048760057s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2719.1160293179855s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3293.905257898994s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3814.1774028149957s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4289.452534721s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 9541.271358017984s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 14033.125272553007s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 18019.541714363993s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 21513.275087195012s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 24407.510134499986s
+file_name: validation_results_2019-06-24_14-11-14.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.27   0.02    0.08    0.15    0.04
+K50.0    0.73   0.19    0.03    0.00    0.00
+K100.0   0.84   0.22    0.20    0.14    0.00
+K200.0   0.82   0.93    0.72    0.00    0.00
+Hyperparameter sets completed: 1/20, elapsed CPU time: 58.3065197810065s
+Hyperparameter sets completed: 2/20, elapsed CPU time: 132.74312652999652s
+Hyperparameter sets completed: 3/20, elapsed CPU time: 222.44103339800495s
+Hyperparameter sets completed: 4/20, elapsed CPU time: 310.52208140399307s
+Hyperparameter sets completed: 5/20, elapsed CPU time: 409.37128058698727s
+Hyperparameter sets completed: 6/20, elapsed CPU time: 553.090149347001s
+Hyperparameter sets completed: 7/20, elapsed CPU time: 728.345980077982s
+Hyperparameter sets completed: 8/20, elapsed CPU time: 908.7283197130018s
+Hyperparameter sets completed: 9/20, elapsed CPU time: 1099.1996795079904s
+Hyperparameter sets completed: 10/20, elapsed CPU time: 1347.7050269079919s
+Hyperparameter sets completed: 11/20, elapsed CPU time: 2050.1968427539978s
+Hyperparameter sets completed: 12/20, elapsed CPU time: 2698.3397909890045s
+Hyperparameter sets completed: 13/20, elapsed CPU time: 3271.6728159189806s
+Hyperparameter sets completed: 14/20, elapsed CPU time: 3789.555910926021s
+Hyperparameter sets completed: 15/20, elapsed CPU time: 4264.912573807989s
+Hyperparameter sets completed: 16/20, elapsed CPU time: 9506.227976824972s
+Hyperparameter sets completed: 17/20, elapsed CPU time: 13992.215927209007s
+Hyperparameter sets completed: 18/20, elapsed CPU time: 17999.17575483001s
+Hyperparameter sets completed: 19/20, elapsed CPU time: 21378.432253226987s
+Hyperparameter sets completed: 20/20, elapsed CPU time: 24197.720694103977s
+file_name: validation_results_2019-06-24_14-48-17.csv
+F1 metric for different sets of hyperparameters. 
+F1 values between 0-1, the higher the better
+        K10.0  K50.0  K100.0  K150.0  K200.0
+K10.0    0.27   0.02    0.08    0.15    0.04
+K50.0    0.73   0.19    0.03    0.00    0.00
+K100.0   0.84   0.22    0.20    0.14    0.00
+K200.0   0.82   0.93    0.72    0.00    0.00
