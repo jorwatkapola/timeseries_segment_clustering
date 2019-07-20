@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import time
 from sklearn.model_selection import train_test_split
 import datetime
+from fastdtw import fastdtw
 
 #time series and light curve can be used interchangebly below
 def segmentation(time_series, seg_len, stride, time_stamps=True):
@@ -84,7 +85,7 @@ def reconstruct(test_segments, test_ts, kmeans_model, rel_offset=True, stride=1)
             reco[start:end]+=scaled_centroid
         return reco
     
-def analyse(validation_results, k_clusters, seg_lens, save_histograms=False, save_grid=False):
+def analyse(validation_results, k_clusters, seg_lens, save_histograms=False, save_grid=False, MSE=False):
     """
     
     """
@@ -109,16 +110,16 @@ def analyse(validation_results, k_clusters, seg_lens, save_histograms=False, sav
     for k_id, k_cluster in enumerate(k_clusters):
         for len_id, seg_len in enumerate(seg_lens):
             ordinary=results[(results[:,0]==k_cluster) & (results[:,1]==seg_len) & (results[:,2]==0)]
-            max_ordinary=np.max(ordinary[:,-1])
+            max_ordinary=np.max(ordinary[:,-2])
             outliers=results[(results[:,0]==k_cluster) & (results[:,1]==seg_len) & (results[:,2]==1)]
-            min_outlier=np.min(outliers[:,-1])
+            min_outlier=np.min(outliers[:,-2])
             counter_fn=0
-            for t in outliers[:,-1]:
+            for t in outliers[:,-2]:
                 if t<max_ordinary:
                     counter_fn+=1
             
             counter_fp=0
-            for t in ordinary[:,-1]:
+            for t in ordinary[:,-2]:
                 if t>min_outlier:
                     counter_fp+=1
             counts[0, k_id+1,len_id+1]=counter_fn
@@ -138,8 +139,8 @@ def analyse(validation_results, k_clusters, seg_lens, save_histograms=False, sav
             if save_histograms == True:
                 f = plt.figure()
                 ax = f.add_subplot(111)
-                plt.hist(ordinary[:,-1])
-                plt.hist(outliers[:,-1],alpha=0.5)
+                plt.hist(ordinary[:,-2])
+                plt.hist(outliers[:,-2],alpha=0.5)
                 plt.text(0.85,0.75,"k= {}\nlen= {}\noverlap= {}\nfn= {}\nfp= {}\nprecision = {}\nrecall = {}\naccuracy = {}\nF1 = {}".format(k_cluster, seg_len, round(min_outlier-max_ordinary,1), counter_fn, counter_fp, round(precision,3), round(recall,3), round(accuracy,3), round(F1,3)), ha='center', va='center', transform=ax.transAxes)
                 plt.savefig("{}.png".format(results_dir+"/"+"k{}_len{}".format(k_cluster, seg_len)))
                 plt.close()
@@ -152,6 +153,64 @@ def analyse(validation_results, k_clusters, seg_lens, save_histograms=False, sav
         
         np.savetxt("{}/grid_search.csv".format(results_dir), F1s, delimiter=",", fmt='%i') 
         
+    if MSE == True:
+
+        counts=np.zeros((3, len(k_clusters)+1,len(seg_lens)+1))
+        counts[0, 1:,0]=np.array(k_clusters).T
+        counts[0, 0,1:]=np.array(seg_lens)
+        counts[1, 1:,0]=np.array(k_clusters).T
+        counts[1, 0,1:]=np.array(seg_lens)
+        counts[2, 1:,0]=np.array(k_clusters).T
+        counts[2, 0,1:]=np.array(seg_lens)
+        for k_id, k_cluster in enumerate(k_clusters):
+            for len_id, seg_len in enumerate(seg_lens):
+                ordinary=results[(results[:,0]==k_cluster) & (results[:,1]==seg_len) & (results[:,2]==0)]
+                max_ordinary=np.max(ordinary[:,-1])
+                outliers=results[(results[:,0]==k_cluster) & (results[:,1]==seg_len) & (results[:,2]==1)]
+                min_outlier=np.min(outliers[:,-1])
+                counter_fn=0
+                for t in outliers[:,-1]:
+                    if t<max_ordinary:
+                        counter_fn+=1
+
+                counter_fp=0
+                for t in ordinary[:,-1]:
+                    if t>min_outlier:
+                        counter_fp+=1
+                counts[0, k_id+1,len_id+1]=counter_fn
+                counts[1, k_id+1,len_id+1]=counter_fp
+
+                tp=(len(outliers)-counter_fn)
+                tn=(len(ordinary)-counter_fp)
+                precision = tp/(tp+counter_fp)
+                recall = tp/len(outliers)
+                accuracy = (tp+tn)/(len(outliers)+len(ordinary))
+                if precision * recall == 0:
+                    F1 = 0
+                else:
+                    F1 = 2 * (precision * recall) / (precision + recall)
+                counts[2, k_id+1,len_id+1]=F1
+
+                if save_histograms == True:
+                    f = plt.figure()
+                    ax = f.add_subplot(111)
+                    plt.hist(ordinary[:,-1])
+                    plt.hist(outliers[:,-1],alpha=0.5)
+                    plt.text(0.85,0.75,"k= {}\nlen= {}\noverlap= {}\nfn= {}\nfp= {}\nprecision = {}\nrecall = {}\naccuracy = {}\nF1 = {}".format(k_cluster, seg_len, round(min_outlier-max_ordinary,1), counter_fn, counter_fp, round(precision,3), round(recall,3), round(accuracy,3), round(F1,3)), ha='center', va='center', transform=ax.transAxes)
+                    plt.savefig("{}.png".format(results_dir+"/"+"k{}_len{}".format(k_cluster, seg_len)))
+                    plt.close()
+
+        F1s = counts[2, :,:]
+        F1s[1:,1:] = F1s[1:,1:]*1000
+        F1s = F1s.astype(int)
+
+        if save_grid == True:
+
+            np.savetxt("{}/grid_search_MSE.csv".format(results_dir), F1s, delimiter=",", fmt='%i') 
+        
+    
+    
+    
     
     return counts
 
@@ -174,7 +233,7 @@ def validate_algorithm(ordinary_file, outlier_file, k_clusters, seg_lens, save_r
     validation_labels = np.hstack((np.zeros(len(ordinary_valid)), np.ones(len(outlier_file)))).T # generate labels for valdiation data
     
 
-    validation_result = np.zeros((int(len(validation_data)*len(k_clusters)*len(seg_lens)),5))
+    validation_result = np.zeros((int(len(validation_data)*len(k_clusters)*len(seg_lens)),7))
     loop_counter = 0
     for k_id, k_cluster in enumerate(k_clusters):
         for len_id, seg_len in enumerate(seg_lens): #for every combination of hyperparameters
@@ -183,7 +242,7 @@ def validate_algorithm(ordinary_file, outlier_file, k_clusters, seg_lens, save_r
             tsscod.train(ordinary_train, random_state = 0) # train on the subset with no outliers; segment each series with a slide of 1 and cluster the segments
             
             start_index = int(loop_counter*len(validation_data))
-            validation_result[start_index:start_index+len(validation_data), 4] = tsscod.validate(validation_data) #validation reconstructs the provided series and saves error
+            validation_result[start_index:start_index+len(validation_data), 4:] = tsscod.validate(validation_data) #validation reconstructs the provided series and saves error
             validation_result[start_index:start_index+len(validation_data), 3] = np.hstack((ordinary_valid_ids, outlier_ids))
             validation_result[start_index:start_index+len(validation_data), 2] = validation_labels
             validation_result[start_index:start_index+len(validation_data), 1] = seg_len # add indices of hyperparameters to the results array; this part makes it easier to feed the result into the analysis pipeline
@@ -241,7 +300,7 @@ class TSSCOD():
         self.cluster.fit(all_train_segments)
         return self
     
-    def reconstruct(self, time_series, output="both"):
+    def reconstruct(self, time_series, output="all"):
         """Reconstruct a time series
         """
         if len(np.shape(time_series))==1:#check if time data is provided
@@ -251,7 +310,7 @@ class TSSCOD():
         else:
             raise ValueError("Time series must be 1D or 2D arrays.")
         
-        outputs = ["reconstruction", "error", "both"]
+        outputs = ["reconstruction", "errors", "all"]
         if output not in outputs:
             raise ValueError("Unavailable output argument. Available outputs: {}.".format(outputs))
             
@@ -270,23 +329,26 @@ class TSSCOD():
                            rel_offset=False, 
                            stride=stride)
             
-        z_reco=zscore(reco[0:-seg_len])
+        z_reco=zscore(np.copy(reco[0:-seg_len]))
         expectation=zscore(np.copy(time_series[0:-seg_len]))
-        error = np.mean(((z_reco-expectation))**2.0)
+        std_mse = np.mean(((z_reco-expectation))**2.0)
+        mse = np.mean(((np.copy(reco[0:-seg_len]-np.copy(time_series[0:-seg_len])))**2.0))
+        dtw_dist, dtw_path = fastdtw(reco[0:-seg_len], time_series[0:-seg_len], dist=2, radius=3000)
+        dtw_dist /= len(reco[0:-seg_len])
         
-        if output == "both":
-            return reco, error
+        if output == "all":
+            return reco, std_mse, mse, dtw_dist
         elif output == "reconstruction":
             return reco
-        elif output == "error":
-            return error
+        elif output == "errors":
+            return std_mse, mse, dtw_dist
     
     def validate(self, validation_data):
         """Reconstruct a bunch of time series and save errors
         """
-        reco_errors = np.zeros(len(validation_data))
-        
+        reco_errors = np.zeros((len(validation_data), 3))
+
         for series_index, time_series in enumerate(validation_data):
-            reco_errors[series_index] = self.reconstruct(time_series, output = "error")
-            
+            reco_errors[series_index, :] = self.reconstruct(time_series, output = "errors")
+                
         return reco_errors
